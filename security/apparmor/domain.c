@@ -722,9 +722,8 @@ create_learning_profile:
 	}
 
 audit:
-	aa_audit_file(subj_cred, profile, &perms, OP_EXEC, MAY_EXEC, name,
-		      target, new,
-		      cond->uid, info, error);
+	aa_audit_file(subj_cred, profile, &perms, OP_EXEC, MAY_EXEC, name, target, new,
+		      cond->uid, info, error, true);
 	if (!new || nonewprivs) {
 		aa_put_label(new);
 		return ERR_PTR(error);
@@ -803,7 +802,7 @@ static int profile_onexec(const struct cred *subj_cred,
 audit:
 	return aa_audit_file(subj_cred, profile, &perms, OP_EXEC,
 			     AA_MAY_ONEXEC, xname,
-			     NULL, onexec, cond->uid, info, error);
+			     NULL, onexec, cond->uid, info, error, false);
 }
 
 /* ensure none ns domain transitions are correctly applied with onexec */
@@ -846,7 +845,7 @@ static struct aa_label *handle_onexec(const struct cred *subj_cred,
 				      OP_CHANGE_ONEXEC,
 				      AA_MAY_ONEXEC, bprm->filename, NULL,
 				      onexec, GLOBAL_ROOT_UID,
-				      "failed to build target label", -ENOMEM));
+				      "failed to build target label", -ENOMEM, false));
 	return ERR_PTR(error);
 }
 
@@ -982,7 +981,8 @@ audit:
 			aa_audit_file(current_cred(), profile, &nullperms,
 				      OP_EXEC, MAY_EXEC,
 				      bprm->filename, NULL, new,
-				      vfsuid_into_kuid(vfsuid), info, error));
+				      vfsuid_into_kuid(vfsuid), info, error,
+				      false));
 	aa_put_label(new);
 	goto done;
 }
@@ -1033,7 +1033,7 @@ audit:
 		      AA_MAY_CHANGEHAT,
 		      name, hat ? hat->base.hname : NULL,
 		      hat ? &hat->label : NULL, GLOBAL_ROOT_UID, info,
-		      error);
+		      error, false);
 	if (!hat || (error && error != -ENOENT))
 		return ERR_PTR(error);
 	/* if hat && error - complain mode, already audited and we adjust for
@@ -1126,7 +1126,7 @@ fail:
 			aa_audit_file(subj_cred, profile, &nullperms,
 				      OP_CHANGE_HAT,
 				      AA_MAY_CHANGEHAT, name, NULL, NULL,
-				      GLOBAL_ROOT_UID, info, error);
+				      GLOBAL_ROOT_UID, info, error, false);
 		}
 	}
 	return ERR_PTR(error);
@@ -1285,7 +1285,7 @@ fail:
 	fn_for_each_in_ns(label, profile,
 		aa_audit_file(subj_cred, profile, &perms, OP_CHANGE_HAT,
 			      AA_MAY_CHANGEHAT, NULL, NULL, target,
-			      GLOBAL_ROOT_UID, info, error));
+			      GLOBAL_ROOT_UID, info, error, false));
 
 	goto out;
 }
@@ -1309,7 +1309,7 @@ static int change_profile_perms_wrapper(const char *op, const char *name,
 		error = aa_audit_file(subj_cred, profile, perms, op, request,
 				      name,
 				      NULL, target, GLOBAL_ROOT_UID, info,
-				      error);
+				      error, false);
 
 	return error;
 }
@@ -1393,7 +1393,8 @@ int aa_change_profile(const char *fqname, int flags)
 		(void) fn_for_each_in_ns(label, profile,
 				aa_audit_file(subj_cred, profile, &perms, op,
 					      request, auditname, NULL, target,
-					      GLOBAL_ROOT_UID, stack_msg, 0));
+					      GLOBAL_ROOT_UID, stack_msg, 0,
+					      false));
 		perms.audit = 0;
 	}
 
@@ -1513,7 +1514,7 @@ audit:
 			aa_audit_file(subj_cred,
 				      profile, &perms, op, request, auditname,
 				      NULL, new ? new : target,
-				      GLOBAL_ROOT_UID, info, error));
+				      GLOBAL_ROOT_UID, info, error, false));
 
 out:
 	aa_put_label(new);

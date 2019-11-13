@@ -19,6 +19,7 @@
 
 #include "file.h"
 #include "label.h"
+#include "notify.h"
 
 extern const char *const audit_mode_names[];
 #define AUDIT_MAX_INDEX 5
@@ -38,6 +39,7 @@ enum audit_type {
 	AUDIT_APPARMOR_STATUS,
 	AUDIT_APPARMOR_ERROR,
 	AUDIT_APPARMOR_KILL,
+	AUDIT_APPARMOR_USER,
 	AUDIT_APPARMOR_AUTO
 };
 
@@ -108,7 +110,9 @@ enum audit_type {
 #define OP_URING_OVERRIDE "uring_override"
 #define OP_URING_SQPOLL "uring_sqpoll"
 
+#define AUDIT_TAILGLOB_NAME 1
 struct apparmor_audit_data {
+	u32 flags;		/* control flags not part of actual data */
 	int error;
 	int type;
 	u16 class;
@@ -119,6 +123,9 @@ struct apparmor_audit_data {
 	const char *info;
 	u32 request;
 	u32 denied;
+
+	struct task_struct *subjtsk;
+
 	union {
 		/* these entries require a custom callback fn */
 		struct {
@@ -175,6 +182,7 @@ struct aa_audit_node {
 	struct kref count;
 	struct apparmor_audit_data data;
 	struct list_head list;
+	struct aa_knotif knotif;
 };
 extern struct kmem_cache *aa_audit_slab;
 
@@ -201,6 +209,9 @@ struct aa_audit_node *aa_audit_cache_find(struct aa_audit_cache *cache,
 					  struct apparmor_audit_data *ad);
 struct aa_audit_node *aa_audit_cache_insert(struct aa_audit_cache *cache,
 					    struct aa_audit_node *node);
+void aa_audit_cache_update_ent(struct aa_audit_cache *cache,
+			       struct aa_audit_node *node,
+			       struct apparmor_audit_data *data);
 void aa_audit_cache_destroy(struct aa_audit_cache *cache);
 
 
@@ -214,6 +225,7 @@ void aa_audit_cache_destroy(struct aa_audit_cache *cache);
 	struct apparmor_audit_data NAME = {				\
 		.class = (C),						\
 		.op = (X),                                              \
+		.subjtsk = NULL,                                        \
 		.common.type = (T),					\
 		.common.u.tsk = NULL,					\
 		.common.apparmor_audit_data = &NAME,			\
