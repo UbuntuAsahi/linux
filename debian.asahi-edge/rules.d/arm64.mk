@@ -1,13 +1,15 @@
 human_arch	= ARMv8
 build_arch	= arm64
-header_arch	= $(build_arch)
+header_arch	= arm64
 defconfig	= defconfig
 flavours	= asahi-edge
 build_image	= Image.gz
 kernel_file	= arch/$(build_arch)/boot/Image.gz
 install_file	= vmlinuz
-no_dumpfile	= true
+no_dumpfile = true
+uefi_signed     = false
 
+vdso		= vdso_install
 do_linux_tools		= true
 do_tools_usbip		= true
 do_tools_cpupower	= true
@@ -25,5 +27,3 @@ do_extras_package	= true
 skipabi		= true
 skipmodule	= true
 skipretpoline	= true
-
-gcc=clang
