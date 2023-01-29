@@ -59,6 +59,411 @@ linux-asahi-edge (6.1.1-1.0) jammy; urgency=medium
 
  --  Tobias Heider <me@tobhe.de>  Sun, 27 Nov 2022 01:40:43 +0100
 
+linux-unstable (6.2.0-5.5) lunar; urgency=medium
+
+  * lunar/linux-unstable: 6.2.0-5.5 -proposed tracker (LP: #2003682)
+
+  * [23.04] Kernel 6.2 does not boot on s390x (LP: #2003348)
+    - SAUCE Revert "zstd: import usptream v1.5.2"
+    - SAUCE: Revert "zstd: Move zstd-common module exports to
+      zstd_common_module.c"
+
+  * Revoke & rotate to new signing key (LP: #2002812)
+    - [Packaging] Revoke and rotate to new signing key
+
+  * CVE-2023-0179
+    - netfilter: nft_payload: incorrect arithmetics when fetching VLAN header bits
+
+  * [23.04] net/smc: Alibaba patches about tunable buffer sizes may cause errors
+    and need to be removed (kernel 6.2) (LP: #2003547)
+    - SAUCE: Revert "net/smc: Unbind r/w buffer size from clcsock and make them
+      tunable"
+    - SAUCE: Revert "net/smc: Introduce a specific sysctl for TEST_LINK time"
+
+  * 5.15 stuck at boot on c4.large (LP: #1956780)
+    - SAUCE: Revert "PCI/MSI: Mask MSI-X vectors only on success"
+
+  * Miscellaneous Ubuntu changes
+    - [Packaging] scripts/misc/kernelconfig: Disable config checks for mainline
+      builds
+    - [Packaging] annotations: add CONFIG_GCC_VERSION to the list of ignored
+      configs
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Mon, 23 Jan 2023 08:20:26 +0100
+
+linux-unstable (6.2.0-4.4) lunar; urgency=medium
+
+  * lunar/linux-unstable: 6.2.0-4.4 -proposed tracker (LP: #2003051)
+
+  * Miscellaneous Ubuntu changes
+    - [Packaging] add python3 as a build dependency
+    - [Packaging] scripts/misc/kernelconfig: Rewrite
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Tue, 17 Jan 2023 09:18:54 +0100
+
+linux-unstable (6.2.0-3.3) lunar; urgency=medium
+
+  * lunar/linux-unstable: 6.2.0-3.3 -proposed tracker (LP: #2002939)
+
+  * Enable kernel config for P2PDMA (LP: #1987394)
+    - [Config] Enable CONFIG_HSA_AMD_P2P
+
+  * Miscellaneous Ubuntu changes
+    - SAUCE: (no-up) Remove obj- += foo.o hack
+    - SAUCE: (no-up) re-add ubuntu/ directory
+    - [Config] enable EFI handover protocol
+    - [Packaging] Fix module-check error when modules are compressed
+    - SAUCE: (no-up) do not remove debian directory by 'make mrproper'
+    - [Packaging] debian/rules: Drop AUTOBUILD
+    - [Packaging] debian/rules: Drop NOKERNLOG and PRINTSHAS env variables
+    - [Packaging] debian/rules: Replace skip<foo> variables with skip_checks
+    - [Packaging] checks/retpoline-check: Make 'skipretpoline' argument optional
+    - [Packaging] checks/module-signature-check: Add 'skip_checks' argument
+    - [Packaging] debian/rules: Rename 'skip_dbg' to 'do_dbgsym_package'
+    - [Packaging] debian/rules: Rename 'skip_checks' to 'do_skip_checks'
+    - [Packaging] debian/rules: Rename 'full_build' to 'do_full_build'
+    - [Packaging] debian/rules: Fix PPA debug package builds
+    - [Packaging] debian/rules: Remove debug package install directory earlier
+    - [Packaging] debian/rules: Remove unnecessary 'lockme_<foo>' variables
+    - [Packaging] debian/rules: Remove unused target 'diffupstream'
+    - [Packaging] debian/rules: Mark PHONY targets individually
+    - [Packaging] debian/rules: Clean up 'help' target output
+    - [Packaging] debian/rules: Clean up 'printenv' target output
+    - [Packaging] debian/rules: Add missing 'do_<foo>' variables to 'printenv'
+    - [Config] update annotations after rebase to v6.2-rc4
+
+  [ Upstream Kernel Changes ]
+
+  * Rebase to v6.1-rc4
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Mon, 16 Jan 2023 16:01:40 +0100
+
+linux-unstable (6.2.0-2.2) lunar; urgency=medium
+
+  * lunar/linux-unstable: 6.2.0-2.2 -proposed tracker (LP: #2001892)
+
+  * Soundwire support for the Intel RPL Gen 0C40/0C11 platforms (LP: #2000030)
+    - SAUCE: ASoC: Intel: soc-acpi: add configuration for variant of 0C40 product
+    - SAUCE: ASoC: Intel: soc-acpi: add configuration for variant of 0C11 product
+
+  * Miscellaneous Ubuntu changes
+    - [Config] update toolchain version in annotations
+
+  * Miscellaneous upstream changes
+    - Revert "UBUNTU: [Packaging] Support skipped dkms modules"
+
+  [ Upstream Kernel Changes ]
+
+  * Rebase to v6.1-rc2
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Thu, 05 Jan 2023 09:19:55 +0100
+
+linux-unstable (6.2.0-1.1) lunar; urgency=medium
+
+  * lunar/linux-unstable: 6.2.0-1.1 -proposed tracker (LP: #2000904)
+
+  * Packaging resync (LP: #1786013)
+    - [Packaging] update variants
+
+  * Miscellaneous Ubuntu changes
+    - [Packaging] annotations: remove configs that are undefined across all
+      arches/flavours
+    - SAUCE: Revert "apparmor: make __aa_path_perm() static"
+    - [Packaging] abi-check: ignore failures when abi check is skipped
+    - [Packaging] temporarily disable zfs dkms
+    - [Config] update annotations after rebase to 6.2-rc1
+
+  [ Upstream Kernel Changes ]
+
+  * Rebase to v6.1-rc1
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Wed, 04 Jan 2023 12:08:32 +0100
+
+linux-unstable (6.2.0-0.0) lunar; urgency=medium
+
+  * Empty entry
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Sun, 01 Jan 2023 10:16:00 +0100
+
+linux (6.1.0-11.11) lunar; urgency=medium
+
+  * lunar/linux: 6.1.0-11.11 -proposed tracker (LP: #2000704)
+
+  * Packaging resync (LP: #1786013)
+    - [Packaging] update helper scripts
+
+  * Lunar update: v6.1.1 upstream stable release (LP: #2000706)
+    - x86/vdso: Conditionally export __vdso_sgx_enter_enclave()
+    - libbpf: Fix uninitialized warning in btf_dump_dump_type_data
+    - PCI: mt7621: Add sentinel to quirks table
+    - mips: ralink: mt7621: define MT7621_SYSC_BASE with __iomem
+    - mips: ralink: mt7621: soc queries and tests as functions
+    - mips: ralink: mt7621: do not use kzalloc too early
+    - irqchip/ls-extirq: Fix endianness detection
+    - udf: Discard preallocation before extending file with a hole
+    - udf: Fix preallocation discarding at indirect extent boundary
+    - udf: Do not bother looking for prealloc extents if i_lenExtents matches
+      i_size
+    - udf: Fix extending file within last block
+    - usb: gadget: uvc: Prevent buffer overflow in setup handler
+    - USB: serial: option: add Quectel EM05-G modem
+    - USB: serial: cp210x: add Kamstrup RF sniffer PIDs
+    - USB: serial: f81232: fix division by zero on line-speed change
+    - USB: serial: f81534: fix division by zero on line-speed change
+    - xhci: Apply XHCI_RESET_TO_DEFAULT quirk to ADL-N
+    - staging: r8188eu: fix led register settings
+    - igb: Initialize mailbox message for VF reset
+    - usb: typec: ucsi: Resume in separate work
+    - usb: dwc3: pci: Update PCIe device ID for USB3 controller on CPU sub-system
+      for Raptor Lake
+    - cifs: fix oops during encryption
+    - KEYS: encrypted: fix key instantiation with user-provided data
+    - Linux 6.1.1
+
+  * Expose built-in trusted and revoked certificates (LP: #1996892)
+    - [Packaging] Expose built-in trusted and revoked certificates
+
+  * Fix System cannot detect bluetooth after running suspend stress test
+    (LP: #1998727)
+    - wifi: rtw88: 8821c: enable BT device recovery mechanism
+
+  * Gnome doesn't run smooth when performing normal usage with RPL-P CPU
+    (LP: #1998419)
+    - drm/i915/rpl-p: Add stepping info
+
+  * Mute/mic LEDs no function on a HP platfrom (LP: #1998882)
+    - ALSA: hda/realtek: fix mute/micmute LEDs for a HP ProBook
+
+  * Add additional Mediatek MT7922 BT device ID (LP: #1998885)
+    - Bluetooth: btusb: Add a new VID/PID 0489/e0f2 for MT7922
+
+  * Support Icicle Kit reference design v2022.10 (LP: #1993148)
+    - SAUCE: riscv: dts: microchip: Disable PCIe on the Icicle Kit
+
+  * Add iommu passthrough quirk for Intel IPU6 on RaptorLake (LP: #1989041)
+    - SAUCE: iommu: intel-ipu: use IOMMU passthrough mode for Intel IPUs on Raptor
+      Lake
+
+  * Enable Intel FM350 wwan CCCI driver port logging (LP: #1997686)
+    - net: wwan: t7xx: use union to group port type specific data
+    - net: wwan: t7xx: Add port for modem logging
+
+  * TEE Support for CCP driver (LP: #1991608)
+    - crypto: ccp - Add support for TEE for PCI ID 0x14CA
+
+  * Kinetic update: v5.19.17 upstream stable release (LP: #1994179)
+    - Revert "fs: check FMODE_LSEEK to control internal pipe splicing"
+    - kbuild: Add skip_encoding_btf_enum64 option to pahole
+
+  * Kinetic update: v5.19.15 upstream stable release (LP: #1994078)
+    - Revert "clk: ti: Stop using legacy clkctrl names for omap4 and 5"
+
+  * support independent clock and LED GPIOs for Intel IPU6 platforms
+    (LP: #1989046)
+    - SAUCE: platform/x86: int3472: support independent clock and LED GPIOs
+
+  * Kernel livepatch support for for s390x (LP: #1639924)
+    - [Config] Enable EXPOLINE_EXTERN on s390x
+
+  * Kinetic update: v5.19.7 upstream stable release (LP: #1988733)
+    - Revert "PCI/portdrv: Don't disable AER reporting in
+      get_port_device_capability()"
+
+  * Kinetic update: v5.19.3 upstream stable release (LP: #1987345)
+    - Revert "mm: kfence: apply kmemleak_ignore_phys on early allocated pool"
+
+  * Fix non-working e1000e device after resume (LP: #1951861)
+    - SAUCE: Revert "e1000e: Add polling mechanism to indicate CSME DPG exit"
+
+  * Add additional Mediatek MT7921 WiFi/BT device IDs (LP: #1937004)
+    - SAUCE: Bluetooth: btusb: Add support for Foxconn Mediatek Chip
+
+  * Fix system sleep on TGL systems with Intel ME (LP: #1919321)
+    - SAUCE: PCI: Serialize TGL e1000e PM ops
+
+  * Fix broken e1000e device after S3 (LP: #1897755)
+    - SAUCE: e1000e: Increase polling timeout on MDIC ready bit
+
+  * Fix unusable USB hub on Dell TB16 after S3 (LP: #1855312)
+    - SAUCE: USB: core: Make port power cycle a seperate helper function
+    - SAUCE: USB: core: Attempt power cycle port when it's in eSS.Disabled state
+
+  * Set explicit CC in the headers package (LP: #1999750)
+    - [Packaging] Set explicit CC in the headers package
+
+  * commit cf58599cded35cf4affed1e659c0e2c742d3fda7 seems to be missing in
+    kinetic master to remove "hio" reference from Makefile (LP: #1999556)
+    - SAUCE: remove leftover reference to ubuntu/hio driver
+
+  * Miscellaneous Ubuntu changes
+    - [Packaging] kernelconfig: always complete all config checks
+    - [Packaging] annotations: unify same rule across all flavour within the same
+      arch
+    - [Config] annotations: compact annotations file
+    - [Config] disable EFI_ZBOOT
+    - SAUCE: input: i8042: fix section mismatch warning
+    - debian/dkms-versions -- re-enable zfs
+    - [Packaging] old-kernelconfig: update config-check path
+    - [Packaging] update getabis
+    - [Packaging] update Ubuntu.md
+
+  * Miscellaneous upstream changes
+    - Revert "drm/i915/opregion: check port number bounds for SWSCI display power
+      state"
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Fri, 30 Dec 2022 11:23:16 +0100
+
+linux (6.1.0-10.10) lunar; urgency=medium
+
+  * lunar/linux: 6.1.0-10.10 -proposed tracker (LP: #1999569)
+
+  * Soundwire support for the Intel RPL Gen platforms (LP: #1997944)
+    - ASoC: Intel: sof_sdw: Add support for SKU 0C10 product
+    - ASoC: Intel: soc-acpi: add SKU 0C10 SoundWire configuration
+    - ASoC: Intel: sof_sdw: Add support for SKU 0C40 product
+    - ASoC: Intel: soc-acpi: add SKU 0C40 SoundWire configuration
+    - ASoC: Intel: sof_sdw: Add support for SKU 0C4F product
+    - ASoC: rt1318: Add RT1318 SDCA vendor-specific driver
+    - ASoC: intel: sof_sdw: add rt1318 codec support.
+    - ASoC: Intel: sof_sdw: Add support for SKU 0C11 product
+    - ASoC: Intel: soc-acpi: add SKU 0C11 SoundWire configuration
+    - SAUCE: ASoC: Intel: soc-acpi: update codec addr on 0C11/0C4F product
+    - [Config] enable CONFIG_SND_SOC_RT1318_SDW
+
+  * Virtual GPU driver packaging regression (LP: #1996112)
+    - [Packaging] Reintroduce VM DRM drivers into modules
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Tue, 13 Dec 2022 22:14:08 +0100
+
+linux (6.1.0-9.9) lunar; urgency=medium
+
+  * Empty entry (ABI bump)
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Tue, 13 Dec 2022 21:31:08 +0100
+
+linux (6.1.0-3.3) lunar; urgency=medium
+
+  * lunar/linux: 6.1.0-3.3 -proposed tracker (LP: #1999534)
+
+  * [DEP-8] Run ADT regression suite for lowlatency kernels Jammy and later
+    (LP: #1999528)
+    - [DEP-8] Fix regression suite to run on lowlatency
+
+  * Miscellaneous Ubuntu changes
+    - [Packaging] annotations: do not add constraints on toolchain versions
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Tue, 13 Dec 2022 16:45:59 +0100
+
+linux (6.1.0-2.2) lunar; urgency=medium
+
+  * lunar/linux: 6.1.0-2.2 -proposed tracker (LP: #1999411)
+
+  * Miscellaneous Ubuntu changes
+    - [Packaging] annotations: do not enforce toolchain versions
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Mon, 12 Dec 2022 17:05:59 +0100
+
+linux (6.1.0-1.1) lunar; urgency=medium
+
+  * lunar/linux: 6.1.0-1.1 -proposed tracker (LP: #1999373)
+
+  * Packaging resync (LP: #1786013)
+    - [Packaging] update variants
+
+  * Miscellaneous Ubuntu changes
+    - [Packaging] annotations: set and delete configs from command line
+    - [Packaging] migrateconfigs: ignore README.rst if it doesn't exist
+    - [Packaging] migrate-annotations: properly determine arches in derivatives
+    - [Packaging] annotations: allow to set note to config options directly
+    - [Packaging] annotations: assume --query as default command
+    - [Packaging] annotations: allow to query using CONFIG_<option> or <option>
+    - [Packaging] annotations: support flavour inheritance
+    - [Packaging] annotations: properly merge configs with includes
+    - [Packaging] annotations: accept config options with or without CONFIG_
+      prefix
+    - [Packaging] annotations: clarify error message with --import
+    - [Packaging] annotations: properly support multiple levels of inclusion
+    - [Packaging] annotations: catch syntax errors in annotations
+    - [Packaging] kernelconfig: report arch and flavour in config-check log
+    - [Packaging] annotations: prevent generating .pyc files on import
+    - [Packaging] annotations: prevent python broken pipe errors
+    - [Packaging] annotations: allow to specify --write and --note at the same
+      time
+    - [Packaging] annotations: add an option to enable config autocompletion in
+      bash
+    - [Packaging] annotations: introduce --source
+    - [Packaging] annotations: add missing CONFIG_ prefix in main()
+    - [Packaging] Remove obsolete etc/kernelconfig
+    - [Packaging] Rewrite debian/scripts/abi-check in Python
+    - [Packaging] Simplify debian/scripts/module-check
+    - [Packaging] Clean up debian/scripts/module-check
+    - [Packaging] Move checker scripts to debian/scripts/checks
+    - [Packaging] mark phony targets
+    - [Packaging] Make the compiler for fix-filenames explicit
+    - [Packaging] add -rR MAKEFLAGS to clear implicit rules
+    - [Packaging] use dpkg-parsechangelog to get package name and series
+    - [Packaging] simplify revision/release
+    - [Packaging] simplify custom_override
+    - [Packaging] Remove meaningless code in install-arch-headers
+    - [Packaging] use olddefconfig in stamp-prepare-tree
+    - [Packaging] use parralel builds in more places
+    - [Packaging] install headers to debian/linux-libc-dev directly
+    - [Packaging] simplify abinum and uploadnum definitions
+    - [Packaging] Remove unused INSTALL_FW_PATH
+    - [Packaging] Merge install commands
+    - [Config] clean up deprecated notes in annotations
+    - [Packaging] automatically apply changes to annotations and drop
+      importconfigs
+    - [Packaging] kernelconfig: drop listnewconfigs
+    - [Packaging] annotations: do not hijack CONFIGS/* to update annotations
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Mon, 12 Dec 2022 10:05:03 +0100
+
+linux (6.1.0-0.0) lunar; urgency=medium
+
+  * Empty entry
+
+  [ Upstream Kernel Changes ]
+
+  * Rebase to v6.1
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Mon, 12 Dec 2022 09:42:01 +0100
+
+linux-unstable (6.1.0-9.9) lunar; urgency=medium
+
+  * lunar/linux-unstable: 6.1.0-9.9 -proposed tracker (LP: #1998078)
+
+  * Miscellaneous Ubuntu changes
+    - [Config] Set ARM64_ERRATUM_2077057=y
+    - SAUCE: add python cached bytecode to .gitignore
+    - [Packaging] config-check: ignore values that are not defined in annotations
+    - [Packaging] config-check: do not strictly enforce CONFIG_CC_VERSION_TEXT
+    - [Packaging] config-check: support annotations format 4
+    - [Packaging] introduce annotations script
+    - [Packaging] add a README.rst to document the new annotations schema
+    - [Packaging] kernelconfig: automatically generate configs from annotations
+    - [Packaging] drop deprecated script tristate.sh
+    - [Packaging] use annotations to generate initial configs check them
+    - [Packaging] simplify kernelconfig
+    - [Packaging] kernelconfig: always keep configs
+    - [Packaging] kernelconfig: provide listnewconfigs
+    - [Packaging] kernelconfig: introduce importconfigs
+    - [Packaging] snap: support new annotations with snapcraft
+    - [Packaging] final-checks: support new annotations
+    - [Packaging] introduce migrate-annotations
+    - [Packaging] re-introduce previous kernelconfig as old-kernelconfig
+    - [Packaging] provide migrateconfigs debian/rules target
+    - [Packaging] correctly propagate errors during updateconfigs
+    - [Packaging] annotations: report failed config checks in alphabetic order
+    - [Config] merge configs into annotations
+    - [Config] udpate annotations after rebase to v6.1-rc7
+
+  [ Upstream Kernel Changes ]
+
+  * Rebase to v6.1-rc7
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Mon, 28 Nov 2022 11:25:44 +0100
+
 linux-unstable (6.1.0-8.8) lunar; urgency=medium
 
   * lunar/linux-unstable: 6.1.0-8.8 -proposed tracker (LP: #1997357)
