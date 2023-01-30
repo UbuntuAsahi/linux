@@ -229,20 +229,23 @@ conc_level		= -j$(CONCURRENCY_LEVEL)
 
 PYTHON ?= $(firstword $(wildcard /usr/bin/python3) $(wildcard /usr/bin/python2) $(wildcard /usr/bin/python))
 
-HOSTCC ?= $(DEB_BUILD_GNU_TYPE)-$(gcc)
+RUSTC ?= $(shell echo `which rustc-1.62`)
+RUST_LIB_SRC ?= "/usr/src/rustc-1.62.1/library"
+
+# HOSTCC ?= $(DEB_BUILD_GNU_TYPE)-$(gcc)
+HOSTCC ?= $(gcc)
 
 # target_flavour is filled in for each step
 kmake = make ARCH=$(build_arch) \
 	CROSS_COMPILE=$(CROSS_COMPILE) \
 	HOSTCC=$(HOSTCC) \
-	CC=$(CROSS_COMPILE)$(gcc) \
+	CC=$(gcc) \
 	RUSTC=rustc-1.62 HOSTRUSTC=rustc-1.62 BINDGEN=bindgen-0.56 RUSTFMT=rustfmt-1.62 RUST_LIB_SRC=/usr/src/rustc-1.62.1/library \
 	KERNELVERSION=$(abi_release)-$(target_flavour) \
-	CONFIG_DEBUG_SECTION_MISMATCH=y \
 	KBUILD_BUILD_VERSION="$(uploadnum)" \
 	LOCALVERSION= localver-extra= \
 	CFLAGS_MODULE="-DPKG_ABI=$(abinum)" \
-	PYTHON=$(PYTHON)
+	PYTHON=$(PYTHON) RUSTC=$(RUSTC) RUST_LIB_SRC=$(RUST_LIB_SRC)
 ifneq ($(LOCAL_ENV_CC),)
 kmake += CC="$(LOCAL_ENV_CC)" DISTCC_HOSTS="$(LOCAL_ENV_DISTCC_HOSTS)"
 endif

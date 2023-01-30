@@ -70,7 +70,7 @@ for arch_flavour in ${FLAVOURS} ; do
 	esac
 
 	# Determine cross toolchain to use for Kconfig compiler tests
-	cross_compile="$(dpkg-architecture -qDEB_HOST_GNU_TYPE -a"${arch}" 2>/dev/null)-"
+	# cross_compile="$(dpkg-architecture -qDEB_HOST_GNU_TYPE -a"${arch}" 2>/dev/null)-"
 
 	# Arch-specific compiler, if any
 	arch_gcc=$(cat <<EOF | make -s -f - all
@@ -108,7 +108,9 @@ EOF
 	env=(ARCH="${kern_arch}"
 		 DEB_ARCH="${arch}"
 		 CROSS_COMPILE="${cross_compile}"
-		 CC="${gcc_path}")
+		 CC="${gcc_path}"
+	         RUSTC="$(which rustc-1.62)"
+	         RUST_LIB_SRC="/usr/src/rustc-1.62.1/library")
 
 	# Concurrency level
 	if [ -n "${conc_level:-}" ] ; then
@@ -122,6 +124,7 @@ EOF
 
 	# Move config for further processing
 	mv build/.config "${tmp_conf_file}"
+	cat build/.config
 done
 
 rc=0
