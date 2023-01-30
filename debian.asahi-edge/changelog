@@ -1,3 +1,9 @@
+linux-asahi-edge (6.2.0-1.1) kinetic; urgency=medium
+
+  * Upgrade to asahi-6.2-rc3
+
+ -- Tobias Heider <me@tobhe.de>  Sun, 29 Jan 2023 16:30:42 +0100
+
 linux-asahi-edge (6.1.1-7.3) kinetic; urgency=medium
 
   * Build dart as non-module

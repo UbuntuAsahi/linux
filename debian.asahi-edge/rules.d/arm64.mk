@@ -24,6 +24,6 @@ do_doc_package		= false
 do_source_package	= false
 do_extras_package	= true
 
-skipabi		= true
-skipmodule	= true
-skipretpoline	= true
+do_skip_checks	= true
+
+gcc = clang
