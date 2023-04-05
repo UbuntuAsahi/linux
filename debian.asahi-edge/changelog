@@ -1,4 +1,4 @@
-linux-asahi-edge (6.2.0-18.18) kinetic; urgency=medium
+linux-asahi-edge (6.2.0-18.20) kinetic; urgency=medium
 
   * Rebase onto asahi-6.2-11
   * Update Ubuntu patches to Ubuntu-6.2.0-18.18

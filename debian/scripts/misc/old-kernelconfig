@@ -83,7 +83,7 @@ for arch in $archs; do
 		modify_config=
 		warning_partial="$warning_partial $arch"
 	fi
-	env="$env RUSTC=$(which rustc-1.62) RUST_LIB_SRC=/usr/src/rustc-1.62.1/library"
+	env="$env RUSTC=$(which rustc) RUST_LIB_SRC=/usr/src/rustc-1.66.1/library"
 
 	archconfdir=$confdir/$arch
 	flavourconfigs=$(cd $archconfdir && ls config.flavour.*)

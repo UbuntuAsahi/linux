@@ -109,8 +109,8 @@ EOF
 		 DEB_ARCH="${arch}"
 		 CROSS_COMPILE="${cross_compile}"
 		 CC="${gcc_path}"
-	         RUSTC="$(which rustc-1.62)"
-	         RUST_LIB_SRC="/usr/src/rustc-1.62.1/library")
+	         RUSTC="$(which rustc)"
+	         RUST_LIB_SRC="/usr/src/rustc-1.66.1/library")
 
 	# Concurrency level
 	if [ -n "${conc_level:-}" ] ; then
