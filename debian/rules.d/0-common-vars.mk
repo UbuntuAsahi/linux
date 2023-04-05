@@ -229,8 +229,8 @@ conc_level		= -j$(CONCURRENCY_LEVEL)
 
 PYTHON ?= $(firstword $(wildcard /usr/bin/python3) $(wildcard /usr/bin/python2) $(wildcard /usr/bin/python))
 
-RUSTC ?= $(shell echo `which rustc-1.62`)
-RUST_LIB_SRC ?= "/usr/src/rustc-1.62.1/library"
+RUSTC ?= $(shell echo `which rustc`)
+RUST_LIB_SRC ?= "/usr/src/rustc-1.66.1/library"
 
 # HOSTCC ?= $(DEB_BUILD_GNU_TYPE)-$(gcc)
 HOSTCC ?= $(gcc)
@@ -240,7 +240,7 @@ kmake = make ARCH=$(build_arch) \
 	CROSS_COMPILE=$(CROSS_COMPILE) \
 	HOSTCC=$(HOSTCC) \
 	CC=$(gcc) \
-	RUSTC=rustc-1.62 HOSTRUSTC=rustc-1.62 BINDGEN=bindgen-0.56 RUSTFMT=rustfmt-1.62 RUST_LIB_SRC=/usr/src/rustc-1.62.1/library \
+	RUSTC=rustc HOSTRUSTC=rustc BINDGEN=bindgen RUSTFMT=rustfmt RUST_LIB_SRC=/usr/src/rustc-1.66.1/library \
 	KERNELVERSION=$(abi_release)-$(target_flavour) \
 	KBUILD_BUILD_VERSION="$(uploadnum)" \
 	LOCALVERSION= localver-extra= \
