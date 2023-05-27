@@ -76,6 +76,7 @@ pub mod rbtree;
 pub mod revocable;
 pub mod security;
 pub mod seq_file;
+pub mod siphash;
 pub mod sizes;
 mod static_assert;
 #[doc(hidden)]
