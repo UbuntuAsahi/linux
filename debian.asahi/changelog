@@ -1,16 +1,237 @@
-linux-asahi (6.2.0-19.19) kinetic; urgency=medium
+linux-asahi (6.3.0-7.7) kinetic; urgency=medium
 
-  * Make CONFIG_APPLE_RTKIT a module
+  * Update to asahi-6.3.7
 
- -- Tobias Heider <me@tobhe.de>  Tue, 28 Mar 2023 02:12:29 +0200
+ -- Tobias Heider <me@tobhe.de>  Mon, 12 Jun 2023 09:53:06 +0200
 
-linux-asahi (6.2.0-18.20) kinetic; urgency=medium
+linux-unstable (6.3.0-2.2) lunar; urgency=medium
 
-  * Merge asahi-6.2-11
-  * Rename to linux-asahi
-  * Sync config with asahi
+  * lunar/linux-unstable: 6.3.0-2.2 -proposed tracker (LP: #2017788)
 
- -- Tobias Heider <me@tobhe.de>  Sat, 25 Mar 2023 14:27:30 +0100
+  * Miscellaneous Ubuntu changes
+    - [Packaging] move python3-dev to build-depends
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Wed, 26 Apr 2023 21:52:12 +0200
+
+linux-unstable (6.3.0-1.1) lunar; urgency=medium
+
+  * lunar/linux-unstable: 6.3.0-1.1 -proposed tracker (LP: #2017776)
+
+  * RFC: virtio and virtio-scsi should be built in (LP: #1685291)
+    - [Config] Mark CONFIG_SCSI_VIRTIO built-in
+
+  * Debian autoreconstruct Fix restoration of execute permissions (LP: #2015498)
+    - [Debian] autoreconstruct - fix restoration of execute permissions
+
+  * [SRU][Jammy] CONFIG_PCI_MESON is not enabled (LP: #2007745)
+    - [Config] arm64: Enable PCI_MESON module
+
+  * vmd may fail to create sysfs entry while `pci_rescan_bus()` called in some
+    other drivers like wwan (LP: #2011389)
+    - SAUCE: PCI: vmd: guard device addition and removal
+
+  * Lunar update: v6.2.9 upstream stable release (LP: #2016877)
+    - [Config] ppc64: updateconfigs following v6.2.9 stable updates
+
+  * Lunar update: v6.2.8 upstream stable release (LP: #2016876)
+    - [Config] ppc64: updateconfigs following v6.2.8 stable updates
+
+  * Miscellaneous Ubuntu changes
+    - [Packaging] Move final-checks script to debian/scripts/checks
+    - [Packaging] checks/final-checks: Honor 'do_skip_checks'
+    - [Packaging] Drop wireguard DKMS
+    - [Packaging] Remove update-version-dkms
+    - [Packaging] debian/rules: Add DKMS info to 'printenv' output
+    - [Packaging] ignore KBUILD_VERBOSE in arch-has-odm-enabled.sh
+    - SAUCE: shiftfs: support linux 6.3
+    - [Packaging] move to v6.3 and rename to linux-unstable
+    - [Config] latency-related optimizations
+    - [Config] update annotations after rebase to v6.3
+    - [Packaging] temporarily disable dkms
+
+  [ Upstream Kernel Changes ]
+
+  * Rebase to v6.3
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Wed, 26 Apr 2023 14:53:52 +0200
+
+linux-unstable (6.3.0-0.0) lunar; urgency=medium
+
+  * Empty entry
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Tue, 25 Apr 2023 10:24:12 +0200
+
+linux (6.2.0-21.21) lunar; urgency=medium
+
+  * lunar/linux: 6.2.0-21.21 -proposed tracker (LP: #2016249)
+
+  * efivarfs:efivarfs.sh in ubuntu_kernel_selftests crash L-6.2 ARM64 node
+    dazzle (rcu_preempt detected stalls) (LP: #2015741)
+    - efi/libstub: smbios: Use length member instead of record struct size
+    - arm64: efi: Use SMBIOS processor version to key off Ampere quirk
+    - efi/libstub: smbios: Drop unused 'recsize' parameter
+
+  * Miscellaneous Ubuntu changes
+    - SAUCE: selftests/bpf: ignore pointer types check with clang
+    - SAUCE: selftests/bpf: avoid conflicting data types in profiler.inc.h
+    - [Packaging] get rid of unnecessary artifacts in linux-headers
+
+  * Miscellaneous upstream changes
+    - Revert "UBUNTU: SAUCE: Revert "efi: random: refresh non-volatile random seed
+      when RNG is initialized""
+    - Revert "UBUNTU: SAUCE: Revert "efi: random: fix NULL-deref when refreshing
+      seed""
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Fri, 14 Apr 2023 12:11:49 +0200
+
+linux (6.2.0-20.20) lunar; urgency=medium
+
+  * lunar/linux: 6.2.0-20.20 -proposed tracker (LP: #2015429)
+
+  * Packaging resync (LP: #1786013)
+    - debian/dkms-versions -- update from kernel-versions (main/master)
+
+  * FTBFS with different dkms or when makeflags are set (LP: #2015361)
+    - [Packaging] FTBFS with different dkms or when makeflags are set
+
+  * expoline.o is packaged unconditionally for s390x (LP: #2013209)
+    - [Packaging] Copy expoline.o only when produced by the build
+
+  * net:l2tp.sh failure with lunar:linux 6.2 (LP: #2013014)
+    - SAUCE: l2tp: generate correct module alias strings
+
+  * Miscellaneous Ubuntu changes
+    - [Packaging] annotations: prevent duplicate include lines
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Thu, 06 Apr 2023 08:33:14 +0200
+
+linux (6.2.0-19.19) lunar; urgency=medium
+
+  * lunar/linux: 6.2.0-19.19 -proposed tracker (LP: #2012488)
+
+  * Neuter signing tarballs (LP: #2012776)
+    - [Packaging] neuter the signing tarball
+
+  * LSM stacking and AppArmor refresh for 6.2 kernel (LP: #2012136)
+    - Revert "UBUNTU: [Config] define CONFIG_SECURITY_APPARMOR_RESTRICT_USERNS"
+    - Revert "UBUNTU: SAUCE: apparmor: add user namespace creation mediation"
+    - Revert "UBUNTU: SAUCE: apparmor: Add fine grained mediation of posix
+      mqueues"
+    - Revert "UBUNTU: SAUCE: Revert "apparmor: make __aa_path_perm() static""
+    - Revert "UBUNTU: SAUCE: LSM: Specify which LSM to display (using struct cred
+      as input)"
+    - Revert "UBUNTU: SAUCE: apparmor: Fix build error, make sk parameter const"
+    - Revert "UBUNTU: SAUCE: LSM: Use lsmblob in smk_netlbl_mls()"
+    - Revert "UBUNTU: SAUCE: LSM: change ima_read_file() to use lsmblob"
+    - Revert "UBUNTU: SAUCE: apparmor: rename kzfree() to kfree_sensitive()"
+    - Revert "UBUNTU: SAUCE: AppArmor: Remove the exclusive flag"
+    - Revert "UBUNTU: SAUCE: LSM: Add /proc attr entry for full LSM context"
+    - Revert "UBUNTU: SAUCE: Audit: Fix incorrect static inline function
+      declration."
+    - Revert "UBUNTU: SAUCE: Audit: Fix for missing NULL check"
+    - Revert "UBUNTU: SAUCE: Audit: Add a new record for multiple object LSM
+      attributes"
+    - Revert "UBUNTU: SAUCE: Audit: Add new record for multiple process LSM
+      attributes"
+    - Revert "UBUNTU: SAUCE: NET: Store LSM netlabel data in a lsmblob"
+    - Revert "UBUNTU: SAUCE: LSM: security_secid_to_secctx in netlink netfilter"
+    - Revert "UBUNTU: SAUCE: LSM: Use lsmcontext in security_inode_getsecctx"
+    - Revert "UBUNTU: SAUCE: LSM: Use lsmcontext in security_secid_to_secctx"
+    - Revert "UBUNTU: SAUCE: LSM: Ensure the correct LSM context releaser"
+    - Revert "UBUNTU: SAUCE: LSM: Specify which LSM to display"
+    - Revert "UBUNTU: SAUCE: IMA: Change internal interfaces to use lsmblobs"
+    - Revert "UBUNTU: SAUCE: LSM: Use lsmblob in security_cred_getsecid"
+    - Revert "UBUNTU: SAUCE: LSM: Use lsmblob in security_inode_getsecid"
+    - Revert "UBUNTU: SAUCE: LSM: Use lsmblob in security_task_getsecid"
+    - Revert "UBUNTU: SAUCE: LSM: Use lsmblob in security_ipc_getsecid"
+    - Revert "UBUNTU: SAUCE: LSM: Use lsmblob in security_secid_to_secctx"
+    - Revert "UBUNTU: SAUCE: LSM: Use lsmblob in security_secctx_to_secid"
+    - Revert "UBUNTU: SAUCE: net: Prepare UDS for security module stacking"
+    - Revert "UBUNTU: SAUCE: LSM: Use lsmblob in security_kernel_act_as"
+    - Revert "UBUNTU: SAUCE: LSM: Use lsmblob in security_audit_rule_match"
+    - Revert "UBUNTU: SAUCE: LSM: Create and manage the lsmblob data structure."
+    - Revert "UBUNTU: SAUCE: LSM: Infrastructure management of the sock security"
+    - Revert "UBUNTU: SAUCE: apparmor: LSM stacking: switch from SK_CTX() to
+      aa_sock()"
+    - Revert "UBUNTU: SAUCE: apparmor: rename aa_sock() to aa_unix_sk()"
+    - Revert "UBUNTU: SAUCE: apparmor: disable showing the mode as part of a secid
+      to secctx"
+    - Revert "UBUNTU: SAUCE: apparmor: fix use after free in sk_peer_label"
+    - Revert "UBUNTU: SAUCE: apparmor: af_unix mediation"
+    - Revert "UBUNTU: SAUCE: apparmor: patch to provide compatibility with v2.x
+      net rules"
+    - Revert "UBUNTU: SAUCE: apparmor: add/use fns to print hash string hex value"
+    - SAUCE: apparmor: rename SK_CTX() to aa_sock and make it an inline fn
+    - SAUCE: apparmor: Add sysctls for additional controls of unpriv userns
+      restrictions
+    - SAUCE: Stacking v38: LSM: Identify modules by more than name
+    - SAUCE: Stacking v38: LSM: Add an LSM identifier for external use
+    - SAUCE: Stacking v38: LSM: Identify the process attributes for each module
+    - SAUCE: Stacking v38: LSM: Maintain a table of LSM attribute data
+    - SAUCE: Stacking v38: proc: Use lsmids instead of lsm names for attrs
+    - SAUCE: Stacking v38: integrity: disassociate ima_filter_rule from
+      security_audit_rule
+    - SAUCE: Stacking v38: LSM: Infrastructure management of the sock security
+    - SAUCE: Stacking v38: LSM: Add the lsmblob data structure.
+    - SAUCE: Stacking v38: LSM: provide lsm name and id slot mappings
+    - SAUCE: Stacking v38: IMA: avoid label collisions with stacked LSMs
+    - SAUCE: Stacking v38: LSM: Use lsmblob in security_audit_rule_match
+    - SAUCE: Stacking v38: LSM: Use lsmblob in security_kernel_act_as
+    - SAUCE: Stacking v38: LSM: Use lsmblob in security_secctx_to_secid
+    - SAUCE: Stacking v38: LSM: Use lsmblob in security_secid_to_secctx
+    - SAUCE: Stacking v38: LSM: Use lsmblob in security_ipc_getsecid
+    - SAUCE: Stacking v38: LSM: Use lsmblob in security_current_getsecid
+    - SAUCE: Stacking v38: LSM: Use lsmblob in security_inode_getsecid
+    - SAUCE: Stacking v38: LSM: Use lsmblob in security_cred_getsecid
+    - SAUCE: Stacking v38: LSM: Specify which LSM to display
+    - SAUCE: Stacking v38: LSM: Ensure the correct LSM context releaser
+    - SAUCE: Stacking v38: LSM: Use lsmcontext in security_secid_to_secctx
+    - SAUCE: Stacking v38: LSM: Use lsmcontext in security_inode_getsecctx
+    - SAUCE: Stacking v38: Use lsmcontext in security_dentry_init_security
+    - SAUCE: Stacking v38: LSM: security_secid_to_secctx in netlink netfilter
+    - SAUCE: Stacking v38: NET: Store LSM netlabel data in a lsmblob
+    - SAUCE: Stacking v38: binder: Pass LSM identifier for confirmation
+    - SAUCE: Stacking v38: LSM: security_secid_to_secctx module selection
+    - SAUCE: Stacking v38: Audit: Keep multiple LSM data in audit_names
+    - SAUCE: Stacking v38: Audit: Create audit_stamp structure
+    - SAUCE: Stacking v38: LSM: Add a function to report multiple LSMs
+    - SAUCE: Stacking v38: Audit: Allow multiple records in an audit_buffer
+    - SAUCE: Stacking v38: Audit: Add record for multiple task security contexts
+    - SAUCE: Stacking v38: audit: multiple subject lsm values for netlabel
+    - SAUCE: Stacking v38: Audit: Add record for multiple object contexts
+    - SAUCE: Stacking v38: netlabel: Use a struct lsmblob in audit data
+    - SAUCE: Stacking v38: LSM: Removed scaffolding function lsmcontext_init
+    - SAUCE: Stacking v38: AppArmor: Remove the exclusive flag
+    - SAUCE: apparmor: combine common_audit_data and apparmor_audit_data
+    - SAUCE: apparmor: setup slab cache for audit data
+    - SAUCE: apparmor: rename audit_data->label to audit_data->subj_label
+    - SAUCE: apparmor: pass cred through to audit info.
+    - SAUCE: apparmor: Improve debug print infrastructure
+    - SAUCE: apparmor: add the ability for profiles to have a learning cache
+    - SAUCE: apparmor: enable userspace upcall for mediation
+    - SAUCE: apparmor: cache buffers on percpu list if there is lock contention
+    - SAUCE: apparmor: fix policy_compat permission remap with extended
+      permissions
+    - SAUCE: apparmor: advertise availability of exended perms
+    - [Config] define CONFIG_SECURITY_APPARMOR_RESTRICT_USERNS
+
+  * kinetic: apply new apparmor and LSM stacking patch set (LP: #1989983) // LSM
+    stacking and AppArmor refresh for 6.2 kernel (LP: #2012136)
+    - SAUCE: apparmor: add/use fns to print hash string hex value
+    - SAUCE: apparmor: patch to provide compatibility with v2.x net rules
+    - SAUCE: apparmor: add user namespace creation mediation
+    - SAUCE: apparmor: af_unix mediation
+    - SAUCE: apparmor: Add fine grained mediation of posix mqueues
+
+  * devlink_port_split from ubuntu_kernel_selftests.net fails on hirsute
+    (KeyError: 'flavour') (LP: #1937133)
+    - selftests: net: devlink_port_split.py: skip test if no suitable device
+      available
+
+  * NFS deathlock with last Kernel 5.4.0-144.161 and 5.15.0-67.74 (LP: #2009325)
+    - NFS: Correct timing for assigning access cache timestamp
+
+ -- Andrea Righi <andrea.righi@canonical.com>  Sat, 25 Mar 2023 07:37:30 +0100
 
 linux (6.2.0-18.18) lunar; urgency=medium
 
