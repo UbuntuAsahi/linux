@@ -1,3 +1,9 @@
+linux-asahi-edge (6.3.0-7.8) jammy; urgency=medium
+
+  * Fix tg3 firmware bug in initrd
+
+ -- Tobias Heider <me@tobhe.de>  Tue, 27 Jun 2023 23:46:22 +0200
+
 linux-asahi-edge (6.3.0-7.7) kinetic; urgency=medium
 
   * Update to asahi-6.3.7
