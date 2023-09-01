@@ -1,5 +1,5 @@
 Name:    linux-apple-arm
-Version: 6.4.0
+Version: 6.5.0
 Series:  23.10 (mantic)
 Description:
     This is the source code for the Ubuntu linux kernel for the 23.10 series. This
