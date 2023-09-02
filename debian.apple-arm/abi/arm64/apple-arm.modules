@@ -187,8 +187,6 @@ adjd_s311
 adl_pci6208
 adl_pci7x3x
 adl_pci8164
-adl_pci9111
-adl_pci9118
 adm1025
 adm1026
 adm1029
@@ -207,7 +205,6 @@ adp5061
 adp5520-keys
 adp5588-keys
 adp5589-keys
-adq12b
 adrf6780
 ads7828
 ads7846
@@ -234,12 +231,10 @@ adv7393
 adv748x
 adv7604
 adv7842
-adv_pci1710
 adv_pci1720
 adv_pci1723
 adv_pci1724
 adv_pci1760
-adv_pci_dio
 advansys
 adxl313_core
 adxl313_i2c
@@ -284,8 +279,6 @@ aht10
 aic79xx
 aic7xxx
 aic94xx
-aio_aio12_8
-aio_iiro_16
 aiptek
 aircable
 airspy
@@ -325,14 +318,7 @@ amd-xgbe
 amd5536udc_pci
 amd8111e
 amlogic-gxl-crypto
-amplc_dio200
-amplc_dio200_common
-amplc_dio200_pci
-amplc_pc236
 amplc_pc236_common
-amplc_pc263
-amplc_pci224
-amplc_pci230
 amplc_pci236
 amplc_pci263
 ams-iaq-core
@@ -632,7 +618,6 @@ btusb
 bu21013_ts
 bu21029_ts
 c67x00
-c6xdigio
 c_can
 c_can_pci
 c_can_platform
@@ -667,10 +652,8 @@ catc
 cavium_ptp
 cb710
 cb710-mmc
-cb_pcidas
 cb_pcidas64
 cb_pcidda
-cb_pcimdas
 cb_pcimdda
 cc10001_adc
 cc2520
@@ -749,7 +732,6 @@ clk-max9485
 clk-palmas
 clk-pwm
 clk-renesas-pcie
-clk-rk808
 clk-s2mps11
 clk-scmi
 clk-si514
@@ -791,7 +773,6 @@ com20020-pci
 com90io
 com90xx
 comedi
-comedi_8254
 comedi_8255
 comedi_bond
 comedi_example_test
@@ -950,16 +931,7 @@ da9150-fg
 da9150-gpadc
 da9210-regulator
 da9211-regulator
-dac02
 daqboard2000
-das08
-das08_isa
-das08_pci
-das16
-das16m1
-das1800
-das6402
-das800
 davicom
 dax_pmem
 dc395x
@@ -1048,7 +1020,6 @@ dmc520_edac
 dme1737
 dmfe
 dmi-sysfs
-dmm32at
 dmx3191d
 dnet
 dp83640
@@ -1091,12 +1062,6 @@ dsa_core
 dsbr100
 dst
 dst_ca
-dt2801
-dt2811
-dt2814
-dt2815
-dt2817
-dt282x
 dt3000
 dt3155
 dt9812
@@ -1330,7 +1295,6 @@ firewire-net
 firewire-ohci
 firewire-sbp2
 fixed
-fl512
 flexcan
 fm10k
 fm801-gp
@@ -1936,7 +1900,6 @@ igbvf
 igc
 igorplugusb
 iguanair
-ii_pci20kc
 iio-mux
 iio-rescale
 iio-trig-hrtimer
@@ -2685,7 +2648,6 @@ mdio-mux-multiplexer
 mdio-mvusb
 mdio-octeon
 mdio-thunder
-me4000
 me_daq
 mediatek-ge
 megaraid
@@ -2721,7 +2683,6 @@ minix
 mip6
 mipi-i3c-hci
 mite
-mk712
 mkiss
 ml86v7667
 mlx4_core
@@ -2783,7 +2744,6 @@ mp5023
 mp5416
 mp8859
 mp886x
-mpc624
 mpi3mr
 mpl115
 mpl115_i2c
@@ -2891,7 +2851,6 @@ mtk-sd
 mtk_t7xx
 mtouch
 multipath
-multiq3
 musb_hdrc
 mux-adg792a
 mux-adgs1408
@@ -3079,13 +3038,6 @@ ni_6527
 ni_65xx
 ni_660x
 ni_670x
-ni_at_a2150
-ni_at_ao
-ni_atmio
-ni_atmio16d
-ni_labpc
-ni_labpc_common
-ni_labpc_pci
 ni_pcidio
 ni_pcimio
 ni_routes_test
@@ -3336,21 +3288,8 @@ pci-stub
 pci200syn
 pcie-apple
 pcips2
-pcl711
-pcl724
-pcl726
-pcl730
-pcl812
-pcl816
-pcl818
-pcm3724
-pcmad
-pcmda12
-pcmmio
-pcmuio
 pcnet32
 pcrypt
-pcs-altera-tse
 pcs_xpcs
 pcwd_pci
 pcwd_usb
@@ -3401,7 +3340,6 @@ pinctrl-max77620
 pinctrl-mcp23s08
 pinctrl-mcp23s08_i2c
 pinctrl-mcp23s08_spi
-pinctrl-rk805
 pinctrl-stmfx
 ping
 pistachio-internal-dac
@@ -3771,9 +3709,6 @@ rfd77402
 rfd_ftl
 rfkill-gpio
 rj54n1cb0c
-rk805-pwrkey
-rk808
-rk808-regulator
 rm3100-core
 rm3100-i2c
 rm3100-spi
@@ -3919,7 +3854,6 @@ rtc-r7301
 rtc-r9701
 rtc-rc5t583
 rtc-rc5t619
-rtc-rk808
 rtc-rp5c01
 rtc-rs5c348
 rtc-rs5c372
@@ -3943,9 +3877,6 @@ rtc-wm831x
 rtc-wm8350
 rtc-x1205
 rtc-zynqmp
-rtd520
-rti800
-rti802
 rtl2830
 rtl2832
 rtl2832_sdr
@@ -4015,7 +3946,6 @@ s2mps11
 s3fwrn5
 s3fwrn5_i2c
 s3fwrn82_uart
-s526
 s5c73m3
 s5h1409
 s5h1411
@@ -4510,7 +4440,6 @@ snd-soc-pcm512x
 snd-soc-pcm512x-i2c
 snd-soc-pcm512x-spi
 snd-soc-rk3328
-snd-soc-rk817
 snd-soc-rl6231
 snd-soc-rt1308-sdw
 snd-soc-rt1316-sdw
