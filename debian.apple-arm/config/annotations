@@ -159,9 +159,6 @@ CONFIG_ACPI_VIOT                                policy<{'arm64': '-'}>
 CONFIG_ACPI_WATCHDOG                            policy<{'arm64': '-'}>
 CONFIG_AD4130                                   policy<{'arm64': 'n'}>
 CONFIG_AD74115                                  policy<{'arm64': 'n'}>
-CONFIG_ADE7854                                  policy<{'arm64': '-'}>
-CONFIG_ADE7854_I2C                              policy<{'arm64': '-'}>
-CONFIG_ADE7854_SPI                              policy<{'arm64': '-'}>
 CONFIG_ADF4377                                  policy<{'arm64': 'n'}>
 CONFIG_ADIN1110                                 policy<{'arm64': 'n'}>
 CONFIG_AFS_DEBUG                                policy<{'arm64': '-'}>
@@ -186,6 +183,7 @@ CONFIG_AIRO                                     policy<{'arm64': 'n'}>
 CONFIG_ALIBABA_UNCORE_DRW_PMU                   policy<{'arm64': '-'}>
 CONFIG_ALTERA_MBOX                              policy<{'arm64': '-'}>
 CONFIG_AMLOGIC_THERMAL                          policy<{'arm64': '-'}>
+CONFIG_AMPERE_ERRATUM_AC03_CPU_38               policy<{'arm64': 'n'}>
 CONFIG_ANDROID_BINDERFS                         policy<{'arm64': '-'}>
 CONFIG_ANDROID_BINDER_DEVICES                   policy<{'arm64': '-'}>
 CONFIG_ANDROID_BINDER_IPC                       policy<{'arm64': 'n'}>
@@ -273,7 +271,6 @@ CONFIG_ARM64_16K_PAGES                          policy<{'arm64': 'y'}>
 CONFIG_ARM64_4K_PAGES                           policy<{'arm64': 'n'}>
 CONFIG_ARM64_ACPI_PARKING_PROTOCOL              policy<{'arm64': '-'}>
 CONFIG_ARM64_ACTLR_STATE                        policy<{'arm64': 'y'}>
-CONFIG_ARM64_BTI_KERNEL                         policy<{'arm64': '-'}>
 CONFIG_ARM64_CONT_PMD_SHIFT                     policy<{'arm64': '5'}>
 CONFIG_ARM64_CONT_PTE_SHIFT                     policy<{'arm64': '7'}>
 CONFIG_ARM64_ERRATUM_2077057                    policy<{'arm64': 'n'}>
@@ -295,7 +292,6 @@ CONFIG_ARM_ALLWINNER_SUN50I_CPUFREQ_NVMEM       policy<{'arm64': '-'}>
 CONFIG_ARM_APPLE_CPUIDLE                        policy<{'arm64': 'y'}>
 CONFIG_ARM_ARMADA_37XX_CPUFREQ                  policy<{'arm64': '-'}>
 CONFIG_ARM_ARMADA_8K_CPUFREQ                    policy<{'arm64': '-'}>
-CONFIG_ARM_CORESIGHT_PMU_ARCH_SYSTEM_PMU        policy<{'arm64': 'n'}>
 CONFIG_ARM_DMC620_PMU                           policy<{'arm64': '-'}>
 CONFIG_ARM_FFA_SMCCC                            policy<{'arm64': '-'}>
 CONFIG_ARM_FFA_TRANSPORT                        policy<{'arm64': 'n'}>
@@ -343,7 +339,6 @@ CONFIG_ARM_TI_CPUFREQ                           policy<{'arm64': '-'}>
 CONFIG_ASM_MODVERSIONS                          policy<{'arm64': '-'}>
 CONFIG_ASYNC_TX_DISABLE_PQ_VAL_DMA              policy<{'arm64': '-'}>
 CONFIG_ASYNC_TX_DISABLE_XOR_VAL_DMA             policy<{'arm64': '-'}>
-CONFIG_AS_IS_LLVM                               policy<{'arm64': '-'}>
 CONFIG_AS_VERSION                               policy<{'arm64': '24090'}>
 CONFIG_ATA_ACPI                                 policy<{'arm64': '-'}>
 CONFIG_ATH10K_SNOC                              policy<{'arm64': '-'}>
@@ -390,8 +385,6 @@ CONFIG_BERLIN2_ADC                              policy<{'arm64': '-'}>
 CONFIG_BINDGEN_VERSION_TEXT                     policy<{'arm64': '"bindgen 0.56.0"'}>
 CONFIG_BLKDEV_UBLK_LEGACY_OPCODES               policy<{'arm64': '-'}>
 CONFIG_BLK_DEV_UBLK                             policy<{'arm64': 'n'}>
-CONFIG_BLK_MQ_RDMA                              policy<{'arm64': '-'}>
-CONFIG_BOOTPARAM_HARDLOCKUP_PANIC               policy<{'arm64': '-'}>
 CONFIG_BOSCH_BNO055                             policy<{'arm64': '-'}>
 CONFIG_BOSCH_BNO055_I2C                         policy<{'arm64': 'n'}>
 CONFIG_BOSCH_BNO055_SERIAL                      policy<{'arm64': 'n'}>
@@ -406,9 +399,7 @@ CONFIG_CAN_RCAR_CANFD                           policy<{'arm64': '-'}>
 CONFIG_CARDBUS                                  policy<{'arm64': '-'}>
 CONFIG_CARMINE_DRAM_CUSTOM                      policy<{'arm64': '-'}>
 CONFIG_CAVIUM_CPT                               policy<{'arm64': '-'}>
-CONFIG_CC_HAS_AUTO_VAR_INIT_ZERO_ENABLER        policy<{'arm64': '-'}>
 CONFIG_CC_HAS_UBSAN_BOUNDS_STRICT               policy<{'arm64': '-'}>
-CONFIG_CC_IS_CLANG                              policy<{'arm64': '-'}>
 CONFIG_CDROM_PKTCDVD                            policy<{'arm64': 'm'}>
 CONFIG_CDROM_PKTCDVD_BUFFERS                    policy<{'arm64': '8'}>
 CONFIG_CDROM_PKTCDVD_WCACHE                     policy<{'arm64': 'n'}>
@@ -432,7 +423,6 @@ CONFIG_CHARGER_SURFACE                          policy<{'arm64': '-'}>
 CONFIG_CHROMEOS_ACPI                            policy<{'arm64': '-'}>
 CONFIG_CHROMEOS_PRIVACY_SCREEN                  policy<{'arm64': '-'}>
 CONFIG_CHROMEOS_TBMC                            policy<{'arm64': '-'}>
-CONFIG_CLANG_SUPPORTS_DYNAMIC_FTRACE_WITH_ARGS  policy<{'arm64': '-'}>
 CONFIG_CLKSRC_MMIO                              policy<{'arm64': '-'}>
 CONFIG_CLKSRC_STM32_LP                          policy<{'arm64': '-'}>
 CONFIG_CLK_ACTIONS                              policy<{'arm64': '-'}>
@@ -815,6 +805,7 @@ CONFIG_CRYPTO_SM4_ARM64_CE_CCM                  policy<{'arm64': 'n'}>
 CONFIG_CRYPTO_SM4_ARM64_CE_GCM                  policy<{'arm64': 'n'}>
 CONFIG_CRYPTO_XCTR                              policy<{'arm64': '-'}>
 CONFIG_CXL_ACPI                                 policy<{'arm64': '-'}>
+CONFIG_CXL_PMU                                  policy<{'arm64': 'n'}>
 CONFIG_DA_MON_EVENTS                            policy<{'arm64': '-'}>
 CONFIG_DA_MON_EVENTS_ID                         policy<{'arm64': '-'}>
 CONFIG_DEBUG_INFO_BTF_MODULES                   policy<{'arm64': '-'}>
@@ -822,7 +813,6 @@ CONFIG_DEBUG_KERNEL_DC                          policy<{'arm64': '-'}>
 CONFIG_DEVFREQ_EVENT_ROCKCHIP_DFI               policy<{'arm64': '-'}>
 CONFIG_DEV_DAX_HMEM                             policy<{'arm64': '-'}>
 CONFIG_DEV_DAX_HMEM_DEVICES                     policy<{'arm64': '-'}>
-CONFIG_DLM_DEPRECATED_API                       policy<{'arm64': '-'}>
 CONFIG_DMABUF_MOVE_NOTIFY                       policy<{'arm64': 'n'}>
 CONFIG_DMA_ACPI                                 policy<{'arm64': '-'}>
 CONFIG_DMA_SUN6I                                policy<{'arm64': '-'}>
@@ -1091,6 +1081,7 @@ CONFIG_DRM_TTM                                  policy<{'arm64': 'y'}>
 CONFIG_DRM_TTM_HELPER                           policy<{'arm64': 'y'}>
 CONFIG_DRM_UDL                                  policy<{'arm64': 'n'}>
 CONFIG_DRM_VGEM                                 policy<{'arm64': 'n'}>
+CONFIG_DRM_VIRTIO_GPU_KMS                       policy<{'arm64': 'n'}>
 CONFIG_DRM_VKMS                                 policy<{'arm64': 'n'}>
 CONFIG_DRM_VMWGFX                               policy<{'arm64': 'n'}>
 CONFIG_DRM_VRAM_HELPER                          policy<{'arm64': 'y'}>
@@ -1162,7 +1153,6 @@ CONFIG_FB_CFB_COPYAREA                          policy<{'arm64': 'm'}>
 CONFIG_FB_CFB_FILLRECT                          policy<{'arm64': 'm'}>
 CONFIG_FB_CFB_IMAGEBLIT                         policy<{'arm64': 'm'}>
 CONFIG_FB_CIRRUS                                policy<{'arm64': 'n'}>
-CONFIG_FB_CMDLINE                               policy<{'arm64': '-'}>
 CONFIG_FB_CYBER2000                             policy<{'arm64': 'n'}>
 CONFIG_FB_CYBER2000_DDC                         policy<{'arm64': '-'}>
 CONFIG_FB_DDC                                   policy<{'arm64': '-'}>
@@ -1293,6 +1283,7 @@ CONFIG_FUJITSU_ES                               policy<{'arm64': '-'}>
 CONFIG_FUNCTION_GRAPH_RETVAL                    policy<{'arm64': 'n'}>
 CONFIG_FW_CFG_SYSFS                             policy<{'arm64': 'n'}>
 CONFIG_FW_CFG_SYSFS_CMDLINE                     policy<{'arm64': '-'}>
+CONFIG_FW_LOADER_DEBUG                          policy<{'arm64': 'n'}>
 CONFIG_GPIO_ACPI                                policy<{'arm64': '-'}>
 CONFIG_GPIO_ALTERA_A10SR                        policy<{'arm64': '-'}>
 CONFIG_GPIO_AMDPT                               policy<{'arm64': '-'}>
@@ -1326,12 +1317,6 @@ CONFIG_GPIO_XLP                                 policy<{'arm64': '-'}>
 CONFIG_GPIO_ZYNQ                                policy<{'arm64': '-'}>
 CONFIG_GPIO_ZYNQMP_MODEPIN                      policy<{'arm64': '-'}>
 CONFIG_GP_PCI1XXXX                              policy<{'arm64': 'n'}>
-CONFIG_HARDLOCKUP_DETECTOR                      policy<{'arm64': 'n'}>
-CONFIG_HARDLOCKUP_DETECTOR_ARCH                 policy<{'arm64': '-'}>
-CONFIG_HARDLOCKUP_DETECTOR_BUDDY                policy<{'arm64': '-'}>
-CONFIG_HARDLOCKUP_DETECTOR_COUNTS_HRTIMER       policy<{'arm64': '-'}>
-CONFIG_HARDLOCKUP_DETECTOR_PERF                 policy<{'arm64': '-'}>
-CONFIG_HARDLOCKUP_DETECTOR_PREFER_BUDDY         policy<{'arm64': '-'}>
 CONFIG_HAVE_ACPI_APEI                           policy<{'arm64': '-'}>
 CONFIG_HAVE_ARCH_KASAN                          policy<{'arm64': '-'}>
 CONFIG_HAVE_ARCH_KASAN_HW_TAGS                  policy<{'arm64': '-'}>
@@ -1540,7 +1525,6 @@ CONFIG_IR_MTK                                   policy<{'arm64': '-'}>
 CONFIG_IR_NUVOTON                               policy<{'arm64': '-'}>
 CONFIG_IR_SUNXI                                 policy<{'arm64': '-'}>
 CONFIG_ISCSI_IBFT                               policy<{'arm64': '-'}>
-CONFIG_IXGB                                     policy<{'arm64': '-'}>
 CONFIG_JOYSTICK_DB9                             policy<{'arm64': '-'}>
 CONFIG_JOYSTICK_GAMECON                         policy<{'arm64': '-'}>
 CONFIG_JOYSTICK_TURBOGRAFX                      policy<{'arm64': '-'}>
@@ -1563,6 +1547,7 @@ CONFIG_KPSS_XCC                                 policy<{'arm64': '-'}>
 CONFIG_KS0108                                   policy<{'arm64': '-'}>
 CONFIG_KS0108_DELAY                             policy<{'arm64': '-'}>
 CONFIG_KS0108_PORT                              policy<{'arm64': '-'}>
+CONFIG_LAN966X_DCB                              policy<{'arm64': 'n'}>
 CONFIG_LD_VERSION                               policy<{'arm64': '24090'}>
 CONFIG_LEDS_AW200XX                             policy<{'arm64': 'n'}>
 CONFIG_LEDS_BD2606MVV                           policy<{'arm64': 'n'}>
@@ -1570,7 +1555,6 @@ CONFIG_LEDS_MT6370_FLASH                        policy<{'arm64': '-'}>
 CONFIG_LEDS_MT6370_RGB                          policy<{'arm64': '-'}>
 CONFIG_LEDS_QCOM_FLASH                          policy<{'arm64': '-'}>
 CONFIG_LEDS_SC27XX_BLTC                         policy<{'arm64': '-'}>
-CONFIG_LEDS_TRIGGER_GPIO                        policy<{'arm64': '-'}>
 CONFIG_LIBWX                                    policy<{'arm64': '-'}>
 CONFIG_LOAD_UEFI_KEYS                           policy<{'arm64': '-'}>
 CONFIG_LOCK_DOWN_IN_SECURE_BOOT                 policy<{'arm64': 'n'}>
@@ -1627,6 +1611,7 @@ CONFIG_MFD_INTEL_M10_BMC_PMCI                   policy<{'arm64': 'n'}>
 CONFIG_MFD_INTEL_M10_BMC_SPI                    policy<{'arm64': 'n'}>
 CONFIG_MFD_KHADAS_MCU                           policy<{'arm64': '-'}>
 CONFIG_MFD_MAX5970                              policy<{'arm64': 'n'}>
+CONFIG_MFD_MAX597X                              policy<{'arm64': '-'}>
 CONFIG_MFD_MAX77541                             policy<{'arm64': 'n'}>
 CONFIG_MFD_MT6370                               policy<{'arm64': 'n'}>
 CONFIG_MFD_NVEC                                 policy<{'arm64': '-'}>
@@ -1764,6 +1749,8 @@ CONFIG_NCN26000_PHY                             policy<{'arm64': 'n'}>
 CONFIG_NET_DSA_MICROCHIP_KSZ_PTP                policy<{'arm64': 'n'}>
 CONFIG_NET_DSA_MICROCHIP_KSZ_SPI                policy<{'arm64': 'n'}>
 CONFIG_NET_DSA_MSCC_OCELOT_EXT                  policy<{'arm64': 'n'}>
+CONFIG_NET_DSA_MT7530_MDIO                      policy<{'arm64': 'n'}>
+CONFIG_NET_DSA_MT7530_MMIO                      policy<{'arm64': 'n'}>
 CONFIG_NET_DSA_QCA8K_LEDS_SUPPORT               policy<{'arm64': 'n'}>
 CONFIG_NET_DSA_TAG_RZN1_A5PSW                   policy<{'arm64': 'n'}>
 CONFIG_NET_SB1000                               policy<{'arm64': '-'}>
@@ -1901,6 +1888,7 @@ CONFIG_PCMCIA                                   policy<{'arm64': '-'}>
 CONFIG_PCMCIA_XIRCOM                            policy<{'arm64': '-'}>
 CONFIG_PCS_ALTERA_TSE                           policy<{'arm64': '-'}>
 CONFIG_PCS_LYNX                                 policy<{'arm64': 'm'}>
+CONFIG_PCS_MTK_LYNXI                            policy<{'arm64': '-'}>
 CONFIG_PDS_CORE                                 policy<{'arm64': 'n'}>
 CONFIG_PDS_VDPA                                 policy<{'arm64': '-'}>
 CONFIG_PHYLINK                                  policy<{'arm64': 'm'}>
@@ -2174,8 +2162,6 @@ CONFIG_POWER_RESET_SC27XX                       policy<{'arm64': '-'}>
 CONFIG_PPDEV                                    policy<{'arm64': '-'}>
 CONFIG_PPS_CLIENT_PARPORT                       policy<{'arm64': '-'}>
 CONFIG_PRINTER                                  policy<{'arm64': '-'}>
-CONFIG_PRINTK_SAFE_LOG_BUF_SHIFT                policy<{'arm64': '-'}>
-CONFIG_PRINT_QUOTA_WARNING                      policy<{'arm64': '-'}>
 CONFIG_PROBE_EVENTS_BTF_ARGS                    policy<{'arm64': '-'}>
 CONFIG_PRU_REMOTEPROC                           policy<{'arm64': '-'}>
 CONFIG_PSE_CONTROLLER                           policy<{'arm64': 'n'}>
@@ -2374,6 +2360,7 @@ CONFIG_ROCKCHIP_CDN_DP                          policy<{'arm64': '-'}>
 CONFIG_ROCKCHIP_DTPM                            policy<{'arm64': '-'}>
 CONFIG_ROCKCHIP_DW_HDMI                         policy<{'arm64': '-'}>
 CONFIG_ROCKCHIP_DW_MIPI_DSI                     policy<{'arm64': '-'}>
+CONFIG_ROCKCHIP_ERRATUM_3588001                 policy<{'arm64': 'n'}>
 CONFIG_ROCKCHIP_GRF                             policy<{'arm64': '-'}>
 CONFIG_ROCKCHIP_INNO_HDMI                       policy<{'arm64': '-'}>
 CONFIG_ROCKCHIP_IODOMAIN                        policy<{'arm64': '-'}>
@@ -2508,8 +2495,6 @@ CONFIG_SDM_LPASSCC_845                          policy<{'arm64': '-'}>
 CONFIG_SDM_MMCC_660                             policy<{'arm64': '-'}>
 CONFIG_SDM_VIDEOCC_845                          policy<{'arm64': '-'}>
 CONFIG_SDX_GCC_75                               policy<{'arm64': '-'}>
-CONFIG_SECURITY_SELINUX_CHECKREQPROT_VALUE      policy<{'arm64': '-'}>
-CONFIG_SECURITY_SELINUX_DISABLE                 policy<{'arm64': '-'}>
 CONFIG_SENSORS_ACBEL_FSG032                     policy<{'arm64': 'n'}>
 CONFIG_SENSORS_ACPI_POWER                       policy<{'arm64': '-'}>
 CONFIG_SENSORS_ARM_SCPI                         policy<{'arm64': '-'}>
@@ -2552,7 +2537,6 @@ CONFIG_SERIAL_OWL                               policy<{'arm64': '-'}>
 CONFIG_SERIAL_OWL_CONSOLE                       policy<{'arm64': '-'}>
 CONFIG_SERIAL_QCOM_GENI                         policy<{'arm64': '-'}>
 CONFIG_SERIAL_QCOM_GENI_CONSOLE                 policy<{'arm64': '-'}>
-CONFIG_SERIAL_SAMSUNG_UARTS_4                   policy<{'arm64': '-'}>
 CONFIG_SERIAL_SH_SCI_DMA                        policy<{'arm64': '-'}>
 CONFIG_SERIAL_SH_SCI_NR_UARTS                   policy<{'arm64': '-'}>
 CONFIG_SERIAL_STM32                             policy<{'arm64': '-'}>
@@ -2571,8 +2555,6 @@ CONFIG_SL28CPLD_WATCHDOG                        policy<{'arm64': '-'}>
 CONFIG_SLAB                                     policy<{'arm64': '-'}>
 CONFIG_SLIC_DS26522                             policy<{'arm64': '-'}>
 CONFIG_SLIM_QCOM_NGD_CTRL                       policy<{'arm64': '-'}>
-CONFIG_SLOB_DEPRECATED                          policy<{'arm64': '-'}>
-CONFIG_SMBFS_COMMON                             policy<{'arm64': '-'}>
 CONFIG_SMPRO_ERRMON                             policy<{'arm64': '-'}>
 CONFIG_SMPRO_MISC                               policy<{'arm64': '-'}>
 CONFIG_SM_CAMCC_6350                            policy<{'arm64': '-'}>
@@ -2937,7 +2919,6 @@ CONFIG_SQUASHFS_COMPILE_DECOMP_MULTI_PERCPU     policy<{'arm64': 'n'}>
 CONFIG_SQUASHFS_COMPILE_DECOMP_SINGLE           policy<{'arm64': 'y'}>
 CONFIG_SQUASHFS_DECOMP_MULTI                    policy<{'arm64': '-'}>
 CONFIG_SQUASHFS_MOUNT_DECOMP_THREADS            policy<{'arm64': '-'}>
-CONFIG_SRCU                                     policy<{'arm64': '-'}>
 CONFIG_SSIF_IPMI_BMC                            policy<{'arm64': 'n'}>
 CONFIG_STEAM_FF                                 policy<{'arm64': 'n'}>
 CONFIG_STM32_ADC                                policy<{'arm64': '-'}>
@@ -3021,7 +3002,6 @@ CONFIG_SYSC_RCAR                                policy<{'arm64': '-'}>
 CONFIG_SYSC_RCAR_GEN4                           policy<{'arm64': '-'}>
 CONFIG_SYSFB                                    policy<{'arm64': '-'}>
 CONFIG_SYSFB_SIMPLEFB                           policy<{'arm64': 'n'}>
-CONFIG_SYSFS_DEPRECATED                         policy<{'arm64': '-'}>
 CONFIG_SYS_SUPPORTS_SH_CMT                      policy<{'arm64': '-'}>
 CONFIG_SYS_SUPPORTS_SH_TMU                      policy<{'arm64': '-'}>
 CONFIG_TCG_CRB                                  policy<{'arm64': '-'}>
@@ -3092,7 +3072,7 @@ CONFIG_TI_SCI_PM_DOMAINS                        policy<{'arm64': '-'}>
 CONFIG_TI_SCI_PROTOCOL                          policy<{'arm64': '-'}>
 CONFIG_TI_SYSCON_CLK                            policy<{'arm64': '-'}>
 CONFIG_TI_TMAG5273                              policy<{'arm64': 'n'}>
-CONFIG_TOUCHSCREEN_APPLE_Z2                     policy<{'arm64': 'y'}>
+CONFIG_TOUCHSCREEN_APPLE_Z2                     policy<{'arm64': 'n'}>
 CONFIG_TOUCHSCREEN_CHIPONE_ICN8505              policy<{'arm64': '-'}>
 CONFIG_TOUCHSCREEN_CYTTSP5                      policy<{'arm64': 'n'}>
 CONFIG_TOUCHSCREEN_HIMAX_HX83112B               policy<{'arm64': 'n'}>
@@ -3144,7 +3124,6 @@ CONFIG_USB_EHCI_HCD_NPCM7XX                     policy<{'arm64': '-'}>
 CONFIG_USB_EHCI_HCD_ORION                       policy<{'arm64': '-'}>
 CONFIG_USB_EHCI_TEGRA                           policy<{'arm64': '-'}>
 CONFIG_USB_EMXX                                 policy<{'arm64': '-'}>
-CONFIG_USB_FTDI_ELAN                            policy<{'arm64': '-'}>
 CONFIG_USB_MTU3                                 policy<{'arm64': '-'}>
 CONFIG_USB_MTU3_DEBUG                           policy<{'arm64': '-'}>
 CONFIG_USB_MTU3_DUAL_ROLE                       policy<{'arm64': '-'}>
@@ -3164,7 +3143,6 @@ CONFIG_USB_RZV2M_USB3DRD                        policy<{'arm64': '-'}>
 CONFIG_USB_SERIAL_MOS7715_PARPORT               policy<{'arm64': '-'}>
 CONFIG_USB_TEGRA_PHY                            policy<{'arm64': '-'}>
 CONFIG_USB_TEGRA_XUDC                           policy<{'arm64': '-'}>
-CONFIG_USB_U132_HCD                             policy<{'arm64': '-'}>
 CONFIG_USB_USS720                               policy<{'arm64': '-'}>
 CONFIG_USB_XHCI_HISTB                           policy<{'arm64': '-'}>
 CONFIG_USB_XHCI_MTK                             policy<{'arm64': '-'}>
@@ -3183,8 +3161,6 @@ CONFIG_VCPU_STALL_DETECTOR                      policy<{'arm64': 'n'}>
 CONFIG_VFIO_CDX                                 policy<{'arm64': '-'}>
 CONFIG_VFIO_FSL_MC                              policy<{'arm64': '-'}>
 CONFIG_VGASTATE                                 policy<{'arm64': '-'}>
-CONFIG_VIDEOBUF_VMALLOC                         policy<{'arm64': '-'}>
-CONFIG_VIDEO_AD9389B                            policy<{'arm64': '-'}>
 CONFIG_VIDEO_ADV7511                            policy<{'arm64': 'n'}>
 CONFIG_VIDEO_ALLEGRO_DVT                        policy<{'arm64': '-'}>
 CONFIG_VIDEO_AMPHION_VPU                        policy<{'arm64': '-'}>
@@ -3208,14 +3184,10 @@ CONFIG_VIDEO_IMX8_JPEG                          policy<{'arm64': '-'}>
 CONFIG_VIDEO_IMX_MEDIA                          policy<{'arm64': '-'}>
 CONFIG_VIDEO_IMX_MIPI_CSIS                      policy<{'arm64': '-'}>
 CONFIG_VIDEO_IMX_PXP                            policy<{'arm64': '-'}>
-CONFIG_VIDEO_M5MOLS                             policy<{'arm64': '-'}>
 CONFIG_VIDEO_MEDIATEK_VPU                       policy<{'arm64': '-'}>
 CONFIG_VIDEO_MESON_GE2D                         policy<{'arm64': '-'}>
 CONFIG_VIDEO_MESON_VDEC                         policy<{'arm64': '-'}>
-CONFIG_VIDEO_MT9M032                            policy<{'arm64': '-'}>
-CONFIG_VIDEO_MT9T001                            policy<{'arm64': '-'}>
 CONFIG_VIDEO_MXB                                policy<{'arm64': 'n'}>
-CONFIG_VIDEO_NOON010PC30                        policy<{'arm64': '-'}>
 CONFIG_VIDEO_OV01A10                            policy<{'arm64': 'n'}>
 CONFIG_VIDEO_OV2740                             policy<{'arm64': '-'}>
 CONFIG_VIDEO_OV8858                             policy<{'arm64': 'n'}>
@@ -3235,10 +3207,8 @@ CONFIG_VIDEO_ROCKCHIP_RGA                       policy<{'arm64': '-'}>
 CONFIG_VIDEO_ROCKCHIP_VDEC                      policy<{'arm64': '-'}>
 CONFIG_VIDEO_RZG2L_CRU                          policy<{'arm64': '-'}>
 CONFIG_VIDEO_RZG2L_CSI2                         policy<{'arm64': '-'}>
-CONFIG_VIDEO_S5K6AA                             policy<{'arm64': '-'}>
 CONFIG_VIDEO_SAA7146                            policy<{'arm64': '-'}>
 CONFIG_VIDEO_SAA7146_VV                         policy<{'arm64': '-'}>
-CONFIG_VIDEO_SR030PC30                          policy<{'arm64': '-'}>
 CONFIG_VIDEO_STK1160_COMMON                     policy<{'arm64': '-'}>
 CONFIG_VIDEO_STM32_DCMI                         policy<{'arm64': '-'}>
 CONFIG_VIDEO_STM32_DMA2D                        policy<{'arm64': '-'}>
@@ -3259,7 +3229,6 @@ CONFIG_VIDEO_TEGRA_VDE                          policy<{'arm64': '-'}>
 CONFIG_VIDEO_TI_CAL                             policy<{'arm64': '-'}>
 CONFIG_VIDEO_TI_CAL_MC                          policy<{'arm64': '-'}>
 CONFIG_VIDEO_VISL                               policy<{'arm64': 'n'}>
-CONFIG_VIDEO_VS6624                             policy<{'arm64': '-'}>
 CONFIG_VIRTIO_IOMMU                             policy<{'arm64': 'n'}>
 CONFIG_VISCONTI_WATCHDOG                        policy<{'arm64': '-'}>
 CONFIG_VISL_DEBUGFS                             policy<{'arm64': '-'}>
@@ -3271,6 +3240,7 @@ CONFIG_WPCM450_SOC                              policy<{'arm64': 'n'}>
 CONFIG_WQ_CPU_INTENSIVE_REPORT                  policy<{'arm64': 'n'}>
 CONFIG_X9250                                    policy<{'arm64': 'n'}>
 CONFIG_XEN_FBDEV_FRONTEND                       policy<{'arm64': 'n'}>
+CONFIG_XFS_SUPPORT_ASCII_CI                     policy<{'arm64': 'n'}>
 CONFIG_XGENE_DMA                                policy<{'arm64': '-'}>
 CONFIG_XGENE_PMU                                policy<{'arm64': '-'}>
 CONFIG_XGENE_SLIMPRO_MBOX                       policy<{'arm64': '-'}>
