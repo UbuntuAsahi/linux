@@ -334,13 +334,11 @@ apds9802als
 apds990x
 apds9960
 apple-admac
-apple-dart
-apple-mailbox
+apple-dockchannel
 apple-mfi-fastcharge
-apple-rtkit
+apple-rtkit-helper
 apple-sart
 apple-soc-cpufreq
-apple_wdt
 appledisplay
 appletalk
 appletouch
@@ -368,6 +366,7 @@ arizona-micsupp
 arizona-spi
 ark3116
 arm-cmn
+arm_cspmu_module
 arm_dsu_pmu
 arm_smc_wdt
 arm_smccc_trng
@@ -566,7 +565,6 @@ bnx2i
 bnx2x
 bnxt_en
 bnxt_re
-bochs
 bonding
 bpa-rs600
 bpa10x
@@ -687,6 +685,9 @@ cec
 cec-gpio
 ceph
 cfb
+cfbcopyarea
+cfbfillrect
+cfbimgblt
 cfg80211
 cfi_cmdset_0001
 cfi_cmdset_0002
@@ -802,6 +803,7 @@ crct10dif-ce
 cros-ec-cec
 cros-ec-regulator
 cros-ec-sensorhub
+cros-ec-typec
 cros_ec
 cros_ec_accel_legacy
 cros_ec_baro
@@ -933,6 +935,7 @@ da9210-regulator
 da9211-regulator
 daqboard2000
 davicom
+dax_cxl
 dax_pmem
 dc395x
 dccp
@@ -1022,6 +1025,7 @@ dmfe
 dmi-sysfs
 dmx3191d
 dnet
+dockchannel-hid
 dp83640
 dp83822
 dp83848
@@ -1034,12 +1038,6 @@ dps310
 dps920ab
 drbd
 drivetemp
-drm
-drm_dma_helper
-drm_kms_helper
-drm_shmem_helper
-drm_ttm_helper
-drm_vram_helper
 drv260x
 drv2665
 drv2667
@@ -1276,7 +1274,6 @@ fan53555
 fan53880
 farsync
 faulty
-fb_sys_fops
 fc0011
 fc0012
 fc0013
@@ -1320,6 +1317,7 @@ fsia6b
 fsl-edma
 fsl-edma-common
 fsl-enetc
+fsl-enetc-core
 fsl-enetc-ierb
 fsl-enetc-mdio
 fsl-enetc-ptp
@@ -1458,6 +1456,7 @@ gpio-logicvc
 gpio-lp3943
 gpio-lp873x
 gpio-lp87565
+gpio-macsmc
 gpio-madera
 gpio-max3191x
 gpio-max7300
@@ -1502,7 +1501,6 @@ gpio_keys
 gpio_keys_polled
 gpio_mouse
 gpio_wdt
-gpu-sched
 gr_udc
 grace
 grcan
@@ -1615,7 +1613,6 @@ hi6421v600-regulator
 hi8435
 hi846
 hi847
-hid
 hid-a4tech
 hid-accutouch
 hid-alps
@@ -2314,6 +2311,8 @@ lib80211
 lib80211_crypt_ccmp
 lib80211_crypt_tkip
 lib80211_crypt_wep
+libahci
+libahci_platform
 libarc4
 libceph
 libchacha
@@ -2342,6 +2341,7 @@ line-display
 lineage-pem
 linear
 liquidio
+liquidio-core
 liquidio_vf
 lis3lv02d
 lis3lv02d_i2c
@@ -2478,6 +2478,11 @@ macb
 macb_pci
 machxo2-spi
 macsec
+macsmc
+macsmc-hid
+macsmc-reboot
+macsmc-rtkit
+macsmc_power
 macvlan
 macvtap
 madera
@@ -2634,6 +2639,7 @@ md4
 mdc800
 mdio
 mdio-bcm-unimac
+mdio-bitbang
 mdio-cavium
 mdio-gpio
 mdio-hisi-femac
@@ -2647,6 +2653,7 @@ mdio-mux-mmioreg
 mdio-mux-multiplexer
 mdio-mvusb
 mdio-octeon
+mdio-regmap
 mdio-thunder
 me_daq
 mediatek-ge
@@ -2776,6 +2783,7 @@ ms_block
 ms_sensors_i2c
 mscc
 mscc_felix
+mscc_felix_dsa_lib
 mscc_ocelot
 mscc_ocelot_switch_lib
 mscc_seville
@@ -3127,6 +3135,7 @@ nvmem-apple-efuses
 nvmem-reboot-mode
 nvmem-rmem
 nvmem_qcom-spmi-sdam
+nvmem_spmi_mfd
 nvmet
 nvmet-fc
 nvmet-rdma
@@ -3290,6 +3299,7 @@ pcie-apple
 pcips2
 pcnet32
 pcrypt
+pcs-lynx
 pcs_xpcs
 pcwd_pci
 pcwd_usb
@@ -3309,6 +3319,7 @@ pfuze100-regulator
 phantom
 phonet
 phram
+phy-apple-atc
 phy-bcm-kona-usb2
 phy-cadence-salvo
 phy-cadence-sierra
@@ -3327,6 +3338,7 @@ phy-qcom-usb-hs
 phy-qcom-usb-hsic
 phy-tahvo
 phy-tusb1210
+phylink
 physmap
 pi3usb30532
 pi433
@@ -3346,6 +3358,7 @@ pistachio-internal-dac
 pixcir_i2c_ts
 pkcs7_test_key
 pkcs8_key_parser
+pktcdvd
 pktgen
 pl172
 pl2303
@@ -3419,6 +3432,7 @@ pvpanic-mmio
 pvpanic-pci
 pvrusb2
 pwc
+pwm-apple
 pwm-atmel-hlcdc
 pwm-atmel-tcb
 pwm-beeper
@@ -3553,6 +3567,7 @@ rc-avermedia-rm-ks
 rc-avertv-303
 rc-azurewave-ad-tu700
 rc-beelink-gs1
+rc-beelink-mxiii
 rc-behold
 rc-behold-columbus
 rc-budget-ci-old
@@ -3569,6 +3584,7 @@ rc-digittrade
 rc-dm1105-nec
 rc-dntv-live-dvb-t
 rc-dntv-live-dvbt-pro
+rc-dreambox
 rc-dtt200u
 rc-dvbsky
 rc-dvico-mce
@@ -3824,6 +3840,7 @@ rtc-m41t94
 rtc-m48t35
 rtc-m48t59
 rtc-m48t86
+rtc-macsmc
 rtc-max6900
 rtc-max6902
 rtc-max6916
@@ -4024,6 +4041,7 @@ sch_hhf
 sch_htb
 sch_ingress
 sch_mqprio
+sch_mqprio_lib
 sch_multiq
 sch_netem
 sch_pie
@@ -4088,7 +4106,6 @@ sha1-ce
 sha2-ce
 sha256-arm64
 sha3-ce
-sha3_generic
 sha512-arm64
 sha512-ce
 shark2
@@ -4114,7 +4131,7 @@ sierra_net
 sifive
 silead
 simple-mfd-i2c
-simpledrm
+simple-mfd-spmi
 siox-bus-gpio
 siox-core
 sis190
@@ -4356,6 +4373,7 @@ snd-soc-cs42l52
 snd-soc-cs42l56
 snd-soc-cs42l73
 snd-soc-cs42l83-i2c
+snd-soc-cs42l84
 snd-soc-cs42xx8
 snd-soc-cs42xx8-i2c
 snd-soc-cs43130
@@ -4395,6 +4413,7 @@ snd-soc-lpass-rx-macro
 snd-soc-lpass-tx-macro
 snd-soc-lpass-va-macro
 snd-soc-lpass-wsa-macro
+snd-soc-macaudio
 snd-soc-max9759
 snd-soc-max98088
 snd-soc-max98357a
@@ -4605,6 +4624,7 @@ spi-altera-core
 spi-altera-dfl
 spi-altera-platform
 spi-amd
+spi-apple
 spi-axi-spi-engine
 spi-bitbang
 spi-cadence
@@ -4635,7 +4655,9 @@ spi-zynqmp-gqspi
 spi_ks8995
 spidev
 spinand
+spl
 spmi
+spmi-apple-controller
 sprd_serial
 sps30
 sps30_i2c
@@ -4760,9 +4782,6 @@ synaptics_i2c
 synaptics_usb
 synclink_gt
 syscon-reboot-mode
-syscopyarea
-sysfillrect
-sysimgblt
 sysv
 t5403
 tag_ar9331
@@ -4876,6 +4895,7 @@ ths8200
 thunder_bgx
 thunder_xcv
 thunderbolt
+thunderbolt_net
 thunderx_edac
 thunderx_zip
 ti-adc081c
@@ -4991,7 +5011,6 @@ tsl4531
 tsnep
 tsys01
 tsys02d
-ttm
 ttpci-eeprom
 ttusb_dec
 ttusbdecfe
@@ -5154,6 +5173,7 @@ usdhi6rol0
 userio
 userspace-consumer
 ushc
+uvc
 uvcvideo
 v4l2-async
 v4l2-dv-timings
@@ -5391,7 +5411,6 @@ xfrm_ipcomp
 xfrm_user
 xfs
 xgene_edac
-xhci-pci
 xhci-plat-hcd
 xilinx-csi2rxss
 xilinx-pr-decoupler
@@ -5513,6 +5532,7 @@ zd1301
 zd1301_demod
 zet6223
 zforce_ts
+zfs
 zhenhua
 ziirave_wdt
 zinitix
