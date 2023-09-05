@@ -21,4 +21,4 @@ readarray -t repo_list < <(sed "s,\s*$,/pool/main/l/linux-apple-arm," \
 
 package_prefixes linux-image linux-modules linux-modules-extra
 
-getall arm64 apple-arm
+getall arm64 apple-arm apple-arm-16k
