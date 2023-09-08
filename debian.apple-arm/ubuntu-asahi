@@ -1,0 +1,3 @@
+# The following upstream asahi releases have been ported:
+[ubuntu-asahi]
+	Ubuntu-6.5.0-4.4 = asahi-6.4-10
