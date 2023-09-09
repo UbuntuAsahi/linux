@@ -1,6 +1,5 @@
 human_arch		= ARMv8
 build_arch		= arm64
-header_arch		= arm64
 defconfig		= defconfig
 flavours		= apple-arm apple-arm-16k
 build_image		= Image.gz
