@@ -1,5 +1,8 @@
 # Recreate any symlinks created since the orig.
 # Remove any files deleted from the orig.
 rm -f 'drivers/mailbox/apple-mailbox.c'
+rm -f 'drivers/media/pci/intel/ipu3/cio2-bridge.c'
+rm -f 'drivers/media/pci/intel/ipu3/cio2-bridge.h'
 rm -f 'drivers/usb/host/xhci-pci.c'
+chmod +x 'debian/scripts/misc/fips-checks'
 exit 0
