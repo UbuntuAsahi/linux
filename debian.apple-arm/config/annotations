@@ -69,6 +69,12 @@ CONFIG_OSNOISE_TRACER                           note<'This enables the osnoise t
 CONFIG_PCI_MESON                                policy<{'arm64': 'n'}>
 CONFIG_PCI_MESON                                note<'LP: #2007745'>
 
+CONFIG_RUST                                     policy<{'arm64': 'y'}>
+CONFIG_RUST                                     note<'required to enable Rust support, LP: #1993183'>
+
+CONFIG_RUST_IS_AVAILABLE                        policy<{'arm64': 'y'}>
+CONFIG_RUST_IS_AVAILABLE                        note<'required to enable Rust support, LP: #1993183'>
+
 CONFIG_SCSI_VIRTIO                              policy<{'arm64': 'm'}>
 CONFIG_SCSI_VIRTIO                              note<'enable initrdless boot in VMs for ease of use, cloud-kernel parity and disaster recovery, LP: #1685291'>
 
@@ -86,6 +92,9 @@ CONFIG_SERIAL_SH_SCI_EARLYCON                   note<'LP: #2022361'>
 
 CONFIG_SQUASHFS_DECOMP_MULTI_PERCPU             policy<{'arm64': '-'}>
 CONFIG_SQUASHFS_DECOMP_MULTI_PERCPU             note<'LP: #1980861'>
+
+CONFIG_SUN6I_RTC_CCU                            policy<{'arm64': '-'}>
+CONFIG_SUN6I_RTC_CCU                            note<'needed by Allwinner D1 pinctrl/gpio'>
 
 CONFIG_TIMERLAT_TRACER                          policy<{'arm64': 'n'}>
 CONFIG_TIMERLAT_TRACER                          note<'This enables the osnoise tracer for the kernel. LP: #2018591'>
@@ -401,6 +410,7 @@ CONFIG_CARDBUS                                  policy<{'arm64': '-'}>
 CONFIG_CARMINE_DRAM_CUSTOM                      policy<{'arm64': '-'}>
 CONFIG_CAVIUM_CPT                               policy<{'arm64': '-'}>
 CONFIG_CC_HAS_UBSAN_BOUNDS_STRICT               policy<{'arm64': '-'}>
+CONFIG_CC_VERSION_TEXT                          policy<{'arm64': '"aarch64-linux-gnu-gcc-13 (Ubuntu 13.1.0-8ubuntu1) 13.1.0"'}>
 CONFIG_CDROM_PKTCDVD                            policy<{'arm64': 'm'}>
 CONFIG_CDROM_PKTCDVD_BUFFERS                    policy<{'arm64': '8'}>
 CONFIG_CDROM_PKTCDVD_WCACHE                     policy<{'arm64': 'n'}>
@@ -1285,6 +1295,7 @@ CONFIG_FUNCTION_GRAPH_RETVAL                    policy<{'arm64': 'n'}>
 CONFIG_FW_CFG_SYSFS                             policy<{'arm64': 'n'}>
 CONFIG_FW_CFG_SYSFS_CMDLINE                     policy<{'arm64': '-'}>
 CONFIG_FW_LOADER_DEBUG                          policy<{'arm64': 'n'}>
+CONFIG_GCC_VERSION                              policy<{'arm64': '130100'}>
 CONFIG_GPIO_ACPI                                policy<{'arm64': '-'}>
 CONFIG_GPIO_ALTERA_A10SR                        policy<{'arm64': '-'}>
 CONFIG_GPIO_AMDPT                               policy<{'arm64': '-'}>
@@ -2425,14 +2436,12 @@ CONFIG_RTW89_8851B                              policy<{'arm64': '-'}>
 CONFIG_RTW89_8851BE                             policy<{'arm64': 'n'}>
 CONFIG_RTW89_8852B                              policy<{'arm64': '-'}>
 CONFIG_RTW89_8852BE                             policy<{'arm64': 'n'}>
-CONFIG_RUST                                     policy<{'arm64': 'y'}>
 CONFIG_RUSTC_VERSION_TEXT                       policy<{'arm64': '"rustc 1.68.2 (9eb3afe9e 2023-03-27) (built from a source tarball)"'}>
 CONFIG_RUST_APPLE_RTKIT                         policy<{'arm64': 'y'}>
 CONFIG_RUST_BUILD_ASSERT_ALLOW                  policy<{'arm64': 'n'}>
 CONFIG_RUST_DEBUG_ASSERTIONS                    policy<{'arm64': 'n'}>
 CONFIG_RUST_DRM_GEM_SHMEM_HELPER                policy<{'arm64': 'y'}>
 CONFIG_RUST_DRM_SCHED                           policy<{'arm64': 'y'}>
-CONFIG_RUST_IS_AVAILABLE                        policy<{'arm64': 'y'}>
 CONFIG_RUST_OVERFLOW_CHECKS                     policy<{'arm64': 'y'}>
 CONFIG_RV                                       policy<{'arm64': 'n'}>
 CONFIG_RV_MON_WWNR                              policy<{'arm64': '-'}>
@@ -2955,7 +2964,6 @@ CONFIG_SUN50I_H6_CCU                            policy<{'arm64': '-'}>
 CONFIG_SUN50I_H6_R_CCU                          policy<{'arm64': '-'}>
 CONFIG_SUN50I_IOMMU                             policy<{'arm64': '-'}>
 CONFIG_SUN6I_MSGBOX                             policy<{'arm64': '-'}>
-CONFIG_SUN6I_RTC_CCU                            policy<{'arm64': '-'}>
 CONFIG_SUN6I_R_INTC                             policy<{'arm64': '-'}>
 CONFIG_SUN8I_DE2_CCU                            policy<{'arm64': '-'}>
 CONFIG_SUN8I_H3_CCU                             policy<{'arm64': '-'}>
