@@ -4106,8 +4106,6 @@ sha1-ce
 sha2-ce
 sha256-arm64
 sha3-ce
-sha512-arm64
-sha512-ce
 shark2
 shiftfs
 sht15
