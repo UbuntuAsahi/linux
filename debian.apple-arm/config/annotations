@@ -349,7 +349,6 @@ CONFIG_ARM_TI_CPUFREQ                           policy<{'arm64': '-'}>
 CONFIG_ASM_MODVERSIONS                          policy<{'arm64': '-'}>
 CONFIG_ASYNC_TX_DISABLE_PQ_VAL_DMA              policy<{'arm64': '-'}>
 CONFIG_ASYNC_TX_DISABLE_XOR_VAL_DMA             policy<{'arm64': '-'}>
-CONFIG_AS_VERSION                               policy<{'arm64': '24090'}>
 CONFIG_ATA_ACPI                                 policy<{'arm64': '-'}>
 CONFIG_ATH10K_SNOC                              policy<{'arm64': '-'}>
 CONFIG_ATH12K                                   policy<{'arm64': 'n'}>
@@ -410,7 +409,6 @@ CONFIG_CARDBUS                                  policy<{'arm64': '-'}>
 CONFIG_CARMINE_DRAM_CUSTOM                      policy<{'arm64': '-'}>
 CONFIG_CAVIUM_CPT                               policy<{'arm64': '-'}>
 CONFIG_CC_HAS_UBSAN_BOUNDS_STRICT               policy<{'arm64': '-'}>
-CONFIG_CC_VERSION_TEXT                          policy<{'arm64': '"aarch64-linux-gnu-gcc-13 (Ubuntu 13.1.0-8ubuntu1) 13.1.0"'}>
 CONFIG_CDROM_PKTCDVD                            policy<{'arm64': 'm'}>
 CONFIG_CDROM_PKTCDVD_BUFFERS                    policy<{'arm64': '8'}>
 CONFIG_CDROM_PKTCDVD_WCACHE                     policy<{'arm64': 'n'}>
@@ -1295,7 +1293,6 @@ CONFIG_FUNCTION_GRAPH_RETVAL                    policy<{'arm64': 'n'}>
 CONFIG_FW_CFG_SYSFS                             policy<{'arm64': 'n'}>
 CONFIG_FW_CFG_SYSFS_CMDLINE                     policy<{'arm64': '-'}>
 CONFIG_FW_LOADER_DEBUG                          policy<{'arm64': 'n'}>
-CONFIG_GCC_VERSION                              policy<{'arm64': '130100'}>
 CONFIG_GPIO_ACPI                                policy<{'arm64': '-'}>
 CONFIG_GPIO_ALTERA_A10SR                        policy<{'arm64': '-'}>
 CONFIG_GPIO_AMDPT                               policy<{'arm64': '-'}>
@@ -1560,7 +1557,6 @@ CONFIG_KS0108                                   policy<{'arm64': '-'}>
 CONFIG_KS0108_DELAY                             policy<{'arm64': '-'}>
 CONFIG_KS0108_PORT                              policy<{'arm64': '-'}>
 CONFIG_LAN966X_DCB                              policy<{'arm64': 'n'}>
-CONFIG_LD_VERSION                               policy<{'arm64': '24090'}>
 CONFIG_LEDS_AW200XX                             policy<{'arm64': 'n'}>
 CONFIG_LEDS_BD2606MVV                           policy<{'arm64': 'n'}>
 CONFIG_LEDS_MT6370_FLASH                        policy<{'arm64': '-'}>
