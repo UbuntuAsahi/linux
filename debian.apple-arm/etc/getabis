@@ -1,4 +1,5 @@
 getabis_ppa="${HOME}/.getabis.mantic-apple-arm"
+getabis_source="$(dpkg-parsechangelog -l$DEBIAN/changelog -SSource)"
 
 if ! [ -e "${getabis_ppa}" ] ; then
 	cat <<EOF >&2
@@ -16,7 +17,7 @@ EOF
 	exit 1
 fi
 
-readarray -t repo_list < <(sed "s,\s*$,/pool/main/l/linux-apple-arm," \
+readarray -t repo_list < <(sed "s,\s*$,/pool/main/l/${getabis_source}," \
                                "${getabis_ppa}")
 
 package_prefixes linux-image linux-modules linux-modules-extra
