@@ -3169,6 +3169,7 @@ CONFIG_VGASTATE                                 policy<{'arm64': '-'}>
 CONFIG_VIDEO_ADV7511                            policy<{'arm64': 'n'}>
 CONFIG_VIDEO_ALLEGRO_DVT                        policy<{'arm64': '-'}>
 CONFIG_VIDEO_AMPHION_VPU                        policy<{'arm64': '-'}>
+CONFIG_VIDEO_APPLE_ISP                          policy<{'arm64': 'm'}>
 CONFIG_VIDEO_AR0521                             policy<{'arm64': 'n'}>
 CONFIG_VIDEO_COBALT                             policy<{'arm64': 'n'}>
 CONFIG_VIDEO_CODA                               policy<{'arm64': '-'}>
