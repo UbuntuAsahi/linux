@@ -13991,8 +13991,6 @@ EXPORT_SYMBOL_GPL	 drivers/net/mdio/mdio-i2c 0x00000000	mdio_i2c_alloc
 EXPORT_SYMBOL_GPL	 drivers/net/mdio/mdio-mux 0x00000000	mdio_mux_init
 EXPORT_SYMBOL_GPL	 drivers/net/mdio/mdio-mux 0x00000000	mdio_mux_uninit
 EXPORT_SYMBOL_GPL	 drivers/net/mdio/mdio-regmap 0x00000000	devm_mdio_regmap_register
-EXPORT_SYMBOL_GPL	 drivers/net/net_failover 0x00000000	net_failover_create
-EXPORT_SYMBOL_GPL	 drivers/net/net_failover 0x00000000	net_failover_destroy
 EXPORT_SYMBOL_GPL	 drivers/net/pcs/pcs-lynx 0x00000000	lynx_pcs_create_fwnode
 EXPORT_SYMBOL_GPL	 drivers/net/pcs/pcs_xpcs 0x00000000	xpcs_config_eee
 EXPORT_SYMBOL_GPL	 drivers/net/pcs/pcs_xpcs 0x00000000	xpcs_create_mdiodev
@@ -16559,9 +16557,6 @@ EXPORT_SYMBOL_GPL	 net/bridge/bridge 0x00000000	br_vlan_get_proto
 EXPORT_SYMBOL_GPL	 net/bridge/bridge 0x00000000	br_vlan_get_pvid
 EXPORT_SYMBOL_GPL	 net/bridge/bridge 0x00000000	br_vlan_get_pvid_rcu
 EXPORT_SYMBOL_GPL	 net/bridge/bridge 0x00000000	nf_br_ops
-EXPORT_SYMBOL_GPL	 net/core/failover 0x00000000	failover_register
-EXPORT_SYMBOL_GPL	 net/core/failover 0x00000000	failover_slave_unregister
-EXPORT_SYMBOL_GPL	 net/core/failover 0x00000000	failover_unregister
 EXPORT_SYMBOL_GPL	 net/dccp/dccp 0x00000000	dccp_ackvec_parsed_add
 EXPORT_SYMBOL_GPL	 net/dccp/dccp 0x00000000	dccp_ackvec_parsed_cleanup
 EXPORT_SYMBOL_GPL	 net/dccp/dccp 0x00000000	dccp_check_req
@@ -22378,6 +22373,9 @@ EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	extract_iter_to_sg
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	ezx_pcap_read
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	ezx_pcap_set_bits
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	ezx_pcap_write
+EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	failover_register
+EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	failover_slave_unregister
+EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	failover_unregister
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	fanout_mutex
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	fat_add_entries
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	fat_alloc_new_dir
@@ -23849,6 +23847,8 @@ EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	net_cls_cgrp_subsys_enabled_key
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	net_cls_cgrp_subsys_on_dfl_key
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	net_dec_egress_queue
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	net_dec_ingress_queue
+EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	net_failover_create
+EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	net_failover_destroy
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	net_inc_egress_queue
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	net_inc_ingress_queue
 EXPORT_SYMBOL_GPL	 vmlinux 0x00000000	net_namespace_list
