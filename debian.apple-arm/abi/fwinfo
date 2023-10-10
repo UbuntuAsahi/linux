@@ -213,6 +213,10 @@ firmware:       brcm/brcmfmac4378b3-pcie.bin
 firmware:       brcm/brcmfmac4378b3-pcie.clm_blob
 firmware:       brcm/brcmfmac4387c2-pcie.bin
 firmware:       brcm/brcmfmac4387c2-pcie.clm_blob
+firmware:       brcm/brcmfmac4388b0-pcie.bin
+firmware:       brcm/brcmfmac4388b0-pcie.clm_blob
+firmware:       brcm/brcmfmac4388c0-pcie.bin
+firmware:       brcm/brcmfmac4388c0-pcie.clm_blob
 firmware:       c218tunx.cod
 firmware:       c320tunx.cod
 firmware:       carl9170-1.fw
