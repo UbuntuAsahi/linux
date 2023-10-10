@@ -335,6 +335,7 @@ apds990x
 apds9960
 apple-admac
 apple-dockchannel
+apple-isp
 apple-mfi-fastcharge
 apple-rtkit-helper
 apple-sart
