@@ -2,7 +2,6 @@
 # FORMAT: 4
 # ARCH: arm64
 # FLAVOUR: arm64-apple-arm arm64-apple-arm-16k
-# FLAVOUR_DEP: {'arm64-apple-arm': 'arm64-generic', 'arm64-apple-arm-16k': 'arm64-generic'}
 
 include "../../debian.master/config/annotations"
 
