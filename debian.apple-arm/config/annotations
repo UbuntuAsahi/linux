@@ -3189,6 +3189,10 @@ CONFIG_VIDEO_IMX8_JPEG                          policy<{'arm64': '-'}>
 CONFIG_VIDEO_IMX_MEDIA                          policy<{'arm64': '-'}>
 CONFIG_VIDEO_IMX_MIPI_CSIS                      policy<{'arm64': '-'}>
 CONFIG_VIDEO_IMX_PXP                            policy<{'arm64': '-'}>
+CONFIG_VIDEO_MEDIATEK_JPEG                      policy<{'arm64': '-'}>
+CONFIG_VIDEO_MEDIATEK_MDP                       policy<{'arm64': '-'}>
+CONFIG_VIDEO_MEDIATEK_MDP3                      policy<{'arm64': '-'}>
+CONFIG_VIDEO_MEDIATEK_VCODEC                    policy<{'arm64': '-'}>
 CONFIG_VIDEO_MEDIATEK_VPU                       policy<{'arm64': '-'}>
 CONFIG_VIDEO_MESON_GE2D                         policy<{'arm64': '-'}>
 CONFIG_VIDEO_MESON_VDEC                         policy<{'arm64': '-'}>
