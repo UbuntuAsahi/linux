@@ -24,6 +24,7 @@ firmware:       advansys/mcode.bin
 firmware:       agere_ap_fw.bin
 firmware:       agere_sta_fw.bin
 firmware:       aic94xx-seq.fw
+firmware:       apple/dfrmtfw-*.bin
 firmware:       apple/tpmtfw-*.bin
 firmware:       ar5523.bin
 firmware:       ath10k/QCA6174/hw2.1/board-2.bin
