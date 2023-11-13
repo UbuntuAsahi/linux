@@ -340,6 +340,7 @@ apple-mfi-fastcharge
 apple-rtkit-helper
 apple-sart
 apple-soc-cpufreq
+apple_z2
 appledisplay
 appletalk
 appletouch
@@ -5373,6 +5374,7 @@ wm8994-regulator
 wm97xx-ts
 wp512
 wusb3801
+wwan
 wwan_hwsim
 x25
 x_tables
