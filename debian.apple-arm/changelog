@@ -1,3 +1,9 @@
+linux-apple-arm (6.6.0-1000.0) noble; urgency=medium
+
+  * Empty entry
+
+ -- John Cabaj <john.cabaj@canonical.com>  Wed, 29 Nov 2023 16:42:58 -0600
+
 linux-apple-arm (6.5.0-1013.15) mantic; urgency=medium
 
   * Miscellaneous upstream changes
