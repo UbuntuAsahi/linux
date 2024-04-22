@@ -1,19 +1,25 @@
-human_arch              = ARMv8
-build_arch              = arm64
-defconfig               = defconfig
-flavours                = apple-arm apple-arm-16k
-build_image             = Image.gz
-kernel_file             = arch/$(build_arch)/boot/Image.gz
-install_file            = vmlinuz
-no_dumpfile             = true
-do_linux_tools          = true
-do_tools_usbip          = true
-do_tools_cpupower       = true
-do_tools_perf           = true
-do_tools_bpftool        = true
-do_common_headers_indep	= false
-do_dtbs                 = true
-do_source_package       = false
-do_extras_package       = true
-do_zfs                  = true
-do_lib_rust             = true
+human_arch	= ARMv8
+build_arch	= arm64
+defconfig	= defconfig
+flavours	= apple-arm apple-arm-16k
+build_image	= Image.gz
+kernel_file	= arch/$(build_arch)/boot/Image.gz
+install_file	= vmlinuz
+no_dumpfile = true
+uefi_signed     = true
+
+vdso		= vdso_install
+
+do_extras_package = true
+do_tools_usbip  = true
+do_tools_cpupower = true
+do_tools_perf   = true
+do_tools_perf_jvmti = true
+do_tools_perf_python = true
+do_tools_bpftool = true
+do_tools_rtla = true
+
+do_dtbs		= true
+
+do_tools_common  = false
+do_tools_host    = false
