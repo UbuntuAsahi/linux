@@ -17,6 +17,9 @@ CONFIG_RUST                                     note<'required to enable Rust su
 CONFIG_RUST_IS_AVAILABLE                        policy<{'arm64': 'y'}>
 CONFIG_RUST_IS_AVAILABLE                        note<'required to enable Rust support, LP: #1993183'>
 
+CONFIG_SYSFB_SIMPLEFB                           policy<{'arm64': 'n'}>
+CONFIG_SYSFB_SIMPLEFB                           note<'LP: #1965303'>
+
 CONFIG_UBSAN                                    policy<{'arm64': 'n'}>
 CONFIG_UBSAN                                    note<'LP: #1942215'>
 
@@ -24,12 +27,12 @@ CONFIG_UBSAN                                    note<'LP: #1942215'>
 # ---- Annotations without notes ----
 
 CONFIG_APPLE_DOCKCHANNEL                        policy<{'arm64': 'm'}>
-CONFIG_APPLE_MAILBOX                            policy<{'arm64': '-'}>
-CONFIG_APPLE_MBOX                               policy<{'arm64': 'y'}>
+CONFIG_APPLE_MAILBOX                            policy<{'arm64': 'y'}>
 CONFIG_APPLE_PLATFORMS                          policy<{'arm64': 'y'}>
 CONFIG_APPLE_PMGR_MISC                          policy<{'arm64': 'y'}>
 CONFIG_APPLE_RTKIT                              policy<{'arm64': 'y'}>
 CONFIG_APPLE_RTKIT_HELPER                       policy<{'arm64': 'm'}>
+CONFIG_APPLE_SIO                                policy<{'arm64': 'm'}>
 CONFIG_APPLE_SMC                                policy<{'arm64': 'm'}>
 CONFIG_APPLE_SMC_RTKIT                          policy<{'arm64': 'm'}>
 CONFIG_APPLE_WATCHDOG                           policy<{'arm64': 'y'}>
@@ -50,34 +53,29 @@ CONFIG_ARM64_VA_BITS_39                         policy<{'arm64': '-'}>
 CONFIG_ARM64_VA_BITS_47                         policy<{'arm64': 'n'}>
 CONFIG_ARM_APPLE_CPUIDLE                        policy<{'arm64': 'y'}>
 CONFIG_ASM_MODVERSIONS                          policy<{'arm64': '-'}>
-CONFIG_AS_VERSION                               policy<{'arm64': '24200'}>
+CONFIG_AX88796B_RUST_PHY                        policy<{'arm64': 'n'}>
 CONFIG_BINDGEN_VERSION_TEXT                     policy<{'arm64': '"bindgen 0.65.1"'}>
 CONFIG_CC_HAS_UBSAN_BOUNDS_STRICT               policy<{'arm64': '-'}>
-CONFIG_CC_VERSION_TEXT                          policy<{'arm64': '"aarch64-linux-gnu-gcc-13 (Ubuntu 13.2.0-11ubuntu1) 13.2.0"'}>
+CONFIG_CC_VERSION_TEXT                          policy<{'arm64': '"aarch64-linux-gnu-gcc-13 (Ubuntu 13.2.0-23ubuntu4) 13.2.0"'}>
 CONFIG_CHARGER_MACSMC                           policy<{'arm64': 'm'}>
 CONFIG_CONSTRUCTORS                             policy<{'arm64': 'y'}>
-CONFIG_DRM                                      policy<{'arm64': 'y'}>
 CONFIG_DRM_ADP                                  policy<{'arm64': 'm'}>
 CONFIG_DRM_APPLE                                policy<{'arm64': 'm'}>
+CONFIG_DRM_APPLE_AUDIO                          policy<{'arm64': 'y'}>
+CONFIG_DRM_APPLE_DEBUG                          policy<{'arm64': 'n'}>
 CONFIG_DRM_ASAHI                                policy<{'arm64': 'm'}>
 CONFIG_DRM_ASAHI_DEBUG_ALLOCATOR                policy<{'arm64': 'n'}>
-CONFIG_DRM_DEBUG_MM                             policy<{'arm64': 'n'}>
-CONFIG_DRM_GEM_SHMEM_HELPER                     policy<{'arm64': 'y'}>
-CONFIG_DRM_KMS_HELPER                           policy<{'arm64': 'y'}>
 CONFIG_DRM_SCHED                                policy<{'arm64': 'y'}>
-CONFIG_DRM_SIMPLEDRM                            policy<{'arm64': 'y'}>
 CONFIG_DRM_SIMPLEDRM_BACKLIGHT                  policy<{'arm64': 'n'}>
-CONFIG_FB_EFI                                   policy<{'arm64': 'n'}>
-CONFIG_FB_SIMPLE                                policy<{'arm64': '-'}>
 CONFIG_GPIO_MACSMC                              policy<{'arm64': 'm'}>
 CONFIG_HAVE_ARCH_KASAN                          policy<{'arm64': '-'}>
 CONFIG_HAVE_ARCH_KASAN_HW_TAGS                  policy<{'arm64': '-'}>
 CONFIG_HAVE_ARCH_KASAN_SW_TAGS                  policy<{'arm64': '-'}>
 CONFIG_HAVE_ARCH_KASAN_VMALLOC                  policy<{'arm64': '-'}>
+CONFIG_HAVE_RUST                                policy<{'arm64': 'y'}>
 CONFIG_HID_DOCKCHANNEL                          policy<{'arm64': 'm'}>
 CONFIG_INPUT_MACSMC_HID                         policy<{'arm64': 'm'}>
 CONFIG_KASAN                                    policy<{'arm64': '-'}>
-CONFIG_LD_VERSION                               policy<{'arm64': '24200'}>
 CONFIG_MARVELL_GTI_WDT                          policy<{'arm64': 'y'}>
 CONFIG_MESON_SECURE_PM_DOMAINS                  policy<{'arm64': '-'}>
 CONFIG_MESON_SM                                 policy<{'arm64': '-'}>
@@ -91,13 +89,14 @@ CONFIG_PHY_APPLE_ATC                            policy<{'arm64': 'm'}>
 CONFIG_PHY_APPLE_DPTX                           policy<{'arm64': 'm'}>
 CONFIG_POWER_RESET_MACSMC                       policy<{'arm64': 'm'}>
 CONFIG_RTC_DRV_MACSMC                           policy<{'arm64': 'm'}>
-CONFIG_RUSTC_VERSION_TEXT                       policy<{'arm64': '"rustc 1.73.0 (cc66ad468 2023-10-03) (built from a source tarball)"'}>
+CONFIG_RUSTC_VERSION_TEXT                       policy<{'arm64': '"rustc 1.76.0 (07dca489a 2024-02-04) (built from a source tarball)"'}>
 CONFIG_RUST_APPLE_RTKIT                         policy<{'arm64': 'y'}>
 CONFIG_RUST_BUILD_ASSERT_ALLOW                  policy<{'arm64': 'n'}>
 CONFIG_RUST_DEBUG_ASSERTIONS                    policy<{'arm64': 'n'}>
 CONFIG_RUST_DRM_GEM_SHMEM_HELPER                policy<{'arm64': 'y'}>
 CONFIG_RUST_DRM_SCHED                           policy<{'arm64': 'y'}>
 CONFIG_RUST_OVERFLOW_CHECKS                     policy<{'arm64': 'y'}>
+CONFIG_RUST_PHYLIB_ABSTRACTIONS                 policy<{'arm64': 'y'}>
 CONFIG_SAMPLES_RUST                             policy<{'arm64': 'n'}>
 CONFIG_SHADOW_CALL_STACK                        policy<{'arm64': 'n'}>
 CONFIG_SND_SOC_APPLE_MACAUDIO                   policy<{'arm64': 'm'}>
@@ -107,7 +106,7 @@ CONFIG_SPI_HID_APPLE_CORE                       policy<{'arm64': 'm'}>
 CONFIG_SPI_HID_APPLE_OF                         policy<{'arm64': 'm'}>
 CONFIG_SPMI_APPLE                               policy<{'arm64': 'm'}>
 CONFIG_SYSFB                                    policy<{'arm64': '-'}>
-CONFIG_SYSFB_SIMPLEFB                           policy<{'arm64': 'n'}>
+CONFIG_TEE_STMM_EFI                             policy<{'arm64': 'n'}>
 CONFIG_TEST_UBSAN                               policy<{'arm64': '-'}>
 CONFIG_THP_SWAP                                 policy<{'arm64': '-'}>
 CONFIG_TOUCHSCREEN_APPLE_Z2                     policy<{'arm64': 'm'}>
