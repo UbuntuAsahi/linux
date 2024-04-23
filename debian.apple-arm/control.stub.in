@@ -44,9 +44,9 @@ Build-Depends:
  zstd <!stage1>,
  pahole [amd64 arm64 armhf ppc64el s390x riscv64] | dwarves (>= 1.21) [amd64 arm64 armhf ppc64el s390x riscv64] <!stage1>,
  clang-18 [amd64 arm64],
- rustc [amd64 arm64],
- rust-src [amd64 arm64],
- rustfmt [amd64 arm64],
+ rustc-1.76 [amd64 arm64],
+ rust-1.76-src [amd64 arm64],
+ rustfmt-1.76 [amd64 arm64],
  bindgen-0.65 [amd64 arm64],
  libstdc++-dev,
 Build-Depends-Indep:
