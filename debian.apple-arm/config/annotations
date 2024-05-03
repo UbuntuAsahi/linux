@@ -56,7 +56,6 @@ CONFIG_ASM_MODVERSIONS                          policy<{'arm64': '-'}>
 CONFIG_AX88796B_RUST_PHY                        policy<{'arm64': 'n'}>
 CONFIG_BINDGEN_VERSION_TEXT                     policy<{'arm64': '"bindgen 0.65.1"'}>
 CONFIG_CC_HAS_UBSAN_BOUNDS_STRICT               policy<{'arm64': '-'}>
-CONFIG_CC_VERSION_TEXT                          policy<{'arm64': '"aarch64-linux-gnu-gcc-13 (Ubuntu 13.2.0-23ubuntu4) 13.2.0"'}>
 CONFIG_CHARGER_MACSMC                           policy<{'arm64': 'm'}>
 CONFIG_CONSTRUCTORS                             policy<{'arm64': 'y'}>
 CONFIG_DRM_ADP                                  policy<{'arm64': 'm'}>
