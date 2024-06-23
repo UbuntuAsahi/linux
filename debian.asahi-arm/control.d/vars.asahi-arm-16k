@@ -1,5 +1,5 @@
 arch="arm64"
-supported="Apple M-Series CPU 19K pages"
+supported="Apple M-Series CPU 16K pages"
 target="Geared toward Apple ARM-based M-Series CPUs."
 desc="=HUMAN= SMP"
 bootloader="grub-pc [amd64] | grub-efi-amd64 [amd64] | grub-efi-ia32 [amd64] | grub [amd64] | lilo [amd64] | flash-kernel [armhf arm64] | grub-efi-arm64 [arm64] | grub-efi-arm [armhf] | grub-ieee1275 [ppc64el]"
