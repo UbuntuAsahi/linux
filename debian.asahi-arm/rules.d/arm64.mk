@@ -1,7 +1,7 @@
 human_arch	= ARMv8
 build_arch	= arm64
 defconfig	= defconfig
-flavours	= apple-arm
+flavours	= asahi-arm
 build_image	= Image.gz
 kernel_file	= arch/$(build_arch)/boot/Image.gz
 install_file	= vmlinuz

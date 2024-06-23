@@ -1,7 +1,7 @@
 # Menu: HEADER
 # FORMAT: 4
 # ARCH: arm64
-# FLAVOUR: arm64-apple-arm arm64-apple-arm-16k
+# FLAVOUR: arm64-asahi-arm arm64-asahi-arm-16k
 
 include "../../debian.master/config/annotations"
 
