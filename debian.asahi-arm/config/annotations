@@ -55,8 +55,13 @@ CONFIG_ARM_APPLE_CPUIDLE                        policy<{'arm64': 'y'}>
 CONFIG_ASM_MODVERSIONS                          policy<{'arm64': '-'}>
 CONFIG_AX88796B_RUST_PHY                        policy<{'arm64': 'n'}>
 CONFIG_BINDGEN_VERSION_TEXT                     policy<{'arm64': '"bindgen 0.66.1"'}>
+CONFIG_BLK_DEV_RUST_NULL                        policy<{'arm64': 'n'}>
 CONFIG_CC_HAS_UBSAN_BOUNDS_STRICT               policy<{'arm64': '-'}>
+CONFIG_CC_VERSION_TEXT                          policy<{'arm64': '"aarch64-linux-gnu-gcc-14 (Ubuntu 14.2.0-4ubuntu2) 14.2.0"'}>
 CONFIG_CHARGER_MACSMC                           policy<{'arm64': 'm'}>
+CONFIG_CLK_QCM2290_GPUCC                        policy<{'arm64': 'n'}>
+CONFIG_COMMON_CLK_C3_PERIPHERALS                policy<{'arm64': 'y'}>
+CONFIG_CZNIC_PLATFORMS                          policy<{'arm64': 'n'}>
 CONFIG_DRM_ADP                                  policy<{'arm64': 'm'}>
 CONFIG_DRM_APPLE                                policy<{'arm64': 'm'}>
 CONFIG_DRM_APPLE_AUDIO                          policy<{'arm64': 'y'}>
@@ -65,7 +70,12 @@ CONFIG_DRM_ASAHI                                policy<{'arm64': 'm'}>
 CONFIG_DRM_ASAHI_DEBUG_ALLOCATOR                policy<{'arm64': 'n'}>
 CONFIG_DRM_EXEC                                 policy<{'arm64': 'y'}>
 CONFIG_DRM_GPUVM                                policy<{'arm64': 'y'}>
+CONFIG_DRM_PANEL_HIMAX_HX83102                  policy<{'arm64': 'n'}>
+CONFIG_DRM_PANEL_ILITEK_ILI9806E                policy<{'arm64': 'n'}>
+CONFIG_DRM_PANEL_LINCOLNTECH_LCD197             policy<{'arm64': 'n'}>
 CONFIG_DRM_SCHED                                policy<{'arm64': 'y'}>
+CONFIG_DRM_STM_LVDS                             policy<{'arm64': 'n'}>
+CONFIG_EC_LENOVO_YOGA_C630                      policy<{'arm64': 'n'}>
 CONFIG_GPIO_MACSMC                              policy<{'arm64': 'm'}>
 CONFIG_HAVE_PAGE_SIZE_16KB                      policy<{'arm64': 'y'}>
 CONFIG_HID_DOCKCHANNEL                          policy<{'arm64': 'm'}>
@@ -93,6 +103,7 @@ CONFIG_RUST_DEBUG_ASSERTIONS                    policy<{'arm64': 'n'}>
 CONFIG_RUST_DRM_GEM_SHMEM_HELPER                policy<{'arm64': 'y'}>
 CONFIG_RUST_DRM_GPUVM                           policy<{'arm64': 'y'}>
 CONFIG_RUST_DRM_SCHED                           policy<{'arm64': 'y'}>
+CONFIG_RUST_FW_LOADER_ABSTRACTIONS              policy<{'arm64': 'n'}>
 CONFIG_RUST_OVERFLOW_CHECKS                     policy<{'arm64': 'y'}>
 CONFIG_RUST_PHYLIB_ABSTRACTIONS                 policy<{'arm64': 'y'}>
 CONFIG_SAMPLES_RUST                             policy<{'arm64': 'n'}>
