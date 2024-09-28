@@ -54,7 +54,7 @@ CONFIG_ARM64_VA_BITS_52                         policy<{'arm64': '-'}>
 CONFIG_ARM_APPLE_CPUIDLE                        policy<{'arm64': 'y'}>
 CONFIG_ASM_MODVERSIONS                          policy<{'arm64': '-'}>
 CONFIG_AX88796B_RUST_PHY                        policy<{'arm64': 'n'}>
-CONFIG_BINDGEN_VERSION_TEXT                     policy<{'arm64': '"bindgen 0.65.1"'}>
+CONFIG_BINDGEN_VERSION_TEXT                     policy<{'arm64': '"bindgen 0.66.1"'}>
 CONFIG_CC_HAS_UBSAN_BOUNDS_STRICT               policy<{'arm64': '-'}>
 CONFIG_CHARGER_MACSMC                           policy<{'arm64': 'm'}>
 CONFIG_DRM_ADP                                  policy<{'arm64': 'm'}>
@@ -86,7 +86,7 @@ CONFIG_PHY_APPLE_DPTX                           policy<{'arm64': 'm'}>
 CONFIG_POWER_RESET_MACSMC                       policy<{'arm64': 'm'}>
 CONFIG_RTC_DRV_MACSMC                           policy<{'arm64': 'm'}>
 CONFIG_RUSTC_LLVM_VERSION_TEXT                  policy<{'arm64': '"18.1.8"'}>
-CONFIG_RUSTC_VERSION_TEXT                       policy<{'arm64': '"rustc 1.78.0"'}>
+CONFIG_RUSTC_VERSION_TEXT                       policy<{'arm64': '"rustc 1.80.1 (3f5fd8dd4 2024-08-06) (built from a source tarball)"'}>
 CONFIG_RUST_APPLE_RTKIT                         policy<{'arm64': 'y'}>
 CONFIG_RUST_BUILD_ASSERT_ALLOW                  policy<{'arm64': 'n'}>
 CONFIG_RUST_DEBUG_ASSERTIONS                    policy<{'arm64': 'n'}>
