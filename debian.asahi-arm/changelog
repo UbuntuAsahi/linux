@@ -1,3 +1,9 @@
+linux-asahi-arm (6.11.0-1000.0) oracular; urgency=medium
+
+  * Empty entry
+
+ -- John Cabaj <john.cabaj@canonical.com>  Sat, 28 Sep 2024 00:50:00 -0500
+
 linux-asahi-arm (6.10.0-1001.1) oracular; urgency=medium
 
   * Packaging resync (LP: #1786013)
