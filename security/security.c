@@ -277,6 +277,7 @@ static void __init initialize_lsm(struct lsm_info *lsm)
  * Current index to use while initializing the lsm id list.
  */
 u32 lsm_active_cnt __ro_after_init;
+u32 lsm_prop_cnt __ro_after_init;
 const struct lsm_id *lsm_idlist[LSM_CONFIG_COUNT];
 
 /* Populate ordered LSMs list from comma-separated LSM name list. */
@@ -574,6 +575,8 @@ void __init security_add_hooks(struct security_hook_list *hooks, int count,
 		if (lsm_active_cnt >= LSM_CONFIG_COUNT)
 			panic("%s Too many LSMs registered.\n", __func__);
 		lsm_idlist[lsm_active_cnt++] = lsmid;
+		if (lsmid->lsmprop)
+			lsm_prop_cnt++;
 	}
 
 	for (i = 0; i < count; i++) {
@@ -4275,12 +4278,12 @@ EXPORT_SYMBOL(security_secid_to_secctx);
 int security_lsmprop_to_secctx(struct lsm_prop *prop, struct lsm_context *cp,
 			       int lsmid)
 {
-	struct lsm_static_call *scall;
+	struct security_hook_list *hp;
 
-	lsm_for_each_hook(scall, lsmprop_to_secctx) {
-		if (lsmid != 0 && lsmid != scall->hl->lsmid->id)
+	hlist_for_each_entry(hp, &security_hook_heads.lsmprop_to_secctx, list) {
+		if (lsmid != 0 && lsmid != hp->lsmid->id)
 			continue;
-		return scall->hl->hook.lsmprop_to_secctx(prop, cp);
+		return hp->hook.lsmprop_to_secctx(prop, cp);
 	}
 	return LSM_RET_DEFAULT(lsmprop_to_secctx);
 }
