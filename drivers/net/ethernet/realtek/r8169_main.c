@@ -5434,9 +5434,9 @@ static bool rtl_aspm_is_safe(struct rtl8169_private *tp)
 	  * 3: CLKEREQ
 	  * 4-7: Reserved
 	  */
-	if (tp->mac_version >= RTL_GIGA_MAC_VER_61 &&
-		r8168_mac_ocp_read(tp, 0xc0b2) & 0xf ||
-		rtl_aspm_dell_workaround(tp))
+	if ((tp->mac_version >= RTL_GIGA_MAC_VER_61 &&
+	     r8168_mac_ocp_read(tp, 0xc0b2) & 0xf) ||
+	    rtl_aspm_dell_workaround(tp))
 		return true;
 
 	return false;
