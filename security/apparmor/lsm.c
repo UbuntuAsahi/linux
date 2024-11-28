@@ -468,7 +468,7 @@ static int common_mqueue_path_perm(const char *op, u32 request,
 
 	label = begin_current_label_crit_section();
 	if (!unconfined(label))
-		error = aa_mqueue_perm(OP_UNLINK, current_cred(), label, path,
+		error = aa_mqueue_perm(op, current_cred(), label, path,
 				       request);
 
 	end_current_label_crit_section(label);
@@ -480,7 +480,7 @@ static int apparmor_inode_getattr(const struct path *path)
 {
 	if (is_mqueue_dentry(path->dentry))
 		/* TODO: fn() for d_parent */
-		return common_mqueue_path_perm(OP_UNLINK, AA_MAY_GETATTR, path);
+		return common_mqueue_path_perm(OP_GETATTR, AA_MAY_GETATTR, path);
 
 	return common_perm_cond(OP_GETATTR, path, AA_MAY_GETATTR);
 }
