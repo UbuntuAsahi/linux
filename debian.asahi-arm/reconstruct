@@ -1,5 +1,4 @@
 # Recreate any symlinks created since the orig.
-chmod +x 'debian.asahi-arm/scripts/helpers/copy-files'
 chmod +x 'debian/cloud-tools/hv_get_dhcp_info'
 chmod +x 'debian/cloud-tools/hv_get_dns_info'
 chmod +x 'debian/cloud-tools/hv_set_ifconfig'
@@ -35,4 +34,6 @@ chmod +x 'debian/tests/ubuntu-regression-suite'
 chmod +x 'drivers/watchdog/f71808e_wdt.c'
 # Remove any files deleted from the orig.
 rm -f 'drivers/usb/host/xhci-pci.c'
+rm -f 'rust/kernel/alloc/box_ext.rs'
+rm -f 'rust/kernel/alloc/vec_ext.rs'
 exit 0
