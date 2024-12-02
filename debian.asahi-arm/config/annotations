@@ -54,10 +54,9 @@ CONFIG_ARM64_VA_BITS_52                         policy<{'arm64': '-'}>
 CONFIG_ARM_APPLE_CPUIDLE                        policy<{'arm64': 'y'}>
 CONFIG_ASM_MODVERSIONS                          policy<{'arm64': '-'}>
 CONFIG_AX88796B_RUST_PHY                        policy<{'arm64': 'n'}>
-CONFIG_BINDGEN_VERSION_TEXT                     policy<{'arm64': '"bindgen 0.66.1"'}>
+CONFIG_BINDGEN_VERSION_TEXT                     policy<{'arm64': '"bindgen 0.70.1"'}>
 CONFIG_BLK_DEV_RUST_NULL                        policy<{'arm64': 'n'}>
 CONFIG_CC_HAS_UBSAN_BOUNDS_STRICT               policy<{'arm64': '-'}>
-CONFIG_CC_VERSION_TEXT                          policy<{'arm64': '"aarch64-linux-gnu-gcc-14 (Ubuntu 14.2.0-4ubuntu2) 14.2.0"'}>
 CONFIG_CHARGER_MACSMC                           policy<{'arm64': 'm'}>
 CONFIG_CLK_QCM2290_GPUCC                        policy<{'arm64': 'n'}>
 CONFIG_COMMON_CLK_C3_PERIPHERALS                policy<{'arm64': 'y'}>
@@ -73,12 +72,15 @@ CONFIG_DRM_GPUVM                                policy<{'arm64': 'y'}>
 CONFIG_DRM_PANEL_HIMAX_HX83102                  policy<{'arm64': 'n'}>
 CONFIG_DRM_PANEL_ILITEK_ILI9806E                policy<{'arm64': 'n'}>
 CONFIG_DRM_PANEL_LINCOLNTECH_LCD197             policy<{'arm64': 'n'}>
+CONFIG_DRM_PANIC_SCREEN_QR_CODE                 policy<{'arm64': 'n'}>
 CONFIG_DRM_SCHED                                policy<{'arm64': 'y'}>
 CONFIG_DRM_STM_LVDS                             policy<{'arm64': 'n'}>
 CONFIG_EC_LENOVO_YOGA_C630                      policy<{'arm64': 'n'}>
 CONFIG_GPIO_MACSMC                              policy<{'arm64': 'm'}>
 CONFIG_HAVE_PAGE_SIZE_16KB                      policy<{'arm64': 'y'}>
+CONFIG_HAVE_RUST                                policy<{'arm64': 'y'}>
 CONFIG_HID_DOCKCHANNEL                          policy<{'arm64': 'm'}>
+CONFIG_HUGETLB_PMD_PAGE_TABLE_SHARING           policy<{'arm64': 'y'}>
 CONFIG_INPUT_MACSMC_HID                         policy<{'arm64': 'm'}>
 CONFIG_MARVELL_GTI_WDT                          policy<{'arm64': 'y'}>
 CONFIG_MESON_SECURE_PM_DOMAINS                  policy<{'arm64': '-'}>
@@ -95,7 +97,8 @@ CONFIG_PHY_APPLE_ATC                            policy<{'arm64': 'm'}>
 CONFIG_PHY_APPLE_DPTX                           policy<{'arm64': 'm'}>
 CONFIG_POWER_RESET_MACSMC                       policy<{'arm64': 'm'}>
 CONFIG_RTC_DRV_MACSMC                           policy<{'arm64': 'm'}>
-CONFIG_RUSTC_LLVM_VERSION_TEXT                  policy<{'arm64': '"18.1.8"'}>
+CONFIG_RUSTC_LLVM_VERSION_TEXT                  policy<{'arm64': '-'}>
+CONFIG_RUSTC_SUPPORTS_ARM64                     policy<{'arm64': 'y'}>
 CONFIG_RUSTC_VERSION_TEXT                       policy<{'arm64': '"rustc 1.80.1 (3f5fd8dd4 2024-08-06) (built from a source tarball)"'}>
 CONFIG_RUST_APPLE_RTKIT                         policy<{'arm64': 'y'}>
 CONFIG_RUST_BUILD_ASSERT_ALLOW                  policy<{'arm64': 'n'}>
@@ -132,7 +135,6 @@ CONFIG_UBSAN_SHIFT                              policy<{'arm64': '-'}>
 CONFIG_UBSAN_SIGNED_WRAP                        policy<{'arm64': '-'}>
 CONFIG_UBSAN_TRAP                               policy<{'arm64': '-'}>
 CONFIG_UBSAN_UNREACHABLE                        policy<{'arm64': '-'}>
-CONFIG_USB_XHCI_PCI                             policy<{'arm64': 'y'}>
 CONFIG_USB_XHCI_PCI_ASMEDIA                     policy<{'arm64': 'y'}>
 CONFIG_USB_XHCI_PCI_RENESAS                     policy<{'arm64': 'y'}>
 CONFIG_VIDEO_APPLE_ISP                          policy<{'arm64': 'm'}>
