@@ -50,6 +50,7 @@ pub mod error;
 pub mod firmware;
 pub mod fs;
 pub mod init;
+pub mod io;
 pub mod ioctl;
 pub mod jump_label;
 #[cfg(CONFIG_KUNIT)]
@@ -86,7 +87,6 @@ pub mod workqueue;
 
 #[doc(hidden)]
 pub use bindings;
-pub mod io;
 pub use macros;
 pub use uapi;
 
