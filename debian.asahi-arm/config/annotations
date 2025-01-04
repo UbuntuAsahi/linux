@@ -26,12 +26,14 @@ CONFIG_UBSAN                                    note<'LP: #1942215'>
 
 # ---- Annotations without notes ----
 
+CONFIG_APPLE_AOP                                policy<{'arm64': 'm'}>
 CONFIG_APPLE_DOCKCHANNEL                        policy<{'arm64': 'm'}>
 CONFIG_APPLE_MAILBOX                            policy<{'arm64': 'y'}>
 CONFIG_APPLE_PLATFORMS                          policy<{'arm64': 'y'}>
 CONFIG_APPLE_PMGR_MISC                          policy<{'arm64': 'y'}>
 CONFIG_APPLE_RTKIT                              policy<{'arm64': 'y'}>
 CONFIG_APPLE_RTKIT_HELPER                       policy<{'arm64': 'm'}>
+CONFIG_APPLE_SEP                                policy<{'arm64': 'm'}>
 CONFIG_APPLE_SIO                                policy<{'arm64': 'm'}>
 CONFIG_APPLE_SMC                                policy<{'arm64': 'm'}>
 CONFIG_APPLE_SMC_RTKIT                          policy<{'arm64': 'm'}>
@@ -81,6 +83,8 @@ CONFIG_GPIO_MACSMC                              policy<{'arm64': 'm'}>
 CONFIG_HAVE_PAGE_SIZE_16KB                      policy<{'arm64': 'y'}>
 CONFIG_HID_DOCKCHANNEL                          policy<{'arm64': 'm'}>
 CONFIG_HUGETLB_PMD_PAGE_TABLE_SHARING           policy<{'arm64': 'y'}>
+CONFIG_IIO_AOP_SENSOR_ALS                       policy<{'arm64': 'm'}>
+CONFIG_IIO_AOP_SENSOR_LAS                       policy<{'arm64': 'm'}>
 CONFIG_INPUT_MACSMC_HID                         policy<{'arm64': 'm'}>
 CONFIG_MARVELL_GTI_WDT                          policy<{'arm64': 'y'}>
 CONFIG_MESON_SECURE_PM_DOMAINS                  policy<{'arm64': '-'}>
@@ -114,6 +118,7 @@ CONFIG_SAMPLES_RUST                             policy<{'arm64': 'n'}>
 CONFIG_SCREEN_INFO                              policy<{'arm64': '-'}>
 CONFIG_SENSORS_MACSMC                           policy<{'arm64': 'm'}>
 CONFIG_SHADOW_CALL_STACK                        policy<{'arm64': 'n'}>
+CONFIG_SND_SOC_APPLE_AOP_AUDIO                  policy<{'arm64': 'm'}>
 CONFIG_SND_SOC_APPLE_MACAUDIO                   policy<{'arm64': 'm'}>
 CONFIG_SND_SOC_CS42L84                          policy<{'arm64': 'm'}>
 CONFIG_SPI_APPLE                                policy<{'arm64': 'm'}>
