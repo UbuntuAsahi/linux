@@ -156,7 +156,7 @@ pub trait MiscDevice: Sized {
         _m: &SeqFile,
         _file: &File,
     ) {
-        kernel::build_error(VTABLE_DEFAULT_ERROR)
+        kernel::build_error!(VTABLE_DEFAULT_ERROR)
     }
 }
 
