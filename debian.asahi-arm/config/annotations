@@ -101,10 +101,8 @@ CONFIG_PHY_APPLE_ATC                            policy<{'arm64': 'm'}>
 CONFIG_PHY_APPLE_DPTX                           policy<{'arm64': 'm'}>
 CONFIG_POWER_RESET_MACSMC                       policy<{'arm64': 'm'}>
 CONFIG_RTC_DRV_MACSMC                           policy<{'arm64': 'm'}>
-CONFIG_RUSTC_LLVM_VERSION                       policy<{'arm64': '180108'}>
 CONFIG_RUSTC_LLVM_VERSION_TEXT                  policy<{'arm64': '-'}>
-CONFIG_RUSTC_VERSION                            policy<{'arm64': '108001'}>
-CONFIG_RUSTC_VERSION_TEXT                       policy<{'arm64': '"rustc 1.80.1 (3f5fd8dd4 2024-08-06) (built from a source tarball)"'}>
+CONFIG_RUSTC_VERSION_TEXT                       policy<{'arm64': '"rustc 1.83.0 (90b35a623 2024-11-26) (built from a source tarball)"'}>
 CONFIG_RUST_APPLE_RTKIT                         policy<{'arm64': 'y'}>
 CONFIG_RUST_BUILD_ASSERT_ALLOW                  policy<{'arm64': 'n'}>
 CONFIG_RUST_DEBUG_ASSERTIONS                    policy<{'arm64': 'n'}>
