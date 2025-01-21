@@ -4291,13 +4291,14 @@ EXPORT_SYMBOL(security_secid_to_secctx);
 int security_lsmprop_to_secctx(struct lsm_prop *prop, struct lsm_context *cp,
 			       int lsmid)
 {
-	struct lsm_static_call *scall;
+	struct security_hook_list *hp;
 
-	lsm_for_each_hook(scall, lsmprop_to_secctx) {
-		if (lsmid != 0 && lsmid != scall->hl->lsmid->id)
+	hlist_for_each_entry(hp, &security_hook_heads.lsmprop_to_secctx, list) {
+		if (lsmid != hp->lsmid->id && lsmid != LSM_ID_UNDEF)
 			continue;
-		return scall->hl->hook.lsmprop_to_secctx(prop, cp);
+		return hp->hook.lsmprop_to_secctx(prop, cp);
 	}
+
 	return LSM_RET_DEFAULT(lsmprop_to_secctx);
 }
 EXPORT_SYMBOL(security_lsmprop_to_secctx);
@@ -4314,12 +4315,12 @@ EXPORT_SYMBOL(security_lsmprop_to_secctx);
  */
 int security_secctx_to_secid(const char *secdata, u32 seclen, u32 *secid)
 {
-	struct lsm_static_call *scall;
+	struct security_hook_list *hp;
 
 	*secid = 0;
-	lsm_for_each_hook(scall, secctx_to_secid) {
-		return scall->hl->hook.secctx_to_secid(secdata, seclen, secid);
-	}
+	hlist_for_each_entry(hp, &security_hook_heads.secctx_to_secid, list)
+		return hp->hook.secctx_to_secid(secdata, seclen, secid);
+
 	return LSM_RET_DEFAULT(secctx_to_secid);
 }
 EXPORT_SYMBOL(security_secctx_to_secid);
@@ -4762,12 +4763,13 @@ EXPORT_SYMBOL(security_sock_rcv_skb);
 int security_socket_getpeersec_stream(struct socket *sock, sockptr_t optval,
 				      sockptr_t optlen, unsigned int len)
 {
-	struct lsm_static_call *scall;
+	struct security_hook_list *hp;
 
-	lsm_for_each_hook(scall, socket_getpeersec_stream) {
-		return scall->hl->hook.socket_getpeersec_stream(sock, optval,
-								optlen, len);
-	}
+	hlist_for_each_entry(hp, &security_hook_heads.socket_getpeersec_stream,
+			     list)
+		return hp->hook.socket_getpeersec_stream(sock, optval, optlen,
+							 len);
+
 	return LSM_RET_DEFAULT(socket_getpeersec_stream);
 }
 
@@ -4788,12 +4790,12 @@ int security_socket_getpeersec_stream(struct socket *sock, sockptr_t optval,
 int security_socket_getpeersec_dgram(struct socket *sock,
 				     struct sk_buff *skb, u32 *secid)
 {
-	struct lsm_static_call *scall;
+	struct security_hook_list *hp;
 
-	lsm_for_each_hook(scall, socket_getpeersec_dgram) {
-		return scall->hl->hook.socket_getpeersec_dgram(sock, skb,
-							       secid);
-	}
+	hlist_for_each_entry(hp, &security_hook_heads.socket_getpeersec_dgram,
+			     list)
+		return hp->hook.socket_getpeersec_dgram(sock, skb, secid);
+
 	return LSM_RET_DEFAULT(socket_getpeersec_dgram);
 }
 EXPORT_SYMBOL(security_socket_getpeersec_dgram);
