@@ -1916,7 +1916,7 @@ CONFIG_AS_SHA1_NI                               policy<{'amd64': 'y'}>
 CONFIG_AS_SHA256_NI                             policy<{'amd64': 'y'}>
 CONFIG_AS_TPAUSE                                policy<{'amd64': 'y'}>
 CONFIG_AS_VAES                                  policy<{'amd64': 'y'}>
-CONFIG_AS_VERSION                               policy<{'amd64': '24350', 'arm64': '24350', 'armhf': '24350', 'ppc64el': '24350', 'riscv64': '24350', 's390x': '24350'}>
+CONFIG_AS_VERSION                               policy<{'amd64': '24390', 'arm64': '24390', 'armhf': '24390', 'ppc64el': '24390', 'riscv64': '24390', 's390x': '24390'}>
 CONFIG_AS_VFP_VMRS_FPINST                       policy<{'armhf': 'y'}>
 CONFIG_AS_VPCLMULQDQ                            policy<{'amd64': 'y'}>
 CONFIG_AS_WRUSS                                 policy<{'amd64': 'y'}>
@@ -7491,7 +7491,7 @@ CONFIG_LD_HEAD_STUB_CATCH                       policy<{'ppc64el': 'n'}>
 CONFIG_LD_IS_BFD                                policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y', 's390x': 'y'}>
 CONFIG_LD_ORPHAN_WARN                           policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y', 's390x': 'y'}>
 CONFIG_LD_ORPHAN_WARN_LEVEL                     policy<{'amd64': '"warn"', 'arm64': '"warn"', 'armhf': '"warn"', 'ppc64el': '"warn"', 'riscv64': '"warn"', 's390x': '"warn"'}>
-CONFIG_LD_VERSION                               policy<{'amd64': '24350', 'arm64': '24350', 'armhf': '24350', 'ppc64el': '24350', 'riscv64': '24350', 's390x': '24350'}>
+CONFIG_LD_VERSION                               policy<{'amd64': '24390', 'arm64': '24390', 'armhf': '24390', 'ppc64el': '24390', 'riscv64': '24390', 's390x': '24390'}>
 CONFIG_LEDS_88PM860X                            policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm', 's390x': '-'}>
 CONFIG_LEDS_AAEON                               policy<{'amd64': 'm'}>
 CONFIG_LEDS_AAT1290                             policy<{'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm'}>
@@ -11703,11 +11703,11 @@ CONFIG_RT_MUTEXES                               policy<{'amd64': 'y', 'arm64': '
 CONFIG_RUNTIME_KERNEL_TESTING_MENU              policy<{'riscv64': 'n'}>
 CONFIG_RUNTIME_TESTING_MENU                     policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y', 's390x': 'y'}>
 CONFIG_RUST                                     policy<{'amd64': 'y', 'arm64': 'n'}>
-CONFIG_RUSTC_LLVM_VERSION                       policy<{'amd64': '190105', 'arm64': '190105', 'armhf': '190105', 'ppc64el': '190105', 'riscv64': '190105', 's390x': '190105'}>
+CONFIG_RUSTC_LLVM_VERSION                       policy<{'amd64': '190106', 'arm64': '190106', 'armhf': '190106', 'ppc64el': '190106', 'riscv64': '190106', 's390x': '190106'}>
 CONFIG_RUSTC_SUPPORTS_ARM64                     policy<{'arm64': 'y'}>
 CONFIG_RUSTC_SUPPORTS_RISCV                     policy<{'riscv64': 'y'}>
-CONFIG_RUSTC_VERSION                            policy<{'amd64': '108300', 'arm64': '108300', 'armhf': '108300', 'ppc64el': '108300', 'riscv64': '108300', 's390x': '108300'}>
-CONFIG_RUSTC_VERSION_TEXT                       policy<{'amd64': '"rustc 1.83.0 (90b35a623 2024-11-26) (built from a source tarball)"'}>
+CONFIG_RUSTC_VERSION                            policy<{'amd64': '108400', 'arm64': '108400', 'armhf': '108400', 'ppc64el': '108400', 'riscv64': '108400', 's390x': '108400'}>
+CONFIG_RUSTC_VERSION_TEXT                       policy<{'amd64': '"rustc 1.84.0 (9fc6b4312 2025-01-07) (built from a source tarball)"'}>
 CONFIG_RUST_BUILD_ASSERT_ALLOW                  policy<{'amd64': 'n'}>
 CONFIG_RUST_DEBUG_ASSERTIONS                    policy<{'amd64': 'n'}>
 CONFIG_RUST_FW_LOADER_ABSTRACTIONS              policy<{'amd64': 'y'}>
