@@ -6527,7 +6527,7 @@ CONFIG_IMX_MBOX                                 policy<{'arm64': 'm', 'armhf': '
 CONFIG_IMX_MU_MSI                               policy<{'arm64': 'm', 'armhf': 'm'}>
 CONFIG_IMX_REMOTEPROC                           policy<{'arm64': 'm', 'armhf': 'm'}>
 CONFIG_IMX_SCMI_BBM_EXT                         policy<{'arm64': 'y', 'armhf': 'y'}>
-CONFIG_IMX_SCMI_MISC_DRV                        policy<{'arm64': 'y', 'armhf': 'y'}>
+CONFIG_IMX_SCMI_MISC_DRV                        policy<{'amd64': 'm', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'm', 'riscv64': 'm', 's390x': 'm'}>
 CONFIG_IMX_SCMI_MISC_EXT                        policy<{'arm64': 'y', 'armhf': 'y'}>
 CONFIG_IMX_SCU                                  policy<{'arm64': 'y', 'armhf': 'y'}>
 CONFIG_IMX_SCU_PD                               policy<{'arm64': 'y', 'armhf': 'y'}>
