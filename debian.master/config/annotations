@@ -2927,7 +2927,6 @@ CONFIG_CLK_X1E80100_DISPCC                      policy<{'arm64': 'm'}>
 CONFIG_CLK_X1E80100_GCC                         policy<{'arm64': 'm'}>
 CONFIG_CLK_X1E80100_GPUCC                       policy<{'arm64': 'm'}>
 CONFIG_CLK_X1E80100_TCSRCC                      policy<{'arm64': 'm'}>
-CONFIG_CLOCKSOURCE_VALIDATE_LAST_CYCLE          policy<{'amd64': 'y'}>
 CONFIG_CLOCKSOURCE_WATCHDOG                     policy<{'amd64': 'y'}>
 CONFIG_CLOCKSOURCE_WATCHDOG_MAX_SKEW_US         policy<{'amd64': '100'}>
 CONFIG_CLONE_BACKWARDS                          policy<{'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y'}>
@@ -3937,7 +3936,6 @@ CONFIG_DEBUG_SPINLOCK                           policy<{'amd64': 'n', 'arm64': '
 CONFIG_DEBUG_STACKOVERFLOW                      policy<{'ppc64el': 'n'}>
 CONFIG_DEBUG_STACK_USAGE                        policy<{'amd64': 'n', 'arm64': 'n', 'armhf': 'n', 'ppc64el': 'n', 'riscv64': 'n', 's390x': 'n'}>
 CONFIG_DEBUG_TEST_DRIVER_REMOVE                 policy<{'amd64': 'n', 'arm64': 'n', 'armhf': 'n', 'ppc64el': 'n', 'riscv64': 'n', 's390x': 'n'}>
-CONFIG_DEBUG_TIMEKEEPING                        policy<{'amd64': 'n', 'arm64': 'n', 'armhf': 'n', 'ppc64el': 'n', 'riscv64': 'n', 's390x': 'n'}>
 CONFIG_DEBUG_TLBFLUSH                           policy<{'amd64': 'n'}>
 CONFIG_DEBUG_USER                               policy<{'armhf': 'n'}>
 CONFIG_DEBUG_VF_UART_PORT                       policy<{'armhf': '1'}>
@@ -6074,6 +6072,7 @@ CONFIG_HIP04_ETH                                policy<{'arm64': 'm', 'armhf': '
 CONFIG_HIPPI                                    policy<{'amd64': 'n', 'arm64': 'n', 'armhf': 'n', 'ppc64el': 'n', 'riscv64': 'n', 's390x': 'n'}>
 CONFIG_HISILICON_ERRATUM_161010101              policy<{'arm64': 'y'}>
 CONFIG_HISILICON_ERRATUM_161600802              policy<{'arm64': 'y'}>
+CONFIG_HISILICON_ERRATUM_162100801              policy<{'arm64': 'y'}>
 CONFIG_HISILICON_IRQ_MBIGEN                     policy<{'arm64': 'y'}>
 CONFIG_HISILICON_LPC                            policy<{'arm64': 'y'}>
 CONFIG_HISI_ACC_VFIO_PCI                        policy<{'arm64': 'm'}>
