@@ -178,16 +178,7 @@ struct _cpuid4_info_regs {
 	struct amd_northbridge *nb;
 };
 
-static inline unsigned int get_num_cache_leaves(unsigned int cpu)
-{
-	return get_cpu_cacheinfo(cpu)->num_leaves;
-}
-
-static inline void
-set_num_cache_leaves(unsigned int nr_leaves, unsigned int cpu)
-{
-	get_cpu_cacheinfo(cpu)->num_leaves = nr_leaves;
-}
+static unsigned short num_cache_leaves;
 
 /* AMD doesn't have CPUID4. Emulate it here to report the same
    information to the user.  This makes some assumptions about the machine:
@@ -727,21 +718,19 @@ void cacheinfo_hygon_init_llc_id(struct cpuinfo_x86 *c)
 void init_amd_cacheinfo(struct cpuinfo_x86 *c)
 {
 
-	unsigned int cpu = c->cpu_index;
-
 	if (boot_cpu_has(X86_FEATURE_TOPOEXT)) {
-		set_num_cache_leaves(find_num_cache_leaves(c), cpu);
+		num_cache_leaves = find_num_cache_leaves(c);
 	} else if (c->extended_cpuid_level >= 0x80000006) {
 		if (cpuid_edx(0x80000006) & 0xf000)
-			set_num_cache_leaves(4, cpu);
+			num_cache_leaves = 4;
 		else
-			set_num_cache_leaves(3, cpu);
+			num_cache_leaves = 3;
 	}
 }
 
 void init_hygon_cacheinfo(struct cpuinfo_x86 *c)
 {
-	set_num_cache_leaves(find_num_cache_leaves(c), c->cpu_index);
+	num_cache_leaves = find_num_cache_leaves(c);
 }
 
 void init_intel_cacheinfo(struct cpuinfo_x86 *c)
@@ -753,19 +742,19 @@ void init_intel_cacheinfo(struct cpuinfo_x86 *c)
 	unsigned int l2_id = 0, l3_id = 0, num_threads_sharing, index_msb;
 
 	if (c->cpuid_level > 3) {
-		/*
-		 * There should be at least one leaf. A non-zero value means
-		 * that the number of leaves has been initialized.
-		 */
-		if (!get_num_cache_leaves(c->cpu_index))
-			set_num_cache_leaves(find_num_cache_leaves(c),
-					     c->cpu_index);
+		static int is_initialized;
+
+		if (is_initialized == 0) {
+			/* Init num_cache_leaves from boot CPU */
+			num_cache_leaves = find_num_cache_leaves(c);
+			is_initialized++;
+		}
 
 		/*
 		 * Whenever possible use cpuid(4), deterministic cache
 		 * parameters cpuid leaf to find the cache details
 		 */
-		for (i = 0; i < get_num_cache_leaves(c->cpu_index); i++) {
+		for (i = 0; i < num_cache_leaves; i++) {
 			struct _cpuid4_info_regs this_leaf = {};
 			int retval;
 
@@ -801,14 +790,14 @@ void init_intel_cacheinfo(struct cpuinfo_x86 *c)
 	 * Don't use cpuid2 if cpuid4 is supported. For P4, we use cpuid2 for
 	 * trace cache
 	 */
-	if ((!get_num_cache_leaves(c->cpu_index) || c->x86 == 15) && c->cpuid_level > 1) {
+	if ((num_cache_leaves == 0 || c->x86 == 15) && c->cpuid_level > 1) {
 		/* supports eax=2  call */
 		int j, n;
 		unsigned int regs[4];
 		unsigned char *dp = (unsigned char *)regs;
 		int only_trace = 0;
 
-		if (get_num_cache_leaves(c->cpu_index) && c->x86 == 15)
+		if (num_cache_leaves != 0 && c->x86 == 15)
 			only_trace = 1;
 
 		/* Number of times to iterate */
@@ -1004,9 +993,12 @@ int init_cache_level(unsigned int cpu)
 {
 	struct cpu_cacheinfo *this_cpu_ci = get_cpu_cacheinfo(cpu);
 
+	if (!num_cache_leaves)
+		return -ENOENT;
 	if (!this_cpu_ci)
 		return -EINVAL;
 	this_cpu_ci->num_levels = 3;
+	this_cpu_ci->num_leaves = num_cache_leaves;
 	return 0;
 }
 
