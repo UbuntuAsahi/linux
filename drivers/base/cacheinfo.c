@@ -542,11 +542,7 @@ static inline int init_level_allocate_ci(unsigned int cpu)
 	 */
 	ci_cacheinfo(cpu)->early_ci_levels = false;
 
-	/*
-	 * Some architectures (e.g., x86) do not use early initialization.
-	 * Allocate memory now in such case.
-	 */
-	if (cache_leaves(cpu) <= early_leaves && per_cpu_cacheinfo(cpu))
+	if (cache_leaves(cpu) <= early_leaves)
 		return 0;
 
 	kfree(per_cpu_cacheinfo(cpu));
