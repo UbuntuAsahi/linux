@@ -8741,7 +8741,7 @@ CONFIG_MTK_REGULATOR_COUPLER                    policy<{'arm64': 'y', 'armhf': '
 CONFIG_MTK_SCP                                  policy<{'arm64': 'm', 'armhf': 'm'}>
 CONFIG_MTK_SCPSYS                               policy<{'arm64': 'y', 'armhf': 'y'}>
 CONFIG_MTK_SCPSYS_PM_DOMAINS                    policy<{'arm64': 'y', 'armhf': 'y'}>
-CONFIG_MTK_SMI                                  policy<{'arm64': 'm', 'armhf': 'm'}>
+CONFIG_MTK_SMI                                  policy<{'arm64': 'm', 'armhf': '-'}>
 CONFIG_MTK_SOCINFO                              policy<{'arm64': 'm', 'armhf': 'm'}>
 CONFIG_MTK_SOC_THERMAL                          policy<{'arm64': 'm', 'armhf': 'm'}>
 CONFIG_MTK_SVS                                  policy<{'arm64': 'm', 'armhf': 'm'}>
