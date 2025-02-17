@@ -190,8 +190,7 @@ static int profile_create_perm(struct aa_profile *profile, int family,
 			       int type, int protocol,
 			       struct apparmor_audit_data *ad)
 {
-	struct aa_ruleset *rules = list_first_entry(&profile->rules,
-						    typeof(*rules), list);
+	struct aa_ruleset *rules = profile->label.rules[0];
 	aa_state_t state;
 
 	AA_BUG(!profile);
@@ -215,9 +214,7 @@ static int profile_sk_perm(struct aa_profile *profile,
 			   struct apparmor_audit_data *ad,
 			   u32 request, struct sock *sk)
 {
-	struct aa_ruleset *rules = list_first_entry(&profile->rules,
-						    typeof(*rules),
-						    list);
+	struct aa_ruleset *rules = profile->label.rules[0];
 	struct aa_perms *p = NULL;
 	aa_state_t state;
 
@@ -241,8 +238,7 @@ static int profile_sk_perm(struct aa_profile *profile,
 static int profile_bind_perm(struct aa_profile *profile, struct sock *sk,
 			     struct apparmor_audit_data *ad)
 {
-	struct aa_ruleset *rules = list_first_entry(&profile->rules,
-						    typeof(*rules), list);
+	struct aa_ruleset *rules = profile->label.rules[0];
 	struct aa_perms *p = NULL;
 	aa_state_t state;
 
@@ -270,8 +266,7 @@ static int profile_bind_perm(struct aa_profile *profile, struct sock *sk,
 static int profile_listen_perm(struct aa_profile *profile, struct sock *sk,
 			       int backlog, struct apparmor_audit_data *ad)
 {
-	struct aa_ruleset *rules = list_first_entry(&profile->rules,
-						    typeof(*rules), list);
+	struct aa_ruleset *rules = profile->label.rules[0];
 	struct aa_perms *p = NULL;
 	aa_state_t state;
 
@@ -304,8 +299,7 @@ static int profile_accept_perm(struct aa_profile *profile,
 			       struct sock *sk,
 			       struct apparmor_audit_data *ad)
 {
-	struct aa_ruleset *rules = list_first_entry(&profile->rules,
-						    typeof(*rules), list);
+	struct aa_ruleset *rules = profile->label.rules[0];
 	struct aa_perms *p = NULL;
 	aa_state_t state;
 
@@ -331,8 +325,7 @@ static int profile_opt_perm(struct aa_profile *profile, u32 request,
 			    struct sock *sk, int optname,
 			    struct apparmor_audit_data *ad)
 {
-	struct aa_ruleset *rules = list_first_entry(&profile->rules,
-						    typeof(*rules), list);
+	struct aa_ruleset *rules = profile->label.rules[0];
 	struct aa_perms *p = NULL;
 	aa_state_t state;
 
@@ -367,8 +360,7 @@ static int profile_peer_perm(struct aa_profile *profile, u32 request,
 			     struct aa_label *peer_label,
 			     struct apparmor_audit_data *ad)
 {
-	struct aa_ruleset *rules = list_first_entry(&profile->rules,
-						    typeof(*rules), list);
+	struct aa_ruleset *rules = profile->label.rules[0];
 	struct aa_perms *p = NULL;
 	aa_state_t state;
 
