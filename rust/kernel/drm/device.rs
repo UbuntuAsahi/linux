@@ -80,6 +80,7 @@ impl<T: drm::drv::Driver> Device<T> {
         patchlevel: T::INFO.patchlevel,
         name: T::INFO.name.as_char_ptr() as *mut _,
         desc: T::INFO.desc.as_char_ptr() as *mut _,
+        date: T::INFO.date.as_char_ptr() as *mut _,
 
         driver_features: T::FEATURES,
         ioctls: T::IOCTLS.as_ptr(),
