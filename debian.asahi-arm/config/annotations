@@ -56,10 +56,10 @@ CONFIG_ARM64_VA_BITS_52                         policy<{'arm64': '-'}>
 CONFIG_ARM_APPLE_CPUIDLE                        policy<{'arm64': 'y'}>
 CONFIG_ASM_MODVERSIONS                          policy<{'arm64': '-'}>
 CONFIG_AX88796B_RUST_PHY                        policy<{'arm64': 'n'}>
-CONFIG_BINDGEN_VERSION_TEXT                     policy<{'arm64': '"bindgen 0.70.1"'}>
+CONFIG_BINDGEN_VERSION_TEXT                     policy<{'arm64': '"bindgen 0.71.1"'}>
 CONFIG_BLK_DEV_RUST_NULL                        policy<{'arm64': 'n'}>
 CONFIG_CC_HAS_UBSAN_BOUNDS_STRICT               policy<{'arm64': '-'}>
-CONFIG_CC_VERSION_TEXT                          policy<{'arm64': '"aarch64-linux-gnu-gcc-14 (Ubuntu 14.2.0-12ubuntu1) 14.2.0"'}>
+CONFIG_CC_VERSION_TEXT                          policy<{'arm64': '"aarch64-linux-gnu-gcc-14 (Ubuntu 14.2.0-17ubuntu3) 14.2.0"'}>
 CONFIG_CHARGER_MACSMC                           policy<{'arm64': 'm'}>
 CONFIG_CLK_QCM2290_GPUCC                        policy<{'arm64': 'n'}>
 CONFIG_COMMON_CLK_C3_PERIPHERALS                policy<{'arm64': 'y'}>
@@ -101,8 +101,10 @@ CONFIG_PHY_APPLE_ATC                            policy<{'arm64': 'm'}>
 CONFIG_PHY_APPLE_DPTX                           policy<{'arm64': 'm'}>
 CONFIG_POWER_RESET_MACSMC                       policy<{'arm64': 'm'}>
 CONFIG_RTC_DRV_MACSMC                           policy<{'arm64': 'm'}>
+CONFIG_RUSTC_LLVM_VERSION                       policy<{'arm64': '190107'}>
 CONFIG_RUSTC_LLVM_VERSION_TEXT                  policy<{'arm64': '-'}>
-CONFIG_RUSTC_VERSION_TEXT                       policy<{'arm64': '"rustc 1.83.0 (90b35a623 2024-11-26) (built from a source tarball)"'}>
+CONFIG_RUSTC_VERSION                            policy<{'arm64': '108401'}>
+CONFIG_RUSTC_VERSION_TEXT                       policy<{'arm64': '"rustc 1.84.1 (e71f9a9a9 2025-01-27) (built from a source tarball)"'}>
 CONFIG_RUST_APPLE_RTKIT                         policy<{'arm64': 'y'}>
 CONFIG_RUST_BUILD_ASSERT_ALLOW                  policy<{'arm64': 'n'}>
 CONFIG_RUST_DEBUG_ASSERTIONS                    policy<{'arm64': 'n'}>
