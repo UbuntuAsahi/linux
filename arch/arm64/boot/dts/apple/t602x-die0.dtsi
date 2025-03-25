@@ -228,7 +228,7 @@
 	};
 
 	aop: aop@2a6c00000 {
-		compatible = "apple,aop";
+		compatible = "apple,aop-t6020";
 		reg = <0x2 0xa6c00000 0x0 0x250000>,
 		      <0x2 0xa6400000 0x0 0x6C000>;
 		mboxes = <&aop_mbox>;
