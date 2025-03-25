@@ -206,6 +206,7 @@
 		interrupt-parent = <&aic>;
 		interrupts = <AIC_IRQ 0 628 IRQ_TYPE_LEVEL_HIGH>;
 		status = "disabled";
+		apple,dma-range = <0x100 0x0 0x300 0x0>;
 	};
 
 	aop_admac: dma-controller@2a6980000 {
