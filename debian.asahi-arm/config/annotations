@@ -52,14 +52,14 @@ CONFIG_ARM64_MEMORY_MODEL_CONTROL               policy<{'arm64': 'y'}>
 CONFIG_ARM64_VA_BITS_36                         policy<{'arm64': 'n'}>
 CONFIG_ARM64_VA_BITS_39                         policy<{'arm64': '-'}>
 CONFIG_ARM64_VA_BITS_47                         policy<{'arm64': 'n'}>
-CONFIG_ARM64_VA_BITS_52                         policy<{'arm64': '-'}>
 CONFIG_ARM_APPLE_CPUIDLE                        policy<{'arm64': 'y'}>
 CONFIG_ASM_MODVERSIONS                          policy<{'arm64': '-'}>
+CONFIG_AS_VERSION                               policy<{'arm64': '24400'}>
 CONFIG_AX88796B_RUST_PHY                        policy<{'arm64': 'n'}>
 CONFIG_BINDGEN_VERSION_TEXT                     policy<{'arm64': '"bindgen 0.71.1"'}>
 CONFIG_BLK_DEV_RUST_NULL                        policy<{'arm64': 'n'}>
 CONFIG_CC_HAS_UBSAN_BOUNDS_STRICT               policy<{'arm64': '-'}>
-CONFIG_CC_VERSION_TEXT                          policy<{'arm64': '"aarch64-linux-gnu-gcc-14 (Ubuntu 14.2.0-17ubuntu3) 14.2.0"'}>
+CONFIG_CC_VERSION_TEXT                          policy<{'arm64': '"aarch64-linux-gnu-gcc-14 (Ubuntu 14.2.0-19ubuntu1) 14.2.0"'}>
 CONFIG_CHARGER_MACSMC                           policy<{'arm64': 'm'}>
 CONFIG_CLK_QCM2290_GPUCC                        policy<{'arm64': 'n'}>
 CONFIG_COMMON_CLK_C3_PERIPHERALS                policy<{'arm64': 'y'}>
@@ -72,6 +72,7 @@ CONFIG_DRM_ASAHI                                policy<{'arm64': 'm'}>
 CONFIG_DRM_ASAHI_DEBUG_ALLOCATOR                policy<{'arm64': 'n'}>
 CONFIG_DRM_EXEC                                 policy<{'arm64': 'y'}>
 CONFIG_DRM_GPUVM                                policy<{'arm64': 'y'}>
+CONFIG_DRM_PANEL_BACKLIGHT_QUIRKS               policy<{'arm64': 'm'}>
 CONFIG_DRM_PANEL_HIMAX_HX83102                  policy<{'arm64': 'n'}>
 CONFIG_DRM_PANEL_ILITEK_ILI9806E                policy<{'arm64': 'n'}>
 CONFIG_DRM_PANEL_LINCOLNTECH_LCD197             policy<{'arm64': 'n'}>
@@ -85,13 +86,19 @@ CONFIG_HID_DOCKCHANNEL                          policy<{'arm64': 'm'}>
 CONFIG_HUGETLB_PMD_PAGE_TABLE_SHARING           policy<{'arm64': 'y'}>
 CONFIG_IIO_AOP_SENSOR_ALS                       policy<{'arm64': 'm'}>
 CONFIG_IIO_AOP_SENSOR_LAS                       policy<{'arm64': 'm'}>
+CONFIG_INFINIBAND_HNS                           policy<{'arm64': '-'}>
+CONFIG_INFINIBAND_HNS_HIP08                     policy<{'arm64': 'm'}>
 CONFIG_INPUT_MACSMC_HID                         policy<{'arm64': 'm'}>
+CONFIG_LD_VERSION                               policy<{'arm64': '24400'}>
 CONFIG_MARVELL_GTI_WDT                          policy<{'arm64': 'y'}>
+CONFIG_MD_LINEAR                                policy<{'arm64': 'n'}>
 CONFIG_MESON_SECURE_PM_DOMAINS                  policy<{'arm64': '-'}>
 CONFIG_MESON_SM                                 policy<{'arm64': '-'}>
 CONFIG_MFD_APPLE_SPMI_PMU                       policy<{'arm64': 'm'}>
 CONFIG_MFD_SIMPLE_MFD_SPMI                      policy<{'arm64': 'm'}>
+CONFIG_MIPI_I3C_HCI_PCI                         policy<{'arm64': 'n'}>
 CONFIG_MUX_APPLE_DPXBAR                         policy<{'arm64': 'm'}>
+CONFIG_NET_DSA_REALTEK_RTL8366RB_LEDS           policy<{'arm64': 'y'}>
 CONFIG_NVMEM_MESON_EFUSE                        policy<{'arm64': '-'}>
 CONFIG_NVMEM_SPMI_MFD                           policy<{'arm64': 'm'}>
 CONFIG_PAGE_SHIFT                               policy<{'arm64': '14'}>
@@ -101,6 +108,7 @@ CONFIG_PHY_APPLE_ATC                            policy<{'arm64': 'm'}>
 CONFIG_PHY_APPLE_DPTX                           policy<{'arm64': 'm'}>
 CONFIG_POWER_RESET_MACSMC                       policy<{'arm64': 'm'}>
 CONFIG_RTC_DRV_MACSMC                           policy<{'arm64': 'm'}>
+CONFIG_RUSTC_HAS_COERCE_POINTEE                 policy<{'arm64': 'y'}>
 CONFIG_RUSTC_LLVM_VERSION                       policy<{'arm64': '190107'}>
 CONFIG_RUSTC_LLVM_VERSION_TEXT                  policy<{'arm64': '-'}>
 CONFIG_RUSTC_VERSION                            policy<{'arm64': '108401'}>
@@ -120,8 +128,6 @@ CONFIG_SENSORS_MACSMC                           policy<{'arm64': 'm'}>
 CONFIG_SHADOW_CALL_STACK                        policy<{'arm64': 'n'}>
 CONFIG_SND_SOC_APPLE_AOP_AUDIO                  policy<{'arm64': 'm'}>
 CONFIG_SND_SOC_APPLE_MACAUDIO                   policy<{'arm64': 'm'}>
-CONFIG_SND_SOC_CS42L84                          policy<{'arm64': 'm'}>
-CONFIG_SPI_APPLE                                policy<{'arm64': 'm'}>
 CONFIG_SPI_HID_APPLE_CORE                       policy<{'arm64': 'm'}>
 CONFIG_SPI_HID_APPLE_OF                         policy<{'arm64': 'm'}>
 CONFIG_SPMI_APPLE                               policy<{'arm64': 'm'}>
