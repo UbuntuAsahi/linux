@@ -124,6 +124,7 @@ CONFIG_RUST_OVERFLOW_CHECKS                     policy<{'arm64': 'y'}>
 CONFIG_RUST_PHYLIB_ABSTRACTIONS                 policy<{'arm64': 'y'}>
 CONFIG_SAMPLES_RUST                             policy<{'arm64': 'n'}>
 CONFIG_SCREEN_INFO                              policy<{'arm64': '-'}>
+CONFIG_SECURITY_APPARMOR_RESTRICT_USERNS        policy<{'arm64': 'y'}>
 CONFIG_SENSORS_MACSMC                           policy<{'arm64': 'm'}>
 CONFIG_SHADOW_CALL_STACK                        policy<{'arm64': 'n'}>
 CONFIG_SND_SOC_APPLE_AOP_AUDIO                  policy<{'arm64': 'm'}>
