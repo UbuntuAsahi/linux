@@ -1,3 +1,3 @@
 # The following upstream asahi releases have been ported:
 [ubuntu-asahi]
-	Ubuntu-6.12.0-16.16 = asahi-6.12.12-1 (2025-03-08)
+	Ubuntu-unstable-6.13.0-2.2 + v6.13.8 = asahi-6.13.8-1 (2025-03-27)
