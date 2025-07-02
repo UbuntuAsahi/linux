@@ -5,7 +5,7 @@ build_image	= Image.gz
 kernel_file	= arch/$(build_arch)/boot/Image.gz
 install_file	= vmlinuz
 no_dumpfile = true
-uefi_signed     = true
+uefi_signed = false
 
 vdso		= vdso_install
 
@@ -18,5 +18,3 @@ do_tools_bpftool = true
 do_tools_rtla = true
 
 do_dtbs		= true
-
-uefi_signed      = false
