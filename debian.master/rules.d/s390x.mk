@@ -8,7 +8,7 @@ install_file	= vmlinuz
 vdso		= vdso_install
 no_dumpfile	= true
 
-sipl_signed       = false
+sipl_signed       = true
 do_tools_usbip    = true
 do_tools_cpupower = true
 do_tools_perf     = true
