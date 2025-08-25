@@ -2694,7 +2694,7 @@ CONFIG_CC_NO_ARRAY_BOUNDS                       policy<{'amd64': 'y', 'arm64': '
 CONFIG_CC_NO_STRINGOP_OVERFLOW                  policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y', 's390x': 'y'}>
 CONFIG_CC_OPTIMIZE_FOR_PERFORMANCE              policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y', 's390x': 'y'}>
 CONFIG_CC_OPTIMIZE_FOR_SIZE                     policy<{'amd64': 'n', 'arm64': 'n', 'armhf': 'n', 'ppc64el': 'n', 'riscv64': 'n', 's390x': 'n'}>
-CONFIG_CC_VERSION_TEXT                          policy<{'amd64': '"x86_64-linux-gnu-gcc (Ubuntu 15.2.0-1ubuntu1) 15.2.0"', 'arm64': '"aarch64-linux-gnu-gcc (Ubuntu 15.1.0-10ubuntu2) 15.1.0"', 'armhf': '"arm-linux-gnueabihf-gcc (Ubuntu 15.1.0-10ubuntu2) 15.1.0"', 'ppc64el': '"powerpc64le-linux-gnu-gcc (Ubuntu 15.1.0-10ubuntu2) 15.1.0"', 'riscv64': '"riscv64-linux-gnu-gcc (Ubuntu 15.1.0-10ubuntu2) 15.1.0"', 's390x': '"s390x-linux-gnu-gcc (Ubuntu 15.1.0-10ubuntu2) 15.1.0"'}>
+CONFIG_CC_VERSION_TEXT                          policy<{'amd64': '"x86_64-linux-gnu-gcc (Ubuntu 15.2.0-1ubuntu1) 15.2.0"', 'arm64': '"aarch64-linux-gnu-gcc (Ubuntu 15.2.0-1ubuntu1) 15.2.0"', 'armhf': '"arm-linux-gnueabihf-gcc (Ubuntu 15.2.0-1ubuntu1) 15.2.0"', 'ppc64el': '"powerpc64le-linux-gnu-gcc (Ubuntu 15.2.0-1ubuntu1) 15.2.0"', 'riscv64': '"riscv64-linux-gnu-gcc (Ubuntu 15.2.0-1ubuntu1) 15.2.0"', 's390x': '"s390x-linux-gnu-gcc (Ubuntu 15.2.0-1ubuntu1) 15.2.0"'}>
 CONFIG_CDNS_I3C_MASTER                          policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm'}>
 CONFIG_CDROM                                    policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y', 's390x': 'y'}>
 CONFIG_CDROM_PKTCDVD                            policy<{'amd64': 'n', 'arm64': 'n', 'armhf': 'n', 'ppc64el': 'n', 'riscv64': 'n', 's390x': 'n'}>
@@ -5548,7 +5548,7 @@ CONFIG_GCC10_NO_ARRAY_BOUNDS                    policy<{'amd64': 'y', 'arm64': '
 CONFIG_GCC_NO_STRINGOP_OVERFLOW                 policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y', 's390x': 'y'}>
 CONFIG_GCC_SUPPORTS_DYNAMIC_FTRACE              policy<{'riscv64': 'y'}>
 CONFIG_GCC_SUPPORTS_DYNAMIC_FTRACE_WITH_ARGS    policy<{'arm64': 'y'}>
-CONFIG_GCC_VERSION                              policy<{'amd64': '150200', 'arm64': '150100', 'armhf': '150100', 'ppc64el': '150100', 'riscv64': '150100', 's390x': '150100'}>
+CONFIG_GCC_VERSION                              policy<{'amd64': '150200', 'arm64': '150200', 'armhf': '150200', 'ppc64el': '150200', 'riscv64': '150200', 's390x': '150200'}>
 CONFIG_GCOV_KERNEL                              policy<{'amd64': 'n', 'arm64': 'n', 'armhf': 'n', 'ppc64el': 'n', 'riscv64': 'n', 's390x': 'n'}>
 CONFIG_GDB_SCRIPTS                              policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y', 's390x': 'y'}>
 CONFIG_GEHC_PMC_ADC                             policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm'}>
@@ -10797,7 +10797,7 @@ CONFIG_POWER_RESET_RMOBILE                      policy<{'armhf': 'm'}>
 CONFIG_POWER_RESET_SC27XX                       policy<{'arm64': 'm'}>
 CONFIG_POWER_RESET_SYSCON                       policy<{'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y'}>
 CONFIG_POWER_RESET_SYSCON_POWEROFF              policy<{'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y'}>
-CONFIG_POWER_RESET_TORADEX_EC                   policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm', 's390x': 'n'}>
+CONFIG_POWER_RESET_TORADEX_EC                   policy<{'amd64': '-', 'arm64': 'm', 'armhf': 'm', 'ppc64el': '-', 'riscv64': '-', 's390x': '-'}>
 CONFIG_POWER_RESET_TPS65086                     policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y'}>
 CONFIG_POWER_RESET_VERSATILE                    policy<{'armhf': 'y'}>
 CONFIG_POWER_RESET_VEXPRESS                     policy<{'arm64': 'y', 'armhf': 'y'}>
@@ -15572,6 +15572,7 @@ CONFIG_VGA_CONSOLE                              policy<{'amd64': 'y', 'ppc64el':
 CONFIG_VGA_SWITCHEROO                           policy<{'amd64': 'y'}>
 CONFIG_VHOST                                    policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm', 's390x': 'm'}>
 CONFIG_VHOST_CROSS_ENDIAN_LEGACY                policy<{'amd64': 'n', 'arm64': 'n', 'armhf': 'n', 'ppc64el': 'n', 'riscv64': 'n', 's390x': 'n'}>
+CONFIG_VHOST_ENABLE_FORK_OWNER_CONTROL          policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y', 's390x': 'y'}>
 CONFIG_VHOST_IOTLB                              policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm', 's390x': 'm'}>
 CONFIG_VHOST_MENU                               policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y', 's390x': 'y'}>
 CONFIG_VHOST_NET                                policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm', 's390x': 'm'}>
@@ -15973,7 +15974,7 @@ CONFIG_VL6180                                   policy<{'amd64': 'm', 'arm64': '
 CONFIG_VLAN_8021Q                               policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm', 's390x': 'm'}>
 CONFIG_VLAN_8021Q_GVRP                          policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y', 's390x': 'y'}>
 CONFIG_VLAN_8021Q_MVRP                          policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y', 's390x': 'y'}>
-CONFIG_VMAP_PFN                                 policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y', 's390x': 'y'}>
+CONFIG_VMAP_PFN                                 policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y', 's390x': '-'}>
 CONFIG_VMAP_STACK                               policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'riscv64': 'y', 's390x': 'y'}>
 CONFIG_VMCORE_INFO                              policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y', 's390x': 'y'}>
 CONFIG_VMCP                                     policy<{'s390x': 'y'}>
