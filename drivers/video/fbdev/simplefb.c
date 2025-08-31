@@ -93,6 +93,7 @@ struct simplefb_par {
 
 static void simplefb_clocks_destroy(struct simplefb_par *par);
 static void simplefb_regulators_destroy(struct simplefb_par *par);
+static void simplefb_detach_genpds(void *res);
 
 /*
  * fb_ops.fb_destroy is called by the last put_fb_info() call at the end
@@ -105,6 +106,7 @@ static void simplefb_destroy(struct fb_info *info)
 
 	simplefb_regulators_destroy(info->par);
 	simplefb_clocks_destroy(info->par);
+	simplefb_detach_genpds(info->par);
 	if (info->screen_base)
 		iounmap(info->screen_base);
 
@@ -474,13 +476,11 @@ static int simplefb_attach_genpds(struct simplefb_par *par,
 		return err;
 	}
 
-	par->num_genpds = err;
-
 	/*
 	 * Single power-domain devices are handled by the driver core, so
 	 * nothing to do here.
 	 */
-	if (par->num_genpds <= 1)
+	if (err <= 1)
 		return 0;
 
 	par->genpds = devm_kcalloc(dev, par->num_genpds, sizeof(*par->genpds),
@@ -493,6 +493,12 @@ static int simplefb_attach_genpds(struct simplefb_par *par,
 					GFP_KERNEL);
 	if (!par->genpd_links)
 		return -ENOMEM;
+
+	/*
+	 * Set num_genpds only after genpds and genpd_links are allocated to
+	 * exit early from simplefb_detach_genpds() without full initialisation.
+	 */
+	par->num_genpds = err;
 
 	for (i = 0; i < par->num_genpds; i++) {
 		par->genpds[i] = dev_pm_domain_attach_by_id(dev, i);
@@ -515,9 +521,10 @@ static int simplefb_attach_genpds(struct simplefb_par *par,
 			dev_warn(dev, "failed to link power-domain %u\n", i);
 	}
 
-	return devm_add_action_or_reset(dev, simplefb_detach_genpds, par);
+	return 0;
 }
 #else
+static void simplefb_detach_genpds(void *res) { }
 static int simplefb_attach_genpds(struct simplefb_par *par,
 				  struct platform_device *pdev)
 {
