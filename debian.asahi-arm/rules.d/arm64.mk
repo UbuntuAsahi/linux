@@ -1,8 +1,8 @@
 build_arch	= arm64
 defconfig	= defconfig
 flavours	= asahi-arm
-build_image	= Image.gz
-kernel_file	= arch/$(build_arch)/boot/Image.gz
+build_image    = vmlinuz.efi
+kernel_file    = arch/$(build_arch)/boot/vmlinuz.efi
 install_file	= vmlinuz
 no_dumpfile = true
 uefi_signed = false
