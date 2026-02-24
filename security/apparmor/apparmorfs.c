@@ -1884,6 +1884,7 @@ static void remove_rawdata_dents(struct aa_loaddata *rawdata)
 		if (!IS_ERR_OR_NULL(rawdata->dents[i])) {
 			aafs_remove(rawdata->dents[i]);
 			rawdata->dents[i] = NULL;
+			aa_put_i_loaddata(rawdata);
 		}
 	}
 }
@@ -1922,12 +1923,14 @@ int __aa_fs_create_rawdata(struct aa_ns *ns, struct aa_loaddata *rawdata)
 	if (IS_ERR(dir))
 		/* ->name freed when rawdata freed */
 		return PTR_ERR(dir);
+	aa_get_i_loaddata(rawdata);
 	rawdata->dents[AAFS_LOADDATA_DIR] = dir;
 
 	dent = aafs_create_file("abi", S_IFREG | 0444, dir, &rawdata->count,
 				      &seq_rawdata_abi_fops);
 	if (IS_ERR(dent))
 		goto fail;
+	aa_get_i_loaddata(rawdata);
 	rawdata->dents[AAFS_LOADDATA_ABI] = dent;
 
 	dent = aafs_create_file("revision", S_IFREG | 0444, dir,
@@ -1935,6 +1938,7 @@ int __aa_fs_create_rawdata(struct aa_ns *ns, struct aa_loaddata *rawdata)
 				&seq_rawdata_revision_fops);
 	if (IS_ERR(dent))
 		goto fail;
+	aa_get_i_loaddata(rawdata);
 	rawdata->dents[AAFS_LOADDATA_REVISION] = dent;
 
 	if (aa_g_hash_policy) {
@@ -1943,6 +1947,7 @@ int __aa_fs_create_rawdata(struct aa_ns *ns, struct aa_loaddata *rawdata)
 					&seq_rawdata_hash_fops);
 		if (IS_ERR(dent))
 			goto fail;
+		aa_get_i_loaddata(rawdata);
 		rawdata->dents[AAFS_LOADDATA_HASH] = dent;
 	}
 
@@ -1951,12 +1956,14 @@ int __aa_fs_create_rawdata(struct aa_ns *ns, struct aa_loaddata *rawdata)
 				&seq_rawdata_compressed_size_fops);
 	if (IS_ERR(dent))
 		goto fail;
+	aa_get_i_loaddata(rawdata);
 	rawdata->dents[AAFS_LOADDATA_COMPRESSED_SIZE] = dent;
 
 	dent = aafs_create_file("raw_data", S_IFREG | 0444, dir,
 				&rawdata->count, &rawdata_fops);
 	if (IS_ERR(dent))
 		goto fail;
+	aa_get_i_loaddata(rawdata);
 	rawdata->dents[AAFS_LOADDATA_DATA] = dent;
 	d_inode(dent)->i_size = rawdata->size;
 
