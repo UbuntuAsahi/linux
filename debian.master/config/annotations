@@ -2036,7 +2036,7 @@ CONFIG_ATH6KL_SDIO                              policy<{'amd64': 'm', 'arm64': '
 CONFIG_ATH6KL_TRACING                           policy<{'amd64': 'n', 'arm64': 'n', 'armhf': 'n', 'ppc64el': 'n', 'riscv64': 'n'}>
 CONFIG_ATH6KL_USB                               policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm'}>
 CONFIG_ATH9K                                    policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm'}>
-CONFIG_ATH9K_AHB                                policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y'}>
+CONFIG_ATH9K_AHB                                policy<{'amd64': '-', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y'}>
 CONFIG_ATH9K_BTCOEX_SUPPORT                     policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y'}>
 CONFIG_ATH9K_CHANNEL_CONTEXT                    policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y'}>
 CONFIG_ATH9K_COMMON                             policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm'}>
@@ -5816,6 +5816,7 @@ CONFIG_GPIO_TC3589X                             policy<{'arm64': 'y', 'armhf': '
 CONFIG_GPIO_TEGRA                               policy<{'arm64': 'y', 'armhf': 'y'}>
 CONFIG_GPIO_TEGRA186                            policy<{'arm64': 'y'}>
 CONFIG_GPIO_THUNDERX                            policy<{'arm64': 'm'}>
+CONFIG_GPIO_TN48M_CPLD                          policy<{'arm64': 'm', 'armhf': 'm'}>
 CONFIG_GPIO_TPIC2810                            policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm', 's390x': 'n'}>
 CONFIG_GPIO_TPS65086                            policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm'}>
 CONFIG_GPIO_TPS65218                            policy<{'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm'}>
@@ -8472,6 +8473,7 @@ CONFIG_MFD_TI_AM335X_TSCADC                     policy<{'amd64': '-', 'arm64': '
 CONFIG_MFD_TI_LMU                               policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm', 's390x': 'n'}>
 CONFIG_MFD_TI_LP873X                            policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm', 's390x': 'n'}>
 CONFIG_MFD_TI_LP87565                           policy<{'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm'}>
+CONFIG_MFD_TN48M_CPLD                           policy<{'arm64': 'm', 'armhf': 'm'}>
 CONFIG_MFD_TPS65086                             policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm', 's390x': 'n'}>
 CONFIG_MFD_TPS65090                             policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 'riscv64': 'y', 's390x': '-'}>
 CONFIG_MFD_TPS65218                             policy<{'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm'}>
@@ -11774,6 +11776,7 @@ CONFIG_RESET_TEGRA_BPMP                         policy<{'arm64': 'y', 'armhf': '
 CONFIG_RESET_TI_SCI                             policy<{'arm64': 'm'}>
 CONFIG_RESET_TI_SYSCON                          policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm', 's390x': '-'}>
 CONFIG_RESET_TI_TPS380X                         policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm'}>
+CONFIG_RESET_TN48M_CPLD                         policy<{'arm64': 'm', 'armhf': 'm'}>
 CONFIG_RESET_ZYNQMP                             policy<{'arm64': 'y'}>
 CONFIG_RETHOOK                                  policy<{'amd64': 'y', 'ppc64el': 'y', 'riscv64': 'y', 's390x': 'y'}>
 CONFIG_RETU_WATCHDOG                            policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 'riscv64': 'm'}>
