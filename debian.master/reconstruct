@@ -31,4 +31,5 @@ chmod +x 'debian/templates/image.prerm.in'
 chmod +x 'debian/tests/rebuild'
 chmod +x 'debian/tests/ubuntu-regression-suite'
 # Remove any files deleted from the orig.
+rm -f 'include/linux/input/adp5589.h'
 exit 0
