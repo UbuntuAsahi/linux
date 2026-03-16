@@ -697,6 +697,7 @@ static int common_file_perm(const char *op, struct file *file, u32 mask)
 {
 	struct aa_label *label;
 	int error = 0;
+	bool needput;
 
 	label = __begin_current_label_crit_section(&needput);
 	error = aa_file_perm(op, current_cred(), label, file, mask, false);
@@ -712,7 +713,7 @@ static int apparmor_file_receive(struct file *file)
 
 static int apparmor_file_permission(struct file *file, int mask)
 {
-	return common_file_perm(OP_FPERM, file, mask, true);
+	return common_file_perm(OP_FPERM, file, mask);
 }
 
 static int apparmor_file_lock(struct file *file, unsigned int cmd)
