@@ -196,7 +196,7 @@ if [ -n "$dbgpkgdir" ]; then
 	dbgpkgdir="$dbgpkgdir/$package"
 	echo "II: dkms-build installing $package into $dbgpkgdir (debug symbols)"
 	install -d "$dbgpkgdir"
-	find "$dkms_dir/build/$dkms_package/$dkms_version/$abi_version" -name \*.ko |
+	find "$dkms_dir/build/$dkms_package/$dkms_version/$abi_version" -name \*.ko* |
 	while read module; do
 		vmodule=$( basename "$module" )
 
@@ -222,7 +222,7 @@ fi
 pkgdir="$pkgdir/$package"
 echo "II: dkms-build installing $package into $pkgdir"
 install -d "$pkgdir"
-find "$dkms_dir/build/$dkms_package/$dkms_version/$abi_version" -name \*.ko |
+find "$dkms_dir/build/$dkms_package/$dkms_version/$abi_version" -name \*.ko* |
 while read module; do
 	vmodule=$( basename "$module" )
 	case "$sign" in
