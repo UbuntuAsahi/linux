@@ -519,7 +519,7 @@
 			<0x3 0x8b344000 0x0 0x4000>,
 			<0x3 0x8b800000 0x0 0x800000>;
 		apple,bw-scratch = <&pmgr_dcp 0 4 0x988>;
-		power-domains = <&pmp_report_disp0>;
+		power-domains = <&ps_disp0_cpu0>;
 		resets = <&ps_disp0_cpu0>;
 		clocks = <&clk_disp0>;
 		phandle = <&dcp>;
@@ -731,7 +731,7 @@
 			<0x4 0x4000000 0 0x1000000>;
 		reg-names = "asc", "sgx";
 		mboxes = <&agx_mbox>;
-		power-domains = <&pmp_report_gfx>;
+		power-domains = <&ps_gfx>;
 		memory-region = <&uat_ttbs>, <&uat_pagetables>, <&uat_handoff>,
 				<&gpu_hw_cal_a>, <&gpu_hw_cal_b>, <&gpu_globals>;
 		memory-region-names = "ttbs", "pagetables", "handoff",
@@ -830,7 +830,7 @@
 			<0x3 0x861043f0 0x0 0x100>;
 		interrupt-parent = <&aic>;
 		interrupts = <AIC_IRQ 0 538 IRQ_TYPE_LEVEL_HIGH>;
-		power-domains = <&pmp_report_isp_sys>, <&ps_isp_set0>,
+		power-domains = <&ps_isp_sys>, <&ps_isp_set0>,
 			<&ps_isp_set1>, <&ps_isp_fe>, <&ps_isp_set3>,
 			<&ps_isp_set4>, <&ps_isp_set5>, <&ps_isp_set6>,
 			<&ps_isp_set7>, <&ps_isp_set8>;
