@@ -181,12 +181,6 @@ static inline void aa_put_profile_loaddata(struct aa_loaddata *data)
 		kref_put(&data->pcount, aa_ploaddata_kref);
 }
 
-static inline void aa_put_profile_loaddata(struct aa_loaddata *data)
-{
-	if (data)
-		kref_put(&data->pcount, aa_ploaddata_kref);
-}
-
 #if IS_ENABLED(CONFIG_KUNIT)
 bool aa_inbounds(struct aa_ext *e, size_t size);
 size_t aa_unpack_u16_chunk(struct aa_ext *e, char **chunk);
