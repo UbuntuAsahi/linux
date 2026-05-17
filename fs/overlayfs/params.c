@@ -827,6 +827,7 @@ int ovl_init_fs_context(struct fs_context *fc)
 	ofs->config.nfs_export		= ovl_nfs_export_def;
 	ofs->config.xino		= ovl_xino_def();
 	ofs->config.metacopy		= ovl_metacopy_def;
+	ofs->config.fsync_mode		= ovl_fsync_mode_def();
 	if (fc->user_ns != &init_user_ns)
 		ofs->config.userxattr = true;
 

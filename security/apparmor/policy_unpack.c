@@ -149,33 +149,6 @@ void aa_ploaddata_kref(struct kref *kref)
 {
 	struct aa_loaddata *d = container_of(kref, struct aa_loaddata, pcount);
 
-	do_loaddata_free(d);
-}
-
-/*
- * need to take the ns mutex lock which is NOT safe most places that
- * put_loaddata is called, so we have to delay freeing it
- */
-static void do_ploaddata_rmfs(struct work_struct *work)
-{
-	struct aa_loaddata *d = container_of(work, struct aa_loaddata, work);
-	struct aa_ns *ns = aa_get_ns(d->ns);
-
-	if (ns) {
-		mutex_lock_nested(&ns->lock, ns->level);
-		/* remove fs ref to loaddata */
-		__aa_fs_remove_rawdata(d);
-		mutex_unlock(&ns->lock);
-		aa_put_ns(ns);
-	}
-	/* called by dropping last pcount, so drop its associated icount */
-	aa_put_i_loaddata(d);
-}
-
-void aa_ploaddata_kref(struct kref *kref)
-{
-	struct aa_loaddata *d = container_of(kref, struct aa_loaddata, pcount);
-
 	if (d) {
 		INIT_WORK(&d->work, do_ploaddata_rmfs);
 		schedule_work(&d->work);
