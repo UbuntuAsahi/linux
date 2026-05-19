@@ -68,7 +68,7 @@ Architecture: all
 Multi-Arch: foreign
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, coreutils
+Depends: coreutils, ${misc:Depends}
 Description: Header files related to Linux kernel version PKGVER
  This package provides kernel header files for version PKGVER, for sites
  that want the latest kernel headers. Please read
@@ -79,7 +79,7 @@ Build-Profiles: <!stage1>
 Architecture: arm64
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, linux-tools-common
+Depends: linux-tools-common, ${misc:Depends}, ${shlibs:Depends},
 Description: Linux kernel version specific tools for version PKGVER-ABINUM
  This package provides the architecture dependant parts for kernel
  version locked tools (such as perf and x86_energy_perf_policy) for
