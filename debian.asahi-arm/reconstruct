@@ -30,5 +30,9 @@ chmod +x 'debian/templates/image.preinst.in'
 chmod +x 'debian/templates/image.prerm.in'
 chmod +x 'debian/tests/rebuild'
 chmod +x 'debian/tests/ubuntu-regression-suite'
+chmod +x 'drivers/watchdog/f71808e_wdt.c'
 # Remove any files deleted from the orig.
+rm -f 'drivers/soc/apple/mailbox.h'
+rm -f 'drivers/usb/host/xhci-pci.c'
+rm -f 'rust/kernel/soc.rs'
 exit 0
