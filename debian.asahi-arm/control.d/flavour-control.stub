@@ -5,6 +5,7 @@
 # TARGET
 # BOOTLOADER
 # =PROVIDES=
+# =DEPENDS=
 #
 # Items marked with =FOO= are optional
 #
@@ -25,9 +26,9 @@ Build-Profiles: <!stage1>
 Architecture: ARCH
 Section: kernel
 Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}, =DEPENDS=wireless-regdb
 Built-Using: ${linux:BuiltUsing}
-Description: Linux kernel extra modules for version PKGVER
+Description: Linux kernel modules for version PKGVER
  Contains the corresponding System.map file, the modules built by the
  packager, and scripts that try to ensure that the system is not left in an
  unbootable state after an update.
@@ -52,17 +53,6 @@ Description: Linux kernel headers for version PKGVER
  .
  This is for sites that want the latest kernel headers.  Please read
  /usr/share/doc/linux-headers-PKGVER-ABINUM/debian.README.gz for details.
-
-Package: SRCPKGNAME-lib-rust-PKGVER-ABINUM-FLAVOUR
-Build-Profiles: <!stage1>
-Architecture: ARCH
-Multi-Arch: foreign
-Section: devel
-Priority: optional
-Depends: ${misc:Depends}, coreutils
-Description: Rust library files related to Linux kernel version PKGVER
- This package provides kernel library files for version PKGVER, that allow to
- compile out-of-tree kernel modules written in Rust.
 
 Package: linux-tools-PKGVER-ABINUM-FLAVOUR
 Build-Profiles: <!stage1>

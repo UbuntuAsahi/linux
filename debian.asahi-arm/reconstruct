@@ -1,4 +1,5 @@
 # Recreate any symlinks created since the orig.
+[ ! -L 'ubuntu/igh-ecat/master/rtdm-ioctl.c' ] && ln -sf 'ioctl.c' 'ubuntu/igh-ecat/master/rtdm-ioctl.c'
 chmod +x 'debian/cloud-tools/hv_get_dhcp_info'
 chmod +x 'debian/cloud-tools/hv_get_dns_info'
 chmod +x 'debian/cloud-tools/hv_set_ifconfig'
@@ -29,13 +30,5 @@ chmod +x 'debian/templates/image.preinst.in'
 chmod +x 'debian/templates/image.prerm.in'
 chmod +x 'debian/tests/rebuild'
 chmod +x 'debian/tests/ubuntu-regression-suite'
-chmod -x 'drivers/edac/ecs.c'
-chmod -x 'drivers/edac/mem_repair.c'
-chmod -x 'drivers/edac/scrub.c'
-chmod +x 'drivers/watchdog/f71808e_wdt.c'
-chmod +x 'scripts/atomic/gen-rust-atomic-helpers.sh'
 # Remove any files deleted from the orig.
-rm -f 'drivers/gpu/drm/nova/uapi.rs'
-rm -f 'drivers/soc/apple/mailbox.h'
-rm -f 'drivers/usb/host/xhci-pci.c'
 exit 0
