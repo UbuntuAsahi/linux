@@ -5,36 +5,117 @@
 
 include "../../debian.master/config/annotations"
 
+CONFIG_APPLE_AOP                                policy<{'arm64': 'm'}>
+CONFIG_APPLE_AOP                                note<'{Asahi enablement config}'>
+
+CONFIG_APPLE_DOCKCHANNEL                        policy<{'arm64': 'm'}>
+CONFIG_APPLE_DOCKCHANNEL                        note<'{Asahi enablement config}'>
+
+CONFIG_APPLE_MAILBOX                            policy<{'arm64': 'y'}>
+CONFIG_APPLE_MAILBOX                            note<'{Asahi enablement config}'>
+
+CONFIG_APPLE_PMGR_MISC                          policy<{'arm64': 'y'}>
+CONFIG_APPLE_PMGR_MISC                          note<'{Asahi enablement config}'>
+
+CONFIG_APPLE_PMP                                policy<{'arm64': 'm'}>
+CONFIG_APPLE_PMP                                note<'{Asahi enablement config}'>
+
+CONFIG_APPLE_PMP_REPORT                         policy<{'arm64': 'y'}>
+CONFIG_APPLE_PMP_REPORT                         note<'{Asahi enablement config}'>
+
+CONFIG_APPLE_RTKIT                              policy<{'arm64': 'y'}>
+CONFIG_APPLE_RTKIT                              note<'{Asahi enablement config}'>
+
+CONFIG_APPLE_RTKIT_HELPER                       policy<{'arm64': 'm'}>
+CONFIG_APPLE_RTKIT_HELPER                       note<'{Asahi enablement config}'>
+
+CONFIG_APPLE_SEP                                policy<{'arm64': 'm'}>
+CONFIG_APPLE_SEP                                note<'{Asahi enablement config}'>
+
+CONFIG_APPLE_SIO                                policy<{'arm64': 'm'}>
+CONFIG_APPLE_SIO                                note<'{Asahi enablement config}'>
+
+CONFIG_APPLE_WATCHDOG                           policy<{'arm64': 'y'}>
+CONFIG_APPLE_WATCHDOG                           note<'{Asahi enablement config}'>
+
 CONFIG_ARCH_MMAP_RND_BITS                       policy<{'arm64': '16'}>
-CONFIG_ARCH_MMAP_RND_BITS                       note<'LP: #1983357'>
+CONFIG_ARCH_MMAP_RND_BITS                       note<'{Asahi enablement config}'>
+
+CONFIG_ARM64_MEMORY_MODEL_CONTROL               policy<{'arm64': 'y'}>
+CONFIG_ARM64_MEMORY_MODEL_CONTROL               note<'{Asahi enablement config}'>
+
+CONFIG_ARM_APPLE_CPUIDLE                        policy<{'arm64': 'y'}>
+CONFIG_ARM_APPLE_CPUIDLE                        note<'{Asahi enablement config}'>
+
+CONFIG_BT_BRCMEXT                               policy<{'arm64': 'y'}>
+CONFIG_BT_BRCMEXT                               note<'{Asahi enablement config}'>
+
+CONFIG_CHARGER_MACSMC                           policy<{'arm64': 'm'}>
+CONFIG_CHARGER_MACSMC                           note<'{Asahi enablement config}'>
+
+CONFIG_DRM_APPLE                                policy<{'arm64': 'm'}>
+CONFIG_DRM_APPLE                                note<'{Asahi enablement config}'>
+
+CONFIG_DRM_APPLE_AUDIO                          policy<{'arm64': 'y'}>
+CONFIG_DRM_APPLE_AUDIO                          note<'{Asahi enablement config}'>
+
+CONFIG_DRM_APPLE_DEBUG                          policy<{'arm64': 'n'}>
+CONFIG_DRM_APPLE_DEBUG                          note<'{Asahi enablement config}'>
+
+CONFIG_DRM_ASAHI                                policy<{'arm64': 'm'}>
+CONFIG_DRM_ASAHI                                note<'{Asahi enablement config}'>
+
+CONFIG_DRM_ASAHI_DEBUG_ALLOCATOR                policy<{'arm64': 'n'}>
+CONFIG_DRM_ASAHI_DEBUG_ALLOCATOR                note<'{Asahi enablement config}'>
+
+CONFIG_HID_DOCKCHANNEL                          policy<{'arm64': 'm'}>
+CONFIG_HID_DOCKCHANNEL                          note<'{Asahi enablement config}'>
+
+CONFIG_IIO_AOP_SENSOR_ALS                       policy<{'arm64': 'm'}>
+CONFIG_IIO_AOP_SENSOR_ALS                       note<'{Asahi enablement config}'>
+
+CONFIG_IIO_AOP_SENSOR_LAS                       policy<{'arm64': 'm'}>
+CONFIG_IIO_AOP_SENSOR_LAS                       note<'{Asahi enablement config}'>
+
+CONFIG_INPUT_MACSMC_INPUT                       policy<{'arm64': 'm'}>
+CONFIG_INPUT_MACSMC_INPUT                       note<'{Asahi enablement config}'>
 
 CONFIG_MODVERSIONS                              policy<{'arm64': 'n'}>
 CONFIG_MODVERSIONS                              note<'required as we have a livepatch/drivers modules signing key'>
 
-CONFIG_RUST                                     policy<{'arm64': 'y'}>
-CONFIG_RUST                                     note<'required to enable Rust support, LP: #1993183'>
+CONFIG_MUX_APPLE_DPXBAR                         policy<{'arm64': 'm'}>
+CONFIG_MUX_APPLE_DPXBAR                         note<'{Asahi enablement config}'>
 
-CONFIG_RUST_IS_AVAILABLE                        policy<{'arm64': 'y'}>
-CONFIG_RUST_IS_AVAILABLE                        note<'required to enable Rust support, LP: #1993183'>
+CONFIG_PHY_APPLE_ATC                            policy<{'arm64': 'm'}>
+CONFIG_PHY_APPLE_ATC                            note<'{Asahi enablement config}'>
+
+CONFIG_PHY_APPLE_DPTX                           policy<{'arm64': 'm'}>
+CONFIG_PHY_APPLE_DPTX                           note<'{Asahi enablement config}'>
+
+CONFIG_SND_SOC_APPLE_AOP_AUDIO                  policy<{'arm64': 'm'}>
+CONFIG_SND_SOC_APPLE_AOP_AUDIO                  note<'{Asahi enablement config}'>
+
+CONFIG_SND_SOC_APPLE_MACAUDIO                   policy<{'arm64': 'm'}>
+CONFIG_SND_SOC_APPLE_MACAUDIO                   note<'{Asahi enablement config}'>
+
+CONFIG_SPI_HID_APPLE_OF                         policy<{'arm64': 'm'}>
+CONFIG_SPI_HID_APPLE_OF                         note<'{Asahi enablement config}'>
 
 CONFIG_SYSFB_SIMPLEFB                           policy<{'arm64': 'n'}>
-CONFIG_SYSFB_SIMPLEFB                           note<'LP: #1965303'>
+CONFIG_SYSFB_SIMPLEFB                           note<'{Asahi enablement config}'>
 
 CONFIG_UBSAN                                    policy<{'arm64': 'n'}>
-CONFIG_UBSAN                                    note<'LP: #1942215'>
+CONFIG_UBSAN                                    note<'{Asahi enablement config}'>
+
+CONFIG_USB_XHCI_PCI_ASMEDIA                     policy<{'arm64': 'y'}>
+CONFIG_USB_XHCI_PCI_ASMEDIA                     note<'{Asahi enablement config}'>
+
+CONFIG_VIDEO_APPLE_ISP                          policy<{'arm64': 'm'}>
+CONFIG_VIDEO_APPLE_ISP                          note<'{Asahi enablement config}'>
 
 
 # ---- Annotations without notes ----
 
-CONFIG_APPLE_AOP                                policy<{'arm64': 'm'}>
-CONFIG_APPLE_DOCKCHANNEL                        policy<{'arm64': 'm'}>
-CONFIG_APPLE_MAILBOX                            policy<{'arm64': 'y'}>
-CONFIG_APPLE_PMGR_MISC                          policy<{'arm64': 'y'}>
-CONFIG_APPLE_RTKIT                              policy<{'arm64': 'y'}>
-CONFIG_APPLE_RTKIT_HELPER                       policy<{'arm64': 'm'}>
-CONFIG_APPLE_SEP                                policy<{'arm64': 'm'}>
-CONFIG_APPLE_SIO                                policy<{'arm64': 'm'}>
-CONFIG_APPLE_WATCHDOG                           policy<{'arm64': 'y'}>
 CONFIG_ARCH_FORCE_MAX_ORDER                     policy<{'arm64': '11'}>
 CONFIG_ARCH_MMAP_RND_BITS_MAX                   policy<{'arm64': '31'}>
 CONFIG_ARCH_MMAP_RND_BITS_MIN                   policy<{'arm64': '16'}>
@@ -45,22 +126,14 @@ CONFIG_ARM64_4K_PAGES                           policy<{'arm64': 'n'}>
 CONFIG_ARM64_ACTLR_STATE                        policy<{'arm64': 'y'}>
 CONFIG_ARM64_CONT_PMD_SHIFT                     policy<{'arm64': '5'}>
 CONFIG_ARM64_CONT_PTE_SHIFT                     policy<{'arm64': '7'}>
-CONFIG_ARM64_MEMORY_MODEL_CONTROL               policy<{'arm64': 'y'}>
 CONFIG_ARM64_VA_BITS_36                         policy<{'arm64': 'n'}>
 CONFIG_ARM64_VA_BITS_39                         policy<{'arm64': '-'}>
 CONFIG_ARM64_VA_BITS_47                         policy<{'arm64': 'n'}>
-CONFIG_ARM_APPLE_CPUIDLE                        policy<{'arm64': 'y'}>
 CONFIG_ASM_MODVERSIONS                          policy<{'arm64': '-'}>
 CONFIG_BASIC_MODVERSIONS                        policy<{'arm64': '-'}>
 CONFIG_CC_HAS_UBSAN_BOUNDS_STRICT               policy<{'arm64': '-'}>
-CONFIG_CHARGER_MACSMC                           policy<{'arm64': 'm'}>
 CONFIG_CLK_QCM2290_GPUCC                        policy<{'arm64': 'n'}>
 CONFIG_COMMON_CLK_C3_PERIPHERALS                policy<{'arm64': 'y'}>
-CONFIG_DRM_APPLE                                policy<{'arm64': 'm'}>
-CONFIG_DRM_APPLE_AUDIO                          policy<{'arm64': 'y'}>
-CONFIG_DRM_APPLE_DEBUG                          policy<{'arm64': 'n'}>
-CONFIG_DRM_ASAHI                                policy<{'arm64': 'm'}>
-CONFIG_DRM_ASAHI_DEBUG_ALLOCATOR                policy<{'arm64': 'n'}>
 CONFIG_DRM_DISPLAY_DP_TUNNEL                    policy<{'arm64': '-'}>
 CONFIG_DRM_EFIDRM                               policy<{'arm64': 'n'}>
 CONFIG_DRM_EXEC                                 policy<{'arm64': 'y'}>
@@ -96,44 +169,37 @@ CONFIG_EXTENDED_MODVERSIONS                     policy<{'arm64': '-'}>
 CONFIG_GENDWARFKSYMS                            policy<{'arm64': '-'}>
 CONFIG_GENKSYMS                                 policy<{'arm64': '-'}>
 CONFIG_HAVE_PAGE_SIZE_16KB                      policy<{'arm64': 'y'}>
-CONFIG_HID_DOCKCHANNEL                          policy<{'arm64': 'm'}>
 CONFIG_HUGETLB_PMD_PAGE_TABLE_SHARING           policy<{'arm64': 'y'}>
-CONFIG_IIO_AOP_SENSOR_ALS                       policy<{'arm64': 'm'}>
-CONFIG_IIO_AOP_SENSOR_LAS                       policy<{'arm64': 'm'}>
-CONFIG_INFINIBAND_HNS                           policy<{'arm64': '-'}>
-CONFIG_INPUT_MACSMC_INPUT                       policy<{'arm64': 'm'}>
+CONFIG_INTEL_MEI                                policy<{'arm64': '-'}>
+CONFIG_INTEL_MEI_ME                             policy<{'arm64': '-'}>
+CONFIG_INTEL_MEI_TXE                            policy<{'arm64': '-'}>
+CONFIG_INTEL_MEI_VSC                            policy<{'arm64': '-'}>
+CONFIG_INTEL_MEI_VSC_HW                         policy<{'arm64': '-'}>
+CONFIG_INTEL_VSC                                policy<{'arm64': '-'}>
 CONFIG_MARVELL_GTI_WDT                          policy<{'arm64': 'y'}>
 CONFIG_MD_LINEAR                                policy<{'arm64': 'n'}>
 CONFIG_MESON_SECURE_PM_DOMAINS                  policy<{'arm64': '-'}>
 CONFIG_MESON_SM                                 policy<{'arm64': '-'}>
-CONFIG_MFD_APPLE_SPMI_PMU                       policy<{'arm64': '-'}>
-CONFIG_MFD_SIMPLE_MFD_SPMI                      policy<{'arm64': '-'}>
 CONFIG_MIPI_I3C_HCI_PCI                         policy<{'arm64': 'n'}>
 CONFIG_MTD_INTEL_DG                             policy<{'arm64': '-'}>
-CONFIG_MUX_APPLE_DPXBAR                         policy<{'arm64': 'm'}>
+CONFIG_NFC_MEI_PHY                              policy<{'arm64': '-'}>
+CONFIG_NFC_MICROREAD_MEI                        policy<{'arm64': '-'}>
+CONFIG_NFC_PN544_MEI                            policy<{'arm64': '-'}>
 CONFIG_NVMEM_MESON_EFUSE                        policy<{'arm64': '-'}>
-CONFIG_NVMEM_SPMI_MFD                           policy<{'arm64': '-'}>
 CONFIG_OVMF_DEBUG_LOG                           policy<{'arm64': 'n'}>
 CONFIG_PAGE_BLOCK_MAX_ORDER                     policy<{'arm64': '11'}>
 CONFIG_PAGE_SHIFT                               policy<{'arm64': '14'}>
 CONFIG_PAGE_SIZE_16KB                           policy<{'arm64': 'y'}>
 CONFIG_PCIE_APPLE                               policy<{'arm64': 'y'}>
-CONFIG_PHY_APPLE_ATC                            policy<{'arm64': 'm'}>
-CONFIG_PHY_APPLE_DPTX                           policy<{'arm64': 'm'}>
-CONFIG_RTC_DRV_MACSMC                           policy<{'arm64': 'm'}>
-CONFIG_RUSTC_LLVM_VERSION_TEXT                  policy<{'arm64': '-'}>
+CONFIG_RUST_APPLE_MAILBOX                       policy<{'arm64': 'y'}>
 CONFIG_RUST_APPLE_RTKIT                         policy<{'arm64': 'y'}>
 CONFIG_RUST_DRM_GEM_SHMEM_HELPER                policy<{'arm64': 'y'}>
 CONFIG_RUST_DRM_GPUVM                           policy<{'arm64': 'y'}>
 CONFIG_RUST_DRM_SCHED                           policy<{'arm64': 'y'}>
-CONFIG_RV_MON_SCHED                             policy<{'arm64': '-'}>
-CONFIG_SENSORS_MACSMC_HWMON                     policy<{'arm64': 'm'}>
+CONFIG_SENSORS_MAX17616                         policy<{'arm64': 'n'}>
 CONFIG_SHADOW_CALL_STACK                        policy<{'arm64': 'n'}>
 CONFIG_SND_HDA_I915                             policy<{'arm64': '-'}>
-CONFIG_SND_SOC_APPLE_AOP_AUDIO                  policy<{'arm64': 'm'}>
-CONFIG_SND_SOC_APPLE_MACAUDIO                   policy<{'arm64': 'm'}>
 CONFIG_SPI_HID_APPLE_CORE                       policy<{'arm64': 'm'}>
-CONFIG_SPI_HID_APPLE_OF                         policy<{'arm64': 'm'}>
 CONFIG_TEE_STMM_EFI                             policy<{'arm64': 'n'}>
 CONFIG_TEST_UBSAN                               policy<{'arm64': '-'}>
 CONFIG_THP_SWAP                                 policy<{'arm64': '-'}>
@@ -144,12 +210,8 @@ CONFIG_UBSAN_BOUNDS_STRICT                      policy<{'arm64': '-'}>
 CONFIG_UBSAN_DIV_ZERO                           policy<{'arm64': '-'}>
 CONFIG_UBSAN_ENUM                               policy<{'arm64': '-'}>
 CONFIG_UBSAN_KVM_EL2                            policy<{'arm64': '-'}>
-CONFIG_UBSAN_SANITIZE_ALL                       policy<{'arm64': '-'}>
 CONFIG_UBSAN_SHIFT                              policy<{'arm64': '-'}>
-CONFIG_UBSAN_SIGNED_WRAP                        policy<{'arm64': '-'}>
 CONFIG_UBSAN_TRAP                               policy<{'arm64': '-'}>
 CONFIG_UBSAN_UNREACHABLE                        policy<{'arm64': '-'}>
-CONFIG_USB_XHCI_PCI_ASMEDIA                     policy<{'arm64': 'y'}>
 CONFIG_USB_XHCI_PCI_RENESAS                     policy<{'arm64': 'y'}>
-CONFIG_VIDEO_APPLE_ISP                          policy<{'arm64': 'm'}>
 CONFIG_VMAP_PFN                                 policy<{'arm64': '-'}>
